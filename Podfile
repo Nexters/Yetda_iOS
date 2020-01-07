@@ -6,6 +6,7 @@ target 'Yetda_iOS' do
   use_frameworks!
 
   # Pods for Yetda_iOS
+  pod 'Firebase/Analytics'
   pod 'Firebase/Database'
   pod 'SwiftLint'
   
