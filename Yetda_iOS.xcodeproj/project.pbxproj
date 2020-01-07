@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3670C56BDABF69D1820BC486 /* Pods_Yetda_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */; };
 		3AF6A9BE23C4A72400B588CE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */; };
+		3AF6A9C223C4AD0300B588CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */; };
 		FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1A23C4945900674A3E /* AppDelegate.swift */; };
 		FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */; };
 		FAB0FD1F23C4945900674A3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1E23C4945900674A3E /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		33118D09705F0F5BCD60B00B /* Pods-Yetda_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.release.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yetda_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0FD1723C4945900674A3E /* Yetda_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yetda_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 		FAB0FD1923C4945900674A3E /* Yetda_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */,
 				FAB0FD1A23C4945900674A3E /* AppDelegate.swift */,
 				FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */,
 				FAB0FD1E23C4945900674A3E /* ViewController.swift */,
@@ -157,6 +160,7 @@
 			files = (
 				3AF6A9BE23C4A72400B588CE /* .swiftlint.yml in Resources */,
 				FAB0FD2723C4945A00674A3E /* LaunchScreen.storyboard in Resources */,
+				3AF6A9C223C4AD0300B588CE /* GoogleService-Info.plist in Resources */,
 				FAB0FD2423C4945A00674A3E /* Assets.xcassets in Resources */,
 				FAB0FD2223C4945900674A3E /* Main.storyboard in Resources */,
 			);

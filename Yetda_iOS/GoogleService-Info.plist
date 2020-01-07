@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>220467588781-ri3dd52q7s679tporg1gkevrkqq2qq89.apps.googleusercontent.com</string>
+	<string>220467588781-142ojibnmcrm0h3mcht4t6rtvn1gsedu.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.220467588781-ri3dd52q7s679tporg1gkevrkqq2qq89</string>
+	<string>com.googleusercontent.apps.220467588781-142ojibnmcrm0h3mcht4t6rtvn1gsedu</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAJKzgzVwPnVQZzVh3RocBsMoiPlMJZiEc</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.nexters.yetda-ios</string>
+	<string>com.nexters.yetda.ios</string>
 	<key>PROJECT_ID</key>
 	<string>yetda-d4506</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:220467588781:ios:9deac948629316bb99e024</string>
+	<string>1:220467588781:ios:43f673b807cc8b2699e024</string>
 	<key>DATABASE_URL</key>
 	<string>https://yetda-d4506.firebaseio.com</string>
 </dict>
