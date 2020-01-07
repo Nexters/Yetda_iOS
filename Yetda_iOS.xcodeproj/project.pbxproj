@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3670C56BDABF69D1820BC486 /* Pods_Yetda_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */; };
 		FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1A23C4945900674A3E /* AppDelegate.swift */; };
 		FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */; };
 		FAB0FD1F23C4945900674A3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1E23C4945900674A3E /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33118D09705F0F5BCD60B00B /* Pods-Yetda_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.release.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yetda_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0FD1723C4945900674A3E /* Yetda_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yetda_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0FD1A23C4945900674A3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3670C56BDABF69D1820BC486 /* Pods_Yetda_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FB046D1D798E8D5AEB5EC66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8821F47DE098EAB26FA73907 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33118D09705F0F5BCD60B00B /* Pods-Yetda_iOS.debug.xcconfig */,
+				C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FAB0FD0E23C4945900674A3E = {
 			isa = PBXGroup;
 			children = (
 				FAB0FD1923C4945900674A3E /* Yetda_iOS */,
 				FAB0FD1823C4945900674A3E /* Products */,
+				8821F47DE098EAB26FA73907 /* Pods */,
+				6FB046D1D798E8D5AEB5EC66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAB0FD2B23C4945A00674A3E /* Build configuration list for PBXNativeTarget "Yetda_iOS" */;
 			buildPhases = (
+				E92FD64C68C52DB6AE5B81CF /* [CP] Check Pods Manifest.lock */,
 				FAB0FD1323C4945900674A3E /* Sources */,
 				FAB0FD1423C4945900674A3E /* Frameworks */,
 				FAB0FD1523C4945900674A3E /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E92FD64C68C52DB6AE5B81CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yetda_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAB0FD1323C4945900674A3E /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		FAB0FD2C23C4945A00674A3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33118D09705F0F5BCD60B00B /* Pods-Yetda_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +351,7 @@
 		};
 		FAB0FD2D23C4945A00674A3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
