@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>220467588781-ri3dd52q7s679tporg1gkevrkqq2qq89.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.220467588781-ri3dd52q7s679tporg1gkevrkqq2qq89</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAJKzgzVwPnVQZzVh3RocBsMoiPlMJZiEc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>220467588781</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nexters.yetda-ios</string>
+	<key>PROJECT_ID</key>
+	<string>yetda-d4506</string>
+	<key>STORAGE_BUCKET</key>
+	<string>yetda-d4506.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:220467588781:ios:9deac948629316bb99e024</string>
+	<key>DATABASE_URL</key>
+	<string>https://yetda-d4506.firebaseio.com</string>
+</dict>
+</plist>
