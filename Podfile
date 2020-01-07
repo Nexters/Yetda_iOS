@@ -7,6 +7,6 @@ target 'Yetda_iOS' do
 
   # Pods for Yetda_iOS
   pod 'Firebase/Database'
-  pod 'SwiftLint'
+  pod 'SwiftLint', '0.38.1'
   
 end

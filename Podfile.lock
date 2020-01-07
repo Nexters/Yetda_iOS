@@ -38,7 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Database
-  - SwiftLint
+  - SwiftLint (= 0.38.1)
 
 SPEC REPOS:
   trunk:
@@ -69,6 +69,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SwiftLint: 0aeb99ca7ccfc222ef93e2560a35e669f5465e6c
 
-PODFILE CHECKSUM: 2474b1861e0502af7fa83803c7c6cf8f1f888c24
+PODFILE CHECKSUM: ff22c2a24e4d6b2e6749ff08a0d81e1cc327913b
 
 COCOAPODS: 1.8.4
