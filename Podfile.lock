@@ -264,6 +264,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - leveldb-library (1.22)
+  - lottie-ios (3.1.5)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
@@ -275,6 +276,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Database
   - FirebaseFirestoreSwift
+  - lottie-ios
   - SwiftLint (= 0.38.1)
 
 SPEC REPOS:
@@ -298,6 +300,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - leveldb-library
+    - lottie-ios
     - nanopb
     - SwiftLint
 
@@ -321,9 +324,10 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SwiftLint: 0aeb99ca7ccfc222ef93e2560a35e669f5465e6c
 
-PODFILE CHECKSUM: aaacc4adc2bf8e9b14da3dfb5b4a312b9e9c8a14
+PODFILE CHECKSUM: d7586ba2b061307813b85d313a87e3f4ec1fbd1a
 
 COCOAPODS: 1.8.4
