@@ -6,7 +6,7 @@ target 'Yetda_iOS' do
   use_frameworks!
 
   # Pods for Yetda_iOS
-  pod 'lottie-ios'
+  pod 'lottie-ios', '3.1.5'
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
   pod 'FirebaseFirestoreSwift'

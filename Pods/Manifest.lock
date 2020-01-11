@@ -276,7 +276,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Database
   - FirebaseFirestoreSwift
-  - lottie-ios
+  - lottie-ios (= 3.1.5)
   - SwiftLint (= 0.38.1)
 
 SPEC REPOS:
@@ -328,6 +328,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SwiftLint: 0aeb99ca7ccfc222ef93e2560a35e669f5465e6c
 
-PODFILE CHECKSUM: d7586ba2b061307813b85d313a87e3f4ec1fbd1a
+PODFILE CHECKSUM: dbf6bebf371056b44762ed2896033a0c26316f84
 
 COCOAPODS: 1.8.4
