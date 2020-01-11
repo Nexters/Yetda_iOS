@@ -14,3 +14,5 @@ $ git clone https://github.com/Nexters/Yetda_iOS.git
 $ cd Yetda_iOS
 $ pod install
 ```
+
+## Todo
