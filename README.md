@@ -1,6 +1,9 @@
-# Yetda_iOS
+# 🎁Yetda_iOS💌
+
+![platform:iOS](https://img.shields.io/badge/Platform-iOS-blue) ![language:iOS](https://img.shields.io/badge/Language-Swift-yellow)
 
 ## Dependencies
+
 | Depencency | Version |
 | ---------- | ------- |
 | lottie-ios | 3.1.5   |
@@ -8,6 +11,7 @@
 | SnapKit    | 5.0.0   |
 
 ## Installation
+
 ```shell
 
 $ git clone https://github.com/Nexters/Yetda_iOS.git
@@ -20,3 +24,4 @@ $ pod install
 - [ ] Setting empty screens
 - [X] Connecting Github repo to Slack
 - [ ] Complete base functionalities
+

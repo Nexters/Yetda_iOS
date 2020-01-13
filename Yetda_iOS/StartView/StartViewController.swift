@@ -9,10 +9,11 @@
 import UIKit
 import FirebaseCore
 import FirebaseFirestore
+import SnapKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
     var database: Firestore!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let settings = FirestoreSettings()
@@ -30,6 +31,6 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
 }
 
