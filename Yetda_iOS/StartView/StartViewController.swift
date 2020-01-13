@@ -31,5 +31,8 @@ class StartViewController: UIViewController {
         }
     }
 
+    @IBAction func onStartButtonPressed(_ sender: UIButton) {
+        // Navigate to next View
+    }
 }
 
