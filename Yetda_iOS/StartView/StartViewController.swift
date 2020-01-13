@@ -10,7 +10,7 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
     var database: Firestore!
 
     override func viewDidLoad() {

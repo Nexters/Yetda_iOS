@@ -12,10 +12,15 @@
 		3AF6A9C223C4AD0300B588CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */; };
 		FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1A23C4945900674A3E /* AppDelegate.swift */; };
 		FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */; };
-		FAB0FD1F23C4945900674A3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1E23C4945900674A3E /* ViewController.swift */; };
+		FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1E23C4945900674A3E /* StartViewController.swift */; };
 		FAB0FD2223C4945900674A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2023C4945900674A3E /* Main.storyboard */; };
 		FAB0FD2423C4945A00674A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2323C4945A00674A3E /* Assets.xcassets */; };
 		FAB0FD2723C4945A00674A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2523C4945A00674A3E /* LaunchScreen.storyboard */; };
+		FAEC902823CC7F2C00010233 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC902723CC7F2C00010233 /* NameViewController.swift */; };
+		FAEC902B23CC7F5800010233 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC902A23CC7F5800010233 /* BirthdayViewController.swift */; };
+		FAEC902E23CC7F7E00010233 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC902D23CC7F7E00010233 /* PriceViewController.swift */; };
+		FAEC903123CC7FA300010233 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903023CC7FA300010233 /* QuestionViewController.swift */; };
+		FAEC903423CC7FC000010233 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903323CC7FC000010233 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +32,16 @@
 		FAB0FD1723C4945900674A3E /* Yetda_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yetda_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0FD1A23C4945900674A3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAB0FD1E23C4945900674A3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAB0FD1E23C4945900674A3E /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FAB0FD2123C4945900674A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAB0FD2323C4945A00674A3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB0FD2623C4945A00674A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB0FD2823C4945A00674A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEC902723CC7F2C00010233 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		FAEC902A23CC7F5800010233 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		FAEC902D23CC7F7E00010233 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
+		FAEC903023CC7FA300010233 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		FAEC903323CC7FC000010233 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +98,66 @@
 				3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */,
 				FAB0FD1A23C4945900674A3E /* AppDelegate.swift */,
 				FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */,
-				FAB0FD1E23C4945900674A3E /* ViewController.swift */,
+				FAEC902623CC7EFD00010233 /* StartView */,
+				FAEC902923CC7F3300010233 /* NameView */,
+				FAEC902C23CC7F5D00010233 /* BirthdayView */,
+				FAEC902F23CC7F8200010233 /* PriceView */,
+				FAEC903223CC7FAA00010233 /* QuestionView */,
+				FAEC903523CC7FC400010233 /* ResultView */,
 				FAB0FD2023C4945900674A3E /* Main.storyboard */,
 				FAB0FD2323C4945A00674A3E /* Assets.xcassets */,
 				FAB0FD2523C4945A00674A3E /* LaunchScreen.storyboard */,
 				FAB0FD2823C4945A00674A3E /* Info.plist */,
 			);
 			path = Yetda_iOS;
+			sourceTree = "<group>";
+		};
+		FAEC902623CC7EFD00010233 /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0FD1E23C4945900674A3E /* StartViewController.swift */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		FAEC902923CC7F3300010233 /* NameView */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC902723CC7F2C00010233 /* NameViewController.swift */,
+			);
+			path = NameView;
+			sourceTree = "<group>";
+		};
+		FAEC902C23CC7F5D00010233 /* BirthdayView */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC902A23CC7F5800010233 /* BirthdayViewController.swift */,
+			);
+			path = BirthdayView;
+			sourceTree = "<group>";
+		};
+		FAEC902F23CC7F8200010233 /* PriceView */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC902D23CC7F7E00010233 /* PriceViewController.swift */,
+			);
+			path = PriceView;
+			sourceTree = "<group>";
+		};
+		FAEC903223CC7FAA00010233 /* QuestionView */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC903023CC7FA300010233 /* QuestionViewController.swift */,
+			);
+			path = QuestionView;
+			sourceTree = "<group>";
+		};
+		FAEC903523CC7FC400010233 /* ResultView */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC903323CC7FC000010233 /* ResultViewController.swift */,
+			);
+			path = ResultView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB0FD1F23C4945900674A3E /* ViewController.swift in Sources */,
+				FAEC902B23CC7F5800010233 /* BirthdayViewController.swift in Sources */,
+				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
+				FAEC903123CC7FA300010233 /* QuestionViewController.swift in Sources */,
+				FAEC903423CC7FC000010233 /* ResultViewController.swift in Sources */,
+				FAEC902E23CC7F7E00010233 /* PriceViewController.swift in Sources */,
 				FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */,
 				FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */,
+				FAEC902823CC7F2C00010233 /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
