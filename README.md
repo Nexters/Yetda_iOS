@@ -17,4 +17,5 @@ $ pod install
 
 ## Todo
 - [X] Adding Dependencies
-- [] Create ViewControllers
+- [] Setting empty screens
+- [] Connecting Github repo to Slack
