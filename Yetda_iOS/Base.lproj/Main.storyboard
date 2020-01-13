@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--Name View Controller-->
         <scene sceneID="YkM-He-iwt">
             <objects>
-                <viewController id="Xi1-Q4-ZVx" sceneMemberID="viewController">
+                <viewController id="Xi1-Q4-ZVx" customClass="NameViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PnN-Eq-tCQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKe-19-ezZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959" y="119"/>
+        </scene>
+        <!--Birthday View Controller-->
+        <scene sceneID="SnO-96-3ZA">
+            <objects>
+                <viewController id="3BI-Cp-qiq" customClass="BirthdayViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FH2-fv-1ek">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CZQ-BJ-83x"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-9f-ZuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="123"/>
+        </scene>
+        <!--Price View Controller-->
+        <scene sceneID="fhY-kc-n5F">
+            <objects>
+                <viewController id="AVg-9i-zlU" customClass="PriceViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zsf-cO-Iuw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PgT-h6-AmA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tP-mb-CRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="123"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="zBV-sf-WIP">
+            <objects>
+                <viewController id="LMg-ld-p3J" customClass="QuestionViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NML-hY-36v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3va-Wx-xd9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ey7-yw-9AP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3413" y="123"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="DbV-4o-RwX">
+            <objects>
+                <viewController id="UBw-SO-8cr" customClass="ResultViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yHG-i6-MNR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="lUt-ME-txi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECU-Dx-1KK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4235" y="123"/>
         </scene>
     </scenes>
 </document>
