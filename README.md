@@ -16,3 +16,5 @@ $ pod install
 ```
 
 ## Todo
+- [X] Adding Dependencies
+- [] Create ViewControllers
