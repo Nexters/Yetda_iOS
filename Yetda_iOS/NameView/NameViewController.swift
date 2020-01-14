@@ -14,7 +14,8 @@ class NameViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.lightGray
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
 
