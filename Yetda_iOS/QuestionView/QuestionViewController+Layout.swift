@@ -23,7 +23,7 @@ extension QuestionViewController {
     
     private func setupCardView() {  // 카드 뷰 부분
         
-        questionCardView.backgroundColor = UIColor.lightGray
+        questionCardView.setCardView()
         
         questionCardView.snp.makeConstraints { (make) in
             make.width.equalTo(cardSize.width)
