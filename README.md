@@ -20,8 +20,8 @@ $ pod install
 ```
 
 ## Todo
-- [X] Adding Dependencies
-- [ ] Setting empty screens
-- [X] Connecting Github repo to Slack
-- [ ] Complete base functionalities
 
+- [x] Adding Dependencies
+- [x] Setting empty screens
+- [x] Connecting Github repo to Slack
+- [ ] Complete base functionalities
