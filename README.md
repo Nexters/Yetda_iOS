@@ -26,3 +26,4 @@ $ pod install
 - [x] Connecting Github repo to Slack
 - [ ] Complete base functionalities
 - [ ] Connect API
+- [ ] Add animations
