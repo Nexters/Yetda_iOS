@@ -26,7 +26,7 @@ class NameViewController: BaseViewController {
     /// custom setup
     override func setup() {
         super.setup()
-        setupNextButton()
+        setupButton(button: nextButton)
         setupGuideTextLabel()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
@@ -58,12 +58,9 @@ class NameViewController: BaseViewController {
         guideText.textColor = .darkGray
     }
     
-    // MARK: - Add AutoLayout to Button
-    func setupNextButton() {
-        nextButton.setTitle("다음", for: .normal)
-        nextButton.backgroundColor = .lightGray
-        nextButton.layer.cornerRadius = 18
-        nextButton.tintColor = .white
+    override func setupButton(button: UIButton) {
+        super.setupButton(button: nextButton)
+        button.setTitle("다음", for: .normal)
     }
     /*
     // MARK: - Navigation

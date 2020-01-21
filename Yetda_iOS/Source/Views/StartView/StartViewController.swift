@@ -18,18 +18,15 @@ class StartViewController: BaseViewController {
     /// custom setup
     override func setup() {
         super.setup()
-        setupStartButton()
+        setupButton(button: startButton)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    
-    // MARK: - Add AutoLayout to Button
-    func setupStartButton() {
-        startButton.setTitle("시작하기", for: .normal)
-        startButton.backgroundColor = .lightGray
-        startButton.layer.cornerRadius = 18
-        startButton.tintColor = .white
+    override func setupButton(button: UIButton) {
+        super.setupButton(button: startButton)
+        button.setTitle("시작하기", for: .normal)
     }
+    
     
     override func setupUI() {
         super.setupUI()
