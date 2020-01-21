@@ -27,23 +27,17 @@ class StartViewController: BaseViewController {
     func setupStartButton() {
         startButton.setTitle("시작하기", for: .normal)
         startButton.backgroundColor = .lightGray
-        startButton.layer.cornerRadius = 10
+        startButton.layer.cornerRadius = 18
         startButton.tintColor = .white
     }
     
     override func setupUI() {
         super.setupUI()
-        //        view.snp.makeConstraints { (make) in
-        //            make.topMargin.equalTo(view.safeAreaLayoutGuide.snp.top)
-        //            make.leftMargin.equalTo(view.safeAreaLayoutGuide.snp.left)
-        //            make.rightMargin.equalTo(view.safeAreaLayoutGuide.snp.right)
-        //            make.bottomMargin.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-        //        }
         
         startButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(view)
-            make.width.equalTo(200)
-            make.height.equalTo(40)
+            make.width.equalTo(240)
+            make.height.equalTo(36)
             make.bottom.equalTo(-80)
         }
     }
