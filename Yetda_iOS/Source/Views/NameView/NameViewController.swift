@@ -20,7 +20,6 @@ class NameViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        view.backgroundColor = UIColor.lightGray
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
@@ -32,14 +31,6 @@ class NameViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    
-    // MARK: - Add AutoLayout to Button
-    func setupNextButton() {
-        nextButton.setTitle("다음", for: .normal)
-        nextButton.backgroundColor = .lightGray
-        nextButton.layer.cornerRadius = 18
-        nextButton.tintColor = .white
-    }
     
     override func setupUI() {
         super.setupUI()
@@ -53,16 +44,11 @@ class NameViewController: BaseViewController {
         verticalView.snp.makeConstraints { (make) in
             make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
             make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(20)
-//            make.left.right.equalTo(20)
-            
             make.top.equalTo(200)
         }
         
 
     }
-
-    
-    
     
     func setupGuideTextLabel() {
         guideText.text = """
@@ -72,10 +58,13 @@ class NameViewController: BaseViewController {
         guideText.textColor = .darkGray
     }
     
-    
-
-    
-
+    // MARK: - Add AutoLayout to Button
+    func setupNextButton() {
+        nextButton.setTitle("다음", for: .normal)
+        nextButton.backgroundColor = .lightGray
+        nextButton.layer.cornerRadius = 18
+        nextButton.tintColor = .white
+    }
     /*
     // MARK: - Navigation
 
