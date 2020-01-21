@@ -60,8 +60,7 @@ class NameViewController: BaseViewController {
         
 
     }
-    
-    
+
     
     
     

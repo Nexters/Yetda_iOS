@@ -48,6 +48,9 @@
                                 <rect key="frame" x="164" y="586" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="3BI-Cp-qiq" kind="show" id="eNO-cx-9Tq"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Umj-g8-Kaz">
                                 <rect key="frame" x="132" y="348" width="131" height="54.5"/>
@@ -91,6 +94,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CZQ-BJ-83x"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zFk-3v-aaa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-9f-ZuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
