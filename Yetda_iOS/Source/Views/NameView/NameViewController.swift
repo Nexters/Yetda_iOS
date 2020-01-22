@@ -27,24 +27,17 @@ class NameViewController: BaseViewController {
     /// custom setup
     override func setup() {
         super.setup()
-        setupButton(button: nextButton)
-//        setupGuideTextLabel()
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     
     override func setupUI() {
         super.setupUI()
-        setLabelAndTextFieldStack()
         
-        nextButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.width.equalTo(240)
-            make.height.equalTo(36)
-            make.bottom.equalTo(-80)
-        }
+        setButton()
+        setVerticalStackView()
+        setGuideLabel()
+        setNameTextField()
         
-
     }
     
     override func setupButton(button: UIButton) {
@@ -52,27 +45,35 @@ class NameViewController: BaseViewController {
         button.setTitle("다음", for: .normal)
     }
     
-    func setLabelAndTextFieldStack() {
+    // Button: BaseViewController
+    func setButton() {
+        setupButton(button: nextButton)
         
+        nextButton.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view)
+            make.width.equalTo(240)
+            make.height.equalTo(36)
+            make.bottom.equalTo(-80)
+        }
+    }
+    
+    // MARK: - Vertical StackView with Label and TextField
+    func setVerticalStackView() {
         verticalStackView = UIStackView()
         verticalStackView.axis = .vertical
         verticalStackView.backgroundColor = .green
         
-        nameTextField = UITextField()
-        nameTextField.borderStyle = .none
-        nameTextField.placeholder = "이름"
-//        nameTextField.keyboardType = UIKeyboardType.default
-        nameTextField.delegate = self
+        view.addSubview(verticalStackView)
         
-        
-        bottomBorderView = UIView()
-        if nameTextField.isSelected {
-            bottomBorderView.backgroundColor = .darkGray
-        } else {
-            bottomBorderView.backgroundColor = .lightGray
-        }
-        
-        
+        verticalStackView.snp.makeConstraints { (make) in
+        make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
+        make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(20)
+        make.bottom.equalTo(nextButton.snp_topMargin).offset(-20)
+        make.top.equalTo(200)
+            }
+    }
+    
+    func setGuideLabel() {
         guideLabel = UILabel()
         guideLabel.numberOfLines = 0
         guideLabel.text = """
@@ -81,24 +82,31 @@ class NameViewController: BaseViewController {
         """
         guideLabel.textColor = .darkGray
         
-        view.addSubview(verticalStackView)
         verticalStackView.addSubview(guideLabel)
-        verticalStackView.addSubview(nameTextField)
-        verticalStackView.addSubview(bottomBorderView)
         
-        
-        
-        verticalStackView.snp.makeConstraints { (make) in
-            make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
-            make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(20)
-            make.bottom.equalTo(nextButton.snp_topMargin).offset(-20)
-            make.top.equalTo(200)
-                }
-        
+        // Set SNP Constraints
         guideLabel.snp.makeConstraints { (make) in
             make.trailing.equalTo(verticalStackView)
             make.leading.equalTo(verticalStackView)
         }
+    }
+    
+    func setNameTextField() {
+        nameTextField = UITextField()
+        nameTextField.borderStyle = .none
+        nameTextField.placeholder = "이름"
+        nameTextField.delegate = self
+        
+        // CreateBottom Border with UIView
+        bottomBorderView = UIView()
+        if nameTextField.isSelected {
+            bottomBorderView.backgroundColor = .darkGray
+        } else {
+            bottomBorderView.backgroundColor = .lightGray
+        }
+        
+        verticalStackView.addSubview(nameTextField)
+        verticalStackView.addSubview(bottomBorderView)
         
         nameTextField.snp.makeConstraints { (make) in
             make.topMargin.equalTo(guideLabel.snp_bottomMargin).offset(20)
@@ -113,6 +121,10 @@ class NameViewController: BaseViewController {
             make.leading.equalTo(verticalStackView)
             make.height.equalTo(2)
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     /*
