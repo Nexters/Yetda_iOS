@@ -19,6 +19,8 @@
 		FAB0FD2223C4945900674A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2023C4945900674A3E /* Main.storyboard */; };
 		FAB0FD2423C4945A00674A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2323C4945A00674A3E /* Assets.xcassets */; };
 		FAB0FD2723C4945A00674A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2523C4945A00674A3E /* LaunchScreen.storyboard */; };
+		FAE165D923D97C2300CEC5F6 /* NameViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE165D823D97C2300CEC5F6 /* NameViewController+layout.swift */; };
+		FAE165DB23D97DDA00CEC5F6 /* NameViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE165DA23D97DDA00CEC5F6 /* NameViewController+TextField.swift */; };
 		FAEC903723CC84A200010233 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903623CC84A200010233 /* NameViewController.swift */; };
 		FAEC903923CC84B700010233 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903823CC84B700010233 /* BirthdayViewController.swift */; };
 		FAEC903B23CC84D600010233 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903A23CC84D600010233 /* PriceViewController.swift */; };
@@ -43,6 +45,8 @@
 		FAB0FD2323C4945A00674A3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB0FD2623C4945A00674A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB0FD2823C4945A00674A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE165D823D97C2300CEC5F6 /* NameViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameViewController+layout.swift"; sourceTree = "<group>"; };
+		FAE165DA23D97DDA00CEC5F6 /* NameViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameViewController+TextField.swift"; sourceTree = "<group>"; };
 		FAEC903623CC84A200010233 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		FAEC903823CC84B700010233 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		FAEC903A23CC84D600010233 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				FAEC903623CC84A200010233 /* NameViewController.swift */,
+				FAE165D823D97C2300CEC5F6 /* NameViewController+layout.swift */,
+				FAE165DA23D97DDA00CEC5F6 /* NameViewController+TextField.swift */,
 			);
 			path = NameView;
 			sourceTree = "<group>";
@@ -359,8 +365,10 @@
 				FAEC903F23CC850000010233 /* ResultViewController.swift in Sources */,
 				FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */,
 				FAEC903B23CC84D600010233 /* PriceViewController.swift in Sources */,
+				FAE165D923D97C2300CEC5F6 /* NameViewController+layout.swift in Sources */,
 				FAEC903D23CC84E800010233 /* QuestionViewController.swift in Sources */,
 				4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */,
+				FAE165DB23D97DDA00CEC5F6 /* NameViewController+TextField.swift in Sources */,
 				FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */,
 				4C002D7723D0B53400A1AC91 /* FIrebaseIntegrator.swift in Sources */,
 			);
