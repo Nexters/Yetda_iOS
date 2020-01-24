@@ -11,11 +11,12 @@ import UIKit
 class QuestionViewController: UIViewController {
 
 
-    let cardSize = CGSize(width: 200, height: 300)
+    let cardSize = CGSize(width: 266, height: 297)
     
     let questionCardView: UIView = UIView()
     let yesButton: UIButton = UIButton()
     let noButton: UIButton = UIButton()
+    let midButton: UIButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
