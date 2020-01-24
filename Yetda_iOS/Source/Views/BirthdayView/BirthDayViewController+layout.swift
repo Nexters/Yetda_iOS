@@ -9,42 +9,15 @@
 import UIKit
 
 extension BirthdayViewController {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
-    }
-
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch component {
-        case 0:
-            return months.count
-        case 1:
-            return days.count
-        default:
-            return 0
-        }
-    }
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch component {
-        case 0:
-            return months[row]
-        case 1:
-            return days[row]
-        default:
-            return nil
-        }
-    }
     
-    func populateData() {
-        for month in 1...12 {
-            months.append(String("\(month)월"))
-        }
+    // MARK: - UI and SNP configurations
+    func setSNP() {
         
-        for day in 1...31 {
-            days.append(String("\(day)일"))
-        }
+        setDatePicker()
+        setButton()
     }
     
+    // Create DatePicker with UIPickerView
     func setDatePicker() {
         datePicker = UIPickerView()
         
@@ -55,6 +28,19 @@ extension BirthdayViewController {
         datePicker.snp.makeConstraints { (make) in
             make.leading.trailing.equalTo(self.view.safeAreaLayoutGuide).inset(20)
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(-20)
+        }
+    }
+    
+    // Set SNP to nextButton
+    func setButton() {
+        setupButton(button: nextButton)
+
+        nextButton.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view)
+            make.width.equalTo(240)
+            make.height.equalTo(36)
+            make.bottom.equalTo(datePicker.snp.top).inset(-80)
+//            make.top.equalTo(200)
         }
     }
 }
