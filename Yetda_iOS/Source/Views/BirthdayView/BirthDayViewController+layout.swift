@@ -16,6 +16,7 @@ extension BirthdayViewController {
         setDatePicker()
         setButton()
     }
+
     
     // Create DatePicker with UIPickerView
     func setDatePicker() {

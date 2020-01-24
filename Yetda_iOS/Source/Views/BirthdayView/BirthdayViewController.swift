@@ -22,9 +22,7 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         super.viewDidLoad()
 
         populateData()
-        
-//        datePicker.delegate = self
-//        datePicker.dataSource = self
+
         // Do any additional setup after loading the view.
     }
     
@@ -33,11 +31,10 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         super.setup()
     }
     
-    // MARK: - apply layout from extension
-    override func setupUI() {
-        super.setupUI()
-        
-        setSNP()
+    // Change Button title to "다음"
+    override func setupButton(button: UIButton) {
+        super.setupButton(button: nextButton)
+        button.setTitle("다음", for: .normal)
     }
     
     // populate months and days array
@@ -49,6 +46,13 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         for day in 1...31 {
             days.append(String("\(day)일"))
         }
+    }
+    
+    // MARK: - apply layout from extension
+    override func setupUI() {
+        super.setupUI()
+        
+        setSNP()
     }
     
     /*

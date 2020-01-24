@@ -77,6 +77,9 @@
                                 <rect key="frame" x="184" y="694" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="AVg-9i-zlU" kind="show" id="PLf-pS-Orl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -101,6 +104,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="PgT-h6-AmA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dge-vR-R7h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tP-mb-CRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
