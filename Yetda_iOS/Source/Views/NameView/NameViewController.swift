@@ -12,59 +12,43 @@ import SnapKit
 class NameViewController: BaseViewController {
 
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var guideText: UILabel!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var verticalView: UILabel!
+    var guideLabel: UILabel!
+    var nameTextField: UITextField!
+    var verticalStackView: UIStackView!
+    var bottomBorderView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    /// custom setup
+    // custom setup
     override func setup() {
         super.setup()
-        setupNextButton()
-        setupGuideTextLabel()
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    
+    // MARK: - apply layout from extension
     override func setupUI() {
         super.setupUI()
         
-        nextButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.width.equalTo(240)
-            make.height.equalTo(36)
-            make.bottom.equalTo(-80)
-        }
-        verticalView.snp.makeConstraints { (make) in
-            make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
-            make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(20)
-            make.top.equalTo(200)
-        }
+        setButton()
+        setVerticalStackView()
+        setGuideLabel()
+        setNameTextField()
         
-
     }
     
-    func setupGuideTextLabel() {
-        guideText.text = """
-        선물 줄 분의 이름이
-        어떻게 되시나요?
-        """
-        guideText.textColor = .darkGray
+    override func setupButton(button: UIButton) {
+        super.setupButton(button: nextButton)
+        button.setTitle("다음", for: .normal)
     }
     
-    // MARK: - Add AutoLayout to Button
-    func setupNextButton() {
-        nextButton.setTitle("다음", for: .normal)
-        nextButton.backgroundColor = .lightGray
-        nextButton.layer.cornerRadius = 18
-        nextButton.tintColor = .white
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
+    
     /*
     // MARK: - Navigation
 
@@ -75,4 +59,7 @@ class NameViewController: BaseViewController {
     }
     */
 
+
+
 }
+
