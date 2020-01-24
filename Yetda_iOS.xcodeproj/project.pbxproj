@@ -26,6 +26,7 @@
 		FAEC903B23CC84D600010233 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903A23CC84D600010233 /* PriceViewController.swift */; };
 		FAEC903D23CC84E800010233 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903C23CC84E800010233 /* QuestionViewController.swift */; };
 		FAEC903F23CC850000010233 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903E23CC850000010233 /* ResultViewController.swift */; };
+		FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FAEC903A23CC84D600010233 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		FAEC903C23CC84E800010233 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		FAEC903E23CC850000010233 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirthDayViewController+layout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEC903823CC84B700010233 /* BirthdayViewController.swift */,
+				FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */,
 			);
 			path = BirthdayView;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
+				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,
 				4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */,
 				FAEC903923CC84B700010233 /* BirthdayViewController.swift in Sources */,
