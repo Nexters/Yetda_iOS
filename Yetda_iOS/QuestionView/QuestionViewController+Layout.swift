@@ -13,14 +13,29 @@ extension QuestionViewController {
     
     func setupView() {  // 전체 뷰
         
+        self.view.addSubview(questionNumLabel)
         self.view.addSubview(questionCardView)
         self.view.addSubview(noButton)
         self.view.addSubview(yesButton)
         self.view.addSubview(midButton)
         
+        setupNumLabel()
         setupCardView()
         setupYNButton()
         setupMidButton()
+    }
+    
+    private func setupNumLabel() {
+        
+        questionNumLabel.text = "Q1"
+        questionNumLabel.font = .systemFont(ofSize: 38)
+        questionNumLabel.textColor = UIColor(red: 109/255, green: 148/255, blue: 178/255, alpha: 1)
+        questionNumLabel.sizeToFit()
+        
+        questionNumLabel.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.view)
+            make.top.equalTo(self.view).offset(164)
+        }
     }
     
     private func setupCardView() {  // 카드 뷰 부분
