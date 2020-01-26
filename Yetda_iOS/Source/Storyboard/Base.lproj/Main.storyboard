@@ -44,12 +44,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4h-mO-CDp">
-                                <rect key="frame" x="184" y="629" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLF-HR-Dqc">
+                                <rect key="frame" x="164" y="586" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="LMg-ld-p3J" kind="show" id="Uqh-ub-2Ln"/>
+                                    <segue destination="3BI-Cp-qiq" kind="show" id="eNO-cx-9Tq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,6 +57,9 @@
                         <viewLayoutGuide key="safeArea" id="6o3-Y8-7mL"/>
                     </view>
                     <navigationItem key="navigationItem" id="4IP-Xa-3ug"/>
+                    <connections>
+                        <outlet property="nextButton" destination="DLF-HR-Dqc" id="DIU-I9-ocq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKe-19-ezZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,9 +72,23 @@
                     <view key="view" contentMode="scaleToFill" id="FH2-fv-1ek">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtv-cY-4wp">
+                                <rect key="frame" x="184" y="694" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="AVg-9i-zlU" kind="show" id="PLf-pS-Orl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CZQ-BJ-83x"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zFk-3v-aaa"/>
+                    <connections>
+                        <outlet property="nextButton" destination="dtv-cY-4wp" id="N2a-Hr-lOf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-9f-ZuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,9 +101,20 @@
                     <view key="view" contentMode="scaleToFill" id="Zsf-cO-Iuw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTf-i6-zJ5">
+                                <rect key="frame" x="184" y="649" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="LMg-ld-p3J" kind="show" id="Oif-NT-29Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="PgT-h6-AmA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dge-vR-R7h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tP-mb-CRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

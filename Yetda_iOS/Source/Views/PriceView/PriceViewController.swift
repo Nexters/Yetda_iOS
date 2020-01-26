@@ -1,5 +1,5 @@
 //
-//  BirthdayViewController.swift
+//  PriceViewController.swift
 //  Yetda_iOS
 //
 //  Created by Leon Kong on 2020/01/13.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class BirthdayViewController: UIViewController {
+class PriceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .green
         // Do any additional setup after loading the view.
     }
     
