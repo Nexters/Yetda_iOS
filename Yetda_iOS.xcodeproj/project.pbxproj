@@ -10,6 +10,7 @@
 		3670C56BDABF69D1820BC486 /* Pods_Yetda_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */; };
 		3A75F21423CEF48A00A73642 /* QuestionViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75F21323CEF48A00A73642 /* QuestionViewController+Layout.swift */; };
 		3A75F21723D0D0AE00A73642 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75F21623D0D0AE00A73642 /* UIView+.swift */; };
+		3A9ADC3023DD934300B6DFA8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ADC2F23DD934300B6DFA8 /* UIColor+.swift */; };
 		3AF6A9BE23C4A72400B588CE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */; };
 		3AF6A9C223C4AD0300B588CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */; };
 		FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1A23C4945900674A3E /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		33118D09705F0F5BCD60B00B /* Pods-Yetda_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3A75F21323CEF48A00A73642 /* QuestionViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+Layout.swift"; sourceTree = "<group>"; };
 		3A75F21623D0D0AE00A73642 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		3A9ADC2F23DD934300B6DFA8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.release.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				3A75F21623D0D0AE00A73642 /* UIView+.swift */,
+				3A9ADC2F23DD934300B6DFA8 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,
 				3A75F21423CEF48A00A73642 /* QuestionViewController+Layout.swift in Sources */,
 				FAEC903923CC84B700010233 /* BirthdayViewController.swift in Sources */,
+				3A9ADC3023DD934300B6DFA8 /* UIColor+.swift in Sources */,
 				3A75F21723D0D0AE00A73642 /* UIView+.swift in Sources */,
 				FAEC903F23CC850000010233 /* ResultViewController.swift in Sources */,
 				FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */,

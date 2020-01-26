@@ -29,7 +29,7 @@ extension QuestionViewController {
         
         questionNumLabel.text = "Q1"
         questionNumLabel.font = .systemFont(ofSize: 38)
-        questionNumLabel.textColor = UIColor(red: 109/255, green: 148/255, blue: 178/255, alpha: 1)
+        questionNumLabel.textColor = UIColor.fadedBlue
         questionNumLabel.sizeToFit()
         
         questionNumLabel.snp.makeConstraints { (make) in
@@ -52,10 +52,12 @@ extension QuestionViewController {
     private func setupYNButton() {  // 예 아니오 버튼 부분
         
         noButton.setTitle("X", for: .normal)
-        noButton.setTitleColor(UIColor.black, for: .normal)
+        noButton.setTitleColor(UIColor.cloudyBlue, for: .normal)
+        noButton.titleLabel?.font = .boldSystemFont(ofSize: 28)
         
         yesButton.setTitle("O", for: .normal)
-        yesButton.setTitleColor(UIColor.black, for: .normal)
+        yesButton.setTitleColor(UIColor.cloudyBlue, for: .normal)
+        yesButton.titleLabel?.font = .boldSystemFont(ofSize: 28)
         
         noButton.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.view)
@@ -71,7 +73,7 @@ extension QuestionViewController {
     private func setupMidButton() {
         
         midButton.setTitle("잘 모르겠어요", for: .normal)
-        midButton.setTitleColor(.gray, for: .normal)
+        midButton.setTitleColor(.brownGrey, for: .normal)
         midButton.titleLabel?.font = .systemFont(ofSize: 18)
         
         // 버튼에 밑줄
