@@ -3,5 +3,6 @@ disabled_rules:
 - trailing_newline
 - trailing_whitespace
 - vertical_whitespace
+- line_length
 excluded:
 - Pods
