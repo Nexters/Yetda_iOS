@@ -12,6 +12,11 @@ import SnapKit
 class GenderViewController: BaseViewController {
     
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var femaleButton: UIButton!
+    @IBOutlet weak var maleButton: UIButton!
+    @IBOutlet weak var femaleLabel: UILabel!
+    @IBOutlet weak var maleLabel: UILabel!
+    
     
     override func viewDidLoad() {
            super.viewDidLoad()
@@ -41,5 +46,9 @@ class GenderViewController: BaseViewController {
            button.setTitle("다음", for: .normal)
        }
     
+    @IBAction func femaleButtonPressed(_ sender: UIButton) {
+    }
+    @IBAction func maleButtonPressed(_ sender: UIButton) {
+    }
     
 }

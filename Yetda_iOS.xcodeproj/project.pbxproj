@@ -16,6 +16,7 @@
 		4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */; };
 		4C002D7723D0B53400A1AC91 /* FIrebaseIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7623D0B53400A1AC91 /* FIrebaseIntegrator.swift */; };
 		4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7A23D0B9C500A1AC91 /* BaseViewController.swift */; };
+		FA9E152E23E1277E003333FE /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E152D23E1277E003333FE /* CheckBox.swift */; };
 		FAA5B41C23DED9520082005E /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5B41B23DED9520082005E /* GenderViewController.swift */; };
 		FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1A23C4945900674A3E /* AppDelegate.swift */; };
 		FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */; };
@@ -46,6 +47,7 @@
 		4C002D7A23D0B9C500A1AC91 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.release.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yetda_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA9E152D23E1277E003333FE /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		FAA5B41B23DED9520082005E /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		FAB0FD1723C4945900674A3E /* Yetda_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yetda_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0FD1A23C4945900674A3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA5B41B23DED9520082005E /* GenderViewController.swift */,
+				FA9E152D23E1277E003333FE /* CheckBox.swift */,
 			);
 			path = GenderView;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,
 				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
+				FA9E152E23E1277E003333FE /* CheckBox.swift in Sources */,
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,
 				4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */,
 				FAEC903923CC84B700010233 /* BirthdayViewController.swift in Sources */,
