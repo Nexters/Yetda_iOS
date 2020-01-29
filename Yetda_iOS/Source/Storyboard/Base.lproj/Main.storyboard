@@ -182,46 +182,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVH-0O-ahD">
-                                <rect key="frame" x="96" y="511" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="femaleButtonPressed:" destination="9Tc-Gg-ifO" eventType="touchUpInside" id="DqU-lh-WrW"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONC-m3-ki7">
-                                <rect key="frame" x="159" y="520" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP4-cN-YtE">
-                                <rect key="frame" x="231" y="511" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="maleButtonPressed:" destination="9Tc-Gg-ifO" eventType="touchUpInside" id="NvV-Pz-FjA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEO-zK-gVb">
-                                <rect key="frame" x="303" y="516" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="C3G-kk-nVP"/>
                     </view>
                     <navigationItem key="navigationItem" id="8QH-CC-y7f"/>
                     <connections>
-                        <outlet property="femaleButton" destination="GVH-0O-ahD" id="GAE-w0-r4P"/>
-                        <outlet property="femaleLabel" destination="ONC-m3-ki7" id="o6m-Yf-0Qb"/>
-                        <outlet property="maleButton" destination="aP4-cN-YtE" id="Xb4-gZ-Xpn"/>
-                        <outlet property="maleLabel" destination="gEO-zK-gVb" id="W0F-QA-CCa"/>
                         <outlet property="nextButton" destination="ytg-nx-sEC" id="JkV-x5-6Rj"/>
                     </connections>
                 </viewController>

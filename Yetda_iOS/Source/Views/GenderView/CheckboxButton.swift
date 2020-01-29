@@ -1,5 +1,5 @@
 //
-//  CheckBox.swift
+//  CheckboxButton.swift
 //  Yetda_iOS
 //
 //  Created by Leon Kong on 2020/01/29.
@@ -8,6 +8,7 @@
 
 import UIKit
 
-class CheckBox: UIButton {
+class CheckboxButton: UIButton {
     
 }
+
