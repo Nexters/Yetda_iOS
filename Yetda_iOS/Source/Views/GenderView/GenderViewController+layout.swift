@@ -59,13 +59,13 @@ extension GenderViewController {
         }
         
         maleButton.setButtonTag(tagId: 0)
-        femaleButton.setButtonAction()
+        setButtonAction(button: femaleButton)
         femaleCheckBox.snp.makeConstraints { (make) in
             make.left.equalTo(26)
         }
         
         maleButton.setButtonTag(tagId: 1)
-        maleButton.setButtonAction()
+        setButtonAction(button: maleButton)
         maleCheckBox.snp.makeConstraints { (make) in
             make.left.equalTo(femaleLabel.snp.rightMargin).inset(-59)
         }
@@ -127,7 +127,30 @@ extension GenderViewController {
         }
     }
     
+    // Add CheckBox button action
+    func setButtonAction(button: UIButton) {
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
+
+    // male/female Buttons are mutually exclusive when selecting
+    @objc func buttonAction(sender: UIButton!) {
+        if sender.backgroundColor == .charcoalGrey {
+            sender.backgroundColor = .clear
+        } else {
+            sender.backgroundColor = .charcoalGrey
+        }
+        
+        if sender == maleButton {
+            femaleButton.backgroundColor = .clear
+        } else {
+            maleButton.backgroundColor = .clear
+        }
+
+
+    }
+    
 }
+
 
 extension UIButton {
     // Set CheckBox button style
@@ -144,21 +167,21 @@ extension UIButton {
         self.tag = tagId
     }
     
-    // Add CheckBox button action
-    func setButtonAction() {
-        self.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-    }
+//    // Add CheckBox button action
+//    func setButtonAction() {
+//        self.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//    }
     
-    // male/female Buttons are mutually exclusive when selecting
-    @objc func buttonAction(sender: UIButton!) {
-        if sender.backgroundColor == .charcoalGrey {
-            sender.backgroundColor = .clear
-        } else {
-            sender.backgroundColor = .charcoalGrey
-        }
-
-        
-    }
+//    // male/female Buttons are mutually exclusive when selecting
+//    @objc func buttonAction(sender: UIButton!) {
+//        if sender.backgroundColor == .charcoalGrey {
+//            sender.backgroundColor = .clear
+//        } else {
+//            sender.backgroundColor = .charcoalGrey
+//        }
+//
+//
+//    }
     
     func setMutuallyExclusiveSelection(view: UIView!, selecedTag: Int) {
         switch selecedTag {
