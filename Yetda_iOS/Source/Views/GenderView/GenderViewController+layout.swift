@@ -45,72 +45,62 @@ extension GenderViewController {
         
     }
     
-    // Common Settings for CheckBox Label
-    func setCommonLabelSetup(label: UILabel, title: String) {
-        label.text = title
-        label.tintColor = .darkGray
-        label.adjustsFontSizeToFitWidth = true
-        label.numberOfLines = 0
-        
-        label.snp.makeConstraints { (make) in
-            make.width.equalTo(75)
-            make.height.equalTo(33)
-        }
-    }
     
     // Set SNP to CheckBox labels and buttons
     func setLabelsAndButtons() {
-        setCommonLabelSetup(label: femaleLabel, title: "여성")
+        femaleLabel.setCommonLabelSetup(title: "여성")
         femaleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(femaleButton.snp.right).inset(-14)
         }
         
-        setCommonLabelSetup(label: maleLabel, title: "남성")
+        maleLabel.setCommonLabelSetup(title: "남성")
         maleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(maleButton.snp.right).inset(-14)
         }
         
-        setButtonAction(button: femaleButton)
+        maleButton.setButtonTag(tagId: 0)
+        femaleButton.setButtonAction()
         femaleCheckBox.snp.makeConstraints { (make) in
             make.left.equalTo(26)
         }
         
-        setButtonAction(button: maleButton)
+        maleButton.setButtonTag(tagId: 1)
+        maleButton.setButtonAction()
         maleCheckBox.snp.makeConstraints { (make) in
             make.left.equalTo(femaleLabel.snp.rightMargin).inset(-59)
         }
         
     }
     
-    // Set CheckBox button style
-    func setButtonStyle(button: UIButton) {
-        button.backgroundColor = .clear
-        button.layer.cornerRadius = 8
-        
-        button.snp.makeConstraints { (make) in
-            make.width.height.equalTo(16)
-        }
-    }
+//    // Set CheckBox button style
+//    func setButtonStyle(button: UIButton) {
+//        button.backgroundColor = .clear
+//        button.layer.cornerRadius = 8
+//
+//        button.snp.makeConstraints { (make) in
+//            make.width.height.equalTo(16)
+//        }
+//    }
     
     // Add CheckBox button action
-    func setButtonAction(button: UIButton) {
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-    }
-    
-    // male/female Buttons are mutually exclusive when selecting
-    @objc func buttonAction(sender: UIButton!) {
-        if sender.backgroundColor == .charcoalGrey {
-            sender.backgroundColor = .clear
-        } else {
-            sender.backgroundColor = .charcoalGrey
-        }
-        
-        if sender == maleButton {
-            femaleButton.backgroundColor = .clear
-        } else {
-            maleButton.backgroundColor = .clear
-        }
-    }
+//    func setButtonAction(button: UIButton) {
+//        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//    }
+//
+//    // male/female Buttons are mutually exclusive when selecting
+//    @objc func buttonAction(sender: UIButton!) {
+//        if sender.backgroundColor == .charcoalGrey {
+//            sender.backgroundColor = .clear
+//        } else {
+//            sender.backgroundColor = .charcoalGrey
+//        }
+//
+//        if sender == maleButton {
+//            femaleButton.backgroundColor = .clear
+//        } else {
+//            maleButton.backgroundColor = .clear
+//        }
+//    }
     
     // Outer Border of CheckBox Button
     func setButtonContainerView(view: UIView) {
@@ -128,13 +118,56 @@ extension GenderViewController {
     
     func setCheckBox(view: UIView, button: UIButton) {
         setButtonContainerView(view: view)
-        setButtonStyle(button: button)
-        setButtonAction(button: button)
-        
+        button.setButtonStyle()
+//        button.setButtonAction(view: horizontalStackView)
+
         view.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.center.equalTo(view)
         }
     }
     
+}
+
+extension UIButton {
+    // Set CheckBox button style
+    func setButtonStyle() {
+        self.backgroundColor = .clear
+        self.layer.cornerRadius = 8
+        
+        self.snp.makeConstraints { (make) in
+            make.width.height.equalTo(16)
+        }
+    }
+    
+    func setButtonTag(tagId: Int) {
+        self.tag = tagId
+    }
+    
+    // Add CheckBox button action
+    func setButtonAction() {
+        self.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
+    
+    // male/female Buttons are mutually exclusive when selecting
+    @objc func buttonAction(sender: UIButton!) {
+        if sender.backgroundColor == .charcoalGrey {
+            sender.backgroundColor = .clear
+        } else {
+            sender.backgroundColor = .charcoalGrey
+        }
+
+        
+    }
+    
+    func setMutuallyExclusiveSelection(view: UIView!, selecedTag: Int) {
+        switch selecedTag {
+        case 0:
+            view.viewWithTag(1)?.backgroundColor = .clear
+        default:
+            view.viewWithTag(0)?.backgroundColor = .clear
+        }
+    }
+    
+
 }
