@@ -83,7 +83,7 @@ extension GenderViewController {
         
     }
     
-    
+    // CheckBox Button and View setups
     func setCheckBox(view: UIView, button: UIButton) {
         setButtonContainerView(view: view)
         button.setButtonStyle()
@@ -100,7 +100,7 @@ extension GenderViewController {
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
 
-//     male/female Buttons are mutually exclusive when selecting
+    //     male/female Buttons are mutually exclusive when selecting
     @objc func buttonAction(sender: UIButton!) {
         if sender.backgroundColor == .charcoalGrey {
             sender.backgroundColor = .clear
