@@ -19,7 +19,7 @@ class QuestionViewController: UIViewController {
     let backCardView: UIView = UIView()
     let frontCardLabel: UILabel = UILabel()
     
-    let questionNumLabel: UILabel = UILabel()
+    let descriptionLabel: UILabel = UILabel()
     let yesButton: UIButton = UIButton()
     let noButton: UIButton = UIButton()
     let midButton: UIButton = UIButton()

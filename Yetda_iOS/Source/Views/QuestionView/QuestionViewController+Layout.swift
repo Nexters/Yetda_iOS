@@ -13,7 +13,7 @@ extension QuestionViewController {
     
     func setupView() {  // 전체 뷰
         
-        self.view.addSubview(questionNumLabel)
+        self.view.addSubview(descriptionLabel)
         self.view.addSubview(backCardView)
         self.view.addSubview(frontCardView)
         self.view.addSubview(noButton)
@@ -29,12 +29,12 @@ extension QuestionViewController {
     
     private func setupNumLabel() {
         
-        questionNumLabel.text = "@@님은 어떤 사람인가요?"
-        questionNumLabel.font = .systemFont(ofSize: 18)
-        questionNumLabel.textColor = UIColor.brownishGrey   
-        questionNumLabel.sizeToFit()
+        descriptionLabel.text = "@@님은 어떤 사람인가요?"
+        descriptionLabel.font = .systemFont(ofSize: 18)
+        descriptionLabel.textColor = UIColor.brownishGrey   
+        descriptionLabel.sizeToFit()
         
-        questionNumLabel.snp.makeConstraints { (make) in
+        descriptionLabel.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.view)
             make.top.equalTo(self.view).offset(164)
         }
