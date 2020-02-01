@@ -10,7 +10,8 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
-
+    var questionNum = 1
+    
     let cardSize = CGSize(width: 266, height: 297)
     
     let frontCardView: UIView = UIView()
@@ -26,8 +27,6 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
 
         setupView()
+        setupButtonAction()
     }
-    
-    
-    
 }
