@@ -33,9 +33,11 @@ extension QuestionViewController {
     @objc func showNextCard() {
         
         questionNum += 1
-        
-        questionNumLabel.text = "Q\(questionNum)"
         frontCardLabel.text = "Question\(questionNum)"
+        
+        if questionNum > basePoint {
+            frontCardLabel.text = "@@님에 대해 조금만 더 알려주세요!"
+        }
         
         frontCardLabel.alpha = 0
         frontCardView.transform = .identity

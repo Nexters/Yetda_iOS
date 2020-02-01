@@ -11,6 +11,7 @@ import UIKit
 class QuestionViewController: UIViewController {
 
     var questionNum = 1
+    var basePoint = 5
     
     let cardSize = CGSize(width: 266, height: 297)
     

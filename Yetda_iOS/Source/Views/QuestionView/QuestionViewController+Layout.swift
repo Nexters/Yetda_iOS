@@ -29,9 +29,9 @@ extension QuestionViewController {
     
     private func setupNumLabel() {
         
-        questionNumLabel.text = "Q1"
-        questionNumLabel.font = .systemFont(ofSize: 38)
-        questionNumLabel.textColor = UIColor.fadedBlue
+        questionNumLabel.text = "@@님은 어떤 사람인가요?"
+        questionNumLabel.font = .systemFont(ofSize: 18)
+        questionNumLabel.textColor = UIColor.brownishGrey   
         questionNumLabel.sizeToFit()
         
         questionNumLabel.snp.makeConstraints { (make) in
@@ -66,7 +66,7 @@ extension QuestionViewController {
     }
     
     private func setupFrontCardLabel() {
-        frontCardLabel.text = "frontCard"
+        frontCardLabel.text = "Question\(questionNum)"
         
         frontCardLabel.snp.makeConstraints { (make) in
             make.center.equalTo(frontCardView)
