@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JDc-QH-eFO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JDc-QH-eFO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +49,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="3BI-Cp-qiq" kind="show" id="eNO-cx-9Tq"/>
+                                    <segue destination="9Tc-Gg-ifO" kind="show" id="iSC-EH-J00"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-9f-ZuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2692.753623188406" y="122.54464285714285"/>
+            <point key="canvasLocation" x="3496" y="117"/>
         </scene>
         <!--Price View Controller-->
         <scene sceneID="fhY-kc-n5F">
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tP-mb-CRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3481.1594202898555" y="122.54464285714285"/>
+            <point key="canvasLocation" x="4296" y="119"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="zBV-sf-WIP">
@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ey7-yw-9AP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4321.739130434783" y="122.54464285714285"/>
+            <point key="canvasLocation" x="5135" y="119"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="DbV-4o-RwX">
@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECU-Dx-1KK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5144.927536231884" y="122.54464285714285"/>
+            <point key="canvasLocation" x="5955" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wip-WW-Opr">
@@ -168,6 +168,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihN-mA-0e2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>
+        </scene>
+        <!--GenderViewcontroller-->
+        <scene sceneID="SrR-4e-168">
+            <objects>
+                <viewController title="GenderViewcontroller" id="9Tc-Gg-ifO" customClass="GenderViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gz1-Dq-2Ub">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-nx-sEC">
+                                <rect key="frame" x="184" y="569" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="3BI-Cp-qiq" kind="show" id="MJq-6y-0kh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="C3G-kk-nVP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8QH-CC-y7f"/>
+                    <connections>
+                        <outlet property="nextButton" destination="ytg-nx-sEC" id="JkV-x5-6Rj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAm-hN-zwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671" y="119"/>
         </scene>
     </scenes>
 </document>
