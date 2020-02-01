@@ -13,7 +13,10 @@ class QuestionViewController: UIViewController {
 
     let cardSize = CGSize(width: 266, height: 297)
     
-    let questionCardView: UIView = UIView()
+    let frontCardView: UIView = UIView()
+    let backCardView: UIView = UIView()
+    let frontCardLabel: UILabel = UILabel()
+    
     let questionNumLabel: UILabel = UILabel()
     let yesButton: UIButton = UIButton()
     let noButton: UIButton = UIButton()
@@ -24,4 +27,7 @@ class QuestionViewController: UIViewController {
 
         setupView()
     }
+    
+    
+    
 }

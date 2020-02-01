@@ -14,13 +14,15 @@ extension QuestionViewController {
     func setupView() {  // 전체 뷰
         
         self.view.addSubview(questionNumLabel)
-        self.view.addSubview(questionCardView)
+        self.view.addSubview(backCardView)
+        self.view.addSubview(frontCardView)
         self.view.addSubview(noButton)
         self.view.addSubview(yesButton)
         self.view.addSubview(midButton)
         
         setupNumLabel()
-        setupCardView()
+        setupBackCardView()
+        setupFrontCardView()
         setupYNButton()
         setupMidButton()
     }
@@ -38,14 +40,36 @@ extension QuestionViewController {
         }
     }
     
-    private func setupCardView() {  // 카드 뷰 부분
+    private func setupBackCardView() {  // 다음 카드 뷰 부분
         
-        questionCardView.setCardView()
+        backCardView.setCardView()
         
-        questionCardView.snp.makeConstraints { (make) in
+        backCardView.snp.makeConstraints { (make) in
             make.width.equalTo(cardSize.width)
             make.height.equalTo(cardSize.height)
             make.center.equalTo(self.view)
+        }
+    }
+    
+    private func setupFrontCardView() {  // 현재 카드 뷰 부분
+    
+        frontCardView.setCardView()
+        frontCardView.addSubview(frontCardLabel)
+        
+        frontCardView.snp.makeConstraints { (make) in
+            make.width.equalTo(cardSize.width)
+            make.height.equalTo(cardSize.height)
+            make.center.equalTo(self.view)
+        }
+        
+        setupFrontCardLabel()
+    }
+    
+    private func setupFrontCardLabel() {
+        frontCardLabel.text = "frontCard"
+        
+        frontCardLabel.snp.makeConstraints { (make) in
+            make.center.equalTo(frontCardView)
         }
     }
     
@@ -84,8 +108,8 @@ extension QuestionViewController {
         midButton.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.width.equalTo(150)
-            make.top.equalTo(questionCardView.snp.bottom).offset(33)
-            make.centerX.equalTo(questionCardView)
+            make.top.equalTo(frontCardView.snp.bottom).offset(33)
+            make.centerX.equalTo(frontCardView)
         }
     }
 }
