@@ -12,10 +12,10 @@ import SnapKit
 class NameViewController: BaseViewController {
 
     @IBOutlet weak var nextButton: UIButton!
-    var guideLabel: UILabel!
-    var nameTextField: UITextField!
-    var verticalStackView: UIStackView!
-    var bottomBorderView: UIView!
+    var guideLabel: UILabel = UILabel()
+    var verticalStackView: UIStackView = UIStackView()
+    var nameTextField: UITextField = UITextField()
+    var bottomBorderView: UIView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +35,6 @@ class NameViewController: BaseViewController {
         
         setButton()
         setVerticalStackView()
-        setGuideLabel()
-        setNameTextField()
-        
     }
     
     override func setupButton(button: UIButton) {
@@ -48,18 +45,5 @@ class NameViewController: BaseViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
-
 }
 
