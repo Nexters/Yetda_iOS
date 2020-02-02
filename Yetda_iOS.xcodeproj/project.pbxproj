@@ -11,6 +11,7 @@
 		3A2F483123DDB1C50034C429 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483023DDB1C50034C429 /* UIView+.swift */; };
 		3A2F483323DDB1EF0034C429 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483223DDB1EF0034C429 /* UIColor+.swift */; };
 		3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483623DDB26A0034C429 /* QuestionViewController+Layout.swift */; };
+		3A2F483923E537010034C429 /* QuestionViewController+ClickMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483823E537010034C429 /* QuestionViewController+ClickMotion.swift */; };
 		3AF6A9BE23C4A72400B588CE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */; };
 		3AF6A9C223C4AD0300B588CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */; };
 		4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */; };
@@ -42,6 +43,7 @@
 		3A2F483023DDB1C50034C429 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = SOURCE_ROOT; };
 		3A2F483223DDB1EF0034C429 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = SOURCE_ROOT; };
 		3A2F483623DDB26A0034C429 /* QuestionViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+Layout.swift"; sourceTree = "<group>"; };
+		3A2F483823E537010034C429 /* QuestionViewController+ClickMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+ClickMotion.swift"; sourceTree = "<group>"; };
 		3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetdaIntegrator.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				FAEC903C23CC84E800010233 /* QuestionViewController.swift */,
 				3A2F483623DDB26A0034C429 /* QuestionViewController+Layout.swift */,
+				3A2F483823E537010034C429 /* QuestionViewController+ClickMotion.swift */,
 			);
 			path = QuestionView;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */,
 				FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */,
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,
+				3A2F483923E537010034C429 /* QuestionViewController+ClickMotion.swift in Sources */,
 				4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */,
 				FAEC903923CC84B700010233 /* BirthdayViewController.swift in Sources */,
 				FAEC903F23CC850000010233 /* ResultViewController.swift in Sources */,
