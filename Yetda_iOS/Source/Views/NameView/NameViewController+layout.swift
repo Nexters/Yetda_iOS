@@ -24,10 +24,10 @@ extension NameViewController {
         
         // setup self view contraints
         nextButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
+            make.centerX.equalTo(self.view)
             make.left.right.equalTo(self.view).inset(24)
+            make.bottom.equalTo(self.view).inset(50)
             make.height.equalTo(44)
-            make.bottom.equalTo(-80)
         }
     }
     

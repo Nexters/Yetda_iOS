@@ -23,9 +23,17 @@ class NameViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        nameTextField.becomeFirstResponder()
+    }
+    
     // custom setup
     override func setup() {
         super.setup()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     // MARK: - apply layout from extension
@@ -41,11 +49,6 @@ class NameViewController: BaseViewController {
         setGuideLabel()
         setNameTextField()
         setBottomBorderView()
-    }
-    
-    override func setupButton(button: UIButton) {
-        super.setupButton(button: nextButton)
-        button.setTitle("다음", for: .normal)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

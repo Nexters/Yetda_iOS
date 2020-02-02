@@ -73,4 +73,18 @@ extension NameViewController: UITextFieldDelegate {
             nextButton.setNextButton(isEnable: false)
         }
     }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
+            else { return }
+        
+        let keybaordRectangle = keyboardFrame.cgRectValue
+        let keyboardHeight = keybaordRectangle.height
+        
+        nextButton.transform = CGAffineTransform(translationX: 0, y: -keyboardHeight)
+    }
+      
+    @objc func keyboardWillHide(_ notification: Notification) {
+        nextButton.transform = .identity
+    }
 }
