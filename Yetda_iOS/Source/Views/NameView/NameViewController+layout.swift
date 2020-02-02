@@ -48,7 +48,6 @@ extension NameViewController {
         }
         
         // add subviews
-        self.view.addSubview(nameTextField)
         self.view.addSubview(bottomBorderView)
         
         // setup subviews properties
@@ -74,14 +73,15 @@ extension NameViewController {
         
         // setup self view properties
         nameTextField.borderStyle = .none
-        nameTextField.placeholder = "이름"
+        nameTextField.textAlignment = .center
         nameTextField.delegate = self
         
         // setup self view contraints
         nameTextField.snp.makeConstraints { (make) in
-            make.topMargin.equalTo(guideLabel.snp_bottomMargin).offset(20)
-            make.trailing.equalTo(verticalStackView)
-            make.leading.equalTo(verticalStackView)
+            make.top.equalTo(guideLabel).offset(40)
+            make.centerX.equalTo(self.view)
+            make.left.equalTo(self.view).offset(75)
+            make.right.equalTo(self.view).offset(-75)
         }
     }
     

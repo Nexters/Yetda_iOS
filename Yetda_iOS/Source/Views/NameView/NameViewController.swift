@@ -36,9 +36,11 @@ class NameViewController: BaseViewController {
         setButton()
         
         self.view.addSubview(guideLabel)
+        self.view.addSubview(nameTextField)
         
         setGuideLabel()
         setVerticalStackView()
+        setNameTextField()
     }
     
     override func setupButton(button: UIButton) {
