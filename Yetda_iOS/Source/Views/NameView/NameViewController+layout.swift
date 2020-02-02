@@ -20,13 +20,13 @@ extension NameViewController {
     func setButton() {
         
         // setup self view properties
-        setupButton(button: nextButton)
+        nextButton.setNextButton(isEnable: true)
         
         // setup self view contraints
         nextButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(view)
-            make.width.equalTo(240)
-            make.height.equalTo(36)
+            make.left.right.equalTo(self.view).inset(24)
+            make.height.equalTo(44)
             make.bottom.equalTo(-80)
         }
     }
