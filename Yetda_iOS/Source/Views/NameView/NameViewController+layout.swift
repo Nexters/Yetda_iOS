@@ -20,7 +20,7 @@ extension NameViewController {
     func setButton() {
         
         // setup self view properties
-        nextButton.setNextButton(isEnable: true)
+        nextButton.setNextButton(isEnable: false)
         
         // setup self view contraints
         nextButton.snp.makeConstraints { (make) in
@@ -53,6 +53,7 @@ extension NameViewController {
         nameTextField.textAlignment = .center
         nameTextField.font = .boldSystemFont(ofSize: 34)
         nameTextField.delegate = self
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         // setup self view contraints
         nameTextField.snp.makeConstraints { (make) in

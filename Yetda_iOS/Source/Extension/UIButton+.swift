@@ -15,8 +15,11 @@ extension UIButton {
         self.setTitle("다음", for: .normal)
         self.titleLabel?.font = .systemFont(ofSize: 18)
         self.layer.cornerRadius = 22
-        
-        if isEnable {
+        setNextButtonEnable(isEnabled)
+    }
+    
+    func setNextButtonEnable(_ enable: Bool){
+        if enable {
             self.setTitleColor(.white, for: .normal)
             self.backgroundColor = .pastelRed
         } else {
