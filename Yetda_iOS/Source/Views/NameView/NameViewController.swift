@@ -34,6 +34,10 @@ class NameViewController: BaseViewController {
         super.setupUI()
         
         setButton()
+        
+        self.view.addSubview(guideLabel)
+        
+        setGuideLabel()
         setVerticalStackView()
     }
     

@@ -48,30 +48,25 @@ extension NameViewController {
         }
         
         // add subviews
-        verticalStackView.addSubview(guideLabel)
-        verticalStackView.addSubview(nameTextField)
-        verticalStackView.addSubview(bottomBorderView)
+        self.view.addSubview(nameTextField)
+        self.view.addSubview(bottomBorderView)
         
         // setup subviews properties
-        setGuideLabel()
-        setNameTextField()
         setBottomBorderView()
     }
     
     func setGuideLabel() {
         
         // setup self view properties
-        guideLabel.numberOfLines = 0
-        guideLabel.text = """
-                        선물 줄 분의 이름이
-                        어떻게 되시나요?
-                        """
-        guideLabel.textColor = .darkGray
+        guideLabel.text = "선물을 받을 사람은?"
+        guideLabel.textColor = .brownishGrey
+        guideLabel.font = .systemFont(ofSize: 18)
+        guideLabel.sizeToFit()
         
         // Set SNP Constraints
         guideLabel.snp.makeConstraints { (make) in
-            make.trailing.equalTo(verticalStackView)
-            make.leading.equalTo(verticalStackView)
+            make.centerX.equalTo(self.view)
+            make.top.equalTo(self.view).offset(200)
         }
     }
     
