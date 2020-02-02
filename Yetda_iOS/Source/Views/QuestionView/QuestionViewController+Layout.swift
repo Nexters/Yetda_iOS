@@ -11,8 +11,16 @@ import SnapKit
 
 extension QuestionViewController {
     
+    /*
+     1. setup self view properties
+     2. setup self view contraints
+     3. add subviews
+     4. setup subviews properties
+    */
+    
     func setupView() {  // 전체 뷰
         
+        // add subviews
         self.view.addSubview(descriptionLabel)
         self.view.addSubview(backCardView)
         self.view.addSubview(frontCardView)
@@ -20,6 +28,7 @@ extension QuestionViewController {
         self.view.addSubview(yesButton)
         self.view.addSubview(midButton)
         
+        // setup subviews properties
         setupNumLabel()
         setupBackCardView()
         setupFrontCardView()
@@ -29,21 +38,25 @@ extension QuestionViewController {
     
     private func setupNumLabel() {
         
+        // setup self view properties
         descriptionLabel.text = "@@님은 어떤 사람인가요?"
         descriptionLabel.font = .systemFont(ofSize: 18)
         descriptionLabel.textColor = UIColor.brownishGrey   
         descriptionLabel.sizeToFit()
         
+        // setup self constraints
         descriptionLabel.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.view)
             make.top.equalTo(self.view).offset(164)
         }
     }
     
-    private func setupBackCardView() {  // 다음 카드 뷰 부분
+    private func setupBackCardView() {  // 뒤에 깔려있는 카드 뷰 부분
         
+        // setup self view properties
         backCardView.setCardView()
         
+        // setup self view contstraints
         backCardView.snp.makeConstraints { (make) in
             make.width.equalTo(cardSize.width)
             make.height.equalTo(cardSize.height)
@@ -53,21 +66,29 @@ extension QuestionViewController {
     
     private func setupFrontCardView() {  // 현재 카드 뷰 부분
     
+        // setup self view properties
         frontCardView.setCardView()
-        frontCardView.addSubview(frontCardLabel)
         
+        // setup self view contraints
         frontCardView.snp.makeConstraints { (make) in
             make.width.equalTo(cardSize.width)
             make.height.equalTo(cardSize.height)
             make.center.equalTo(self.view)
         }
         
+        // add subviews
+        frontCardView.addSubview(frontCardLabel)
+        
+        // setup subviews properties
         setupFrontCardLabel()
     }
     
     private func setupFrontCardLabel() {
+        
+        // setup self view properties
         frontCardLabel.text = "Question\(questionNum)"
         
+        // setup self view contraints
         frontCardLabel.snp.makeConstraints { (make) in
             make.center.equalTo(frontCardView)
         }
@@ -75,29 +96,39 @@ extension QuestionViewController {
     
     private func setupYNButton() {  // 예 아니오 버튼 부분
         
+        // setup self view properties
         noButton.setTitle("X", for: .normal)
-        noButton.setTitleColor(UIColor.cloudyBlue, for: .normal)
+        noButton.setTitleColor(UIColor.blueGrey, for: .normal)
         noButton.titleLabel?.font = .boldSystemFont(ofSize: 28)
+        noButton.layer.cornerRadius = 38
+        noButton.layer.borderColor = UIColor.paleLilac.cgColor
+        noButton.layer.borderWidth = 2
         
         yesButton.setTitle("O", for: .normal)
-        yesButton.setTitleColor(UIColor.cloudyBlue, for: .normal)
+        yesButton.setTitleColor(UIColor.pastelRed, for: .normal)
         yesButton.titleLabel?.font = .boldSystemFont(ofSize: 28)
+        yesButton.layer.cornerRadius = 38
+        yesButton.layer.borderColor = UIColor.paleLilac.cgColor
+        yesButton.layer.borderWidth = 2
         
+        // setup self view contraints
         noButton.snp.makeConstraints { (make) in
-            make.centerY.equalTo(self.view)
-            make.centerX.equalTo(self.view.snp.left).offset((UIScreen.main.bounds.width - cardSize.width)/4)
+            make.width.height.equalTo(76)
+            make.top.equalTo(self.frontCardView.snp.bottom).offset(35)
+            make.right.equalTo(self.view.snp.centerX).offset(-13)
         }
         
         yesButton.snp.makeConstraints { (make) in
-            make.centerY.equalTo(self.view)
-            make.centerX.equalTo(self.view.snp.right).offset(-(UIScreen.main.bounds.width - cardSize.width)/4)
+        make.width.height.equalTo(76)
+            make.top.equalTo(self.frontCardView.snp.bottom).offset(35)
+            make.left.equalTo(self.view.snp.centerX).offset(13)
         }
     }
     
     private func setupMidButton() {
         
         midButton.setTitle("잘 모르겠어요", for: .normal)
-        midButton.setTitleColor(.brownGrey, for: .normal)
+        midButton.setTitleColor(.blueGrey, for: .normal)
         midButton.titleLabel?.font = .systemFont(ofSize: 18)
         
         // 버튼에 밑줄

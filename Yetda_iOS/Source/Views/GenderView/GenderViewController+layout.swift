@@ -75,7 +75,7 @@ extension GenderViewController {
         view.backgroundColor = .clear
         view.layer.cornerRadius = 13
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.charcoalGrey.cgColor
+        view.layer.borderColor = UIColor.brownishGrey.cgColor
         
         view.snp.makeConstraints { (make) in
             make.width.height.equalTo(26)
@@ -102,10 +102,10 @@ extension GenderViewController {
 
     //     male/female Buttons are mutually exclusive when selecting
     @objc func buttonAction(sender: UIButton!) {
-        if sender.backgroundColor == .charcoalGrey {
+        if sender.backgroundColor == .brownishGrey {
             sender.backgroundColor = .clear
         } else {
-            sender.backgroundColor = .charcoalGrey
+            sender.backgroundColor = .brownishGrey
         }
 
         if sender == maleButton {
