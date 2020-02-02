@@ -42,13 +42,20 @@ extension NameViewController: UITextFieldDelegate {
         // if implemented, called in place of textFieldDidEndEditing:
         print("TextField did end editing with reason method called")
     }
-
+     */
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // return NO to not change text
         print("While entering the characters this method gets called")
-        return true
+        
+        // 최대 글자 수 7
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        return updatedText.count <= 7
     }
-
+    
+    /*
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         // called when clear button pressed. return NO to ignore (no notifications)
         print("TextField should clear method called")
