@@ -97,19 +97,9 @@ extension QuestionViewController {
     private func setupYNButton() {  // 예 아니오 버튼 부분
         
         // setup self view properties
-        noButton.setTitle("X", for: .normal)
-        noButton.setTitleColor(UIColor.blueGrey, for: .normal)
-        noButton.titleLabel?.font = .boldSystemFont(ofSize: 28)
-        noButton.layer.cornerRadius = 38
-        noButton.layer.borderColor = UIColor.paleLilac.cgColor
-        noButton.layer.borderWidth = 2
+        noButton.setYesNoButton(isYesBtn: false)
+        yesButton.setYesNoButton(isYesBtn: true)
         
-        yesButton.setTitle("O", for: .normal)
-        yesButton.setTitleColor(UIColor.pastelRed, for: .normal)
-        yesButton.titleLabel?.font = .boldSystemFont(ofSize: 28)
-        yesButton.layer.cornerRadius = 38
-        yesButton.layer.borderColor = UIColor.paleLilac.cgColor
-        yesButton.layer.borderWidth = 2
         
         // setup self view contraints
         noButton.snp.makeConstraints { (make) in
