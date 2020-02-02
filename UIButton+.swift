@@ -25,5 +25,12 @@ extension UIButton {
         self.layer.borderColor = UIColor.paleLilac.cgColor
         self.layer.borderWidth = 2
     }
+    
+    func setUnderLine() {
+        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+        let underlineAttributedString = NSAttributedString(string: "StringWithUnderLine", attributes: underlineAttribute)
+        self.titleLabel?.attributedText = underlineAttributedString
+        
+    }
 }
 

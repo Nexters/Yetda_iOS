@@ -100,7 +100,6 @@ extension QuestionViewController {
         noButton.setYesNoButton(isYesBtn: false)
         yesButton.setYesNoButton(isYesBtn: true)
         
-        
         // setup self view contraints
         noButton.snp.makeConstraints { (make) in
             make.width.height.equalTo(76)
@@ -117,20 +116,17 @@ extension QuestionViewController {
     
     private func setupMidButton() {
         
+        // setup self view properties
         midButton.setTitle("잘 모르겠어요", for: .normal)
-        midButton.setTitleColor(.blueGrey, for: .normal)
+        midButton.setTitleColor(.blueGreyWith(alpha: 0.35), for: .normal)
         midButton.titleLabel?.font = .systemFont(ofSize: 18)
+        midButton.setUnderLine()
         
-        // 버튼에 밑줄
-        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
-        let underlineAttributedString = NSAttributedString(string: "StringWithUnderLine", attributes: underlineAttribute)
-        midButton.titleLabel?.attributedText = underlineAttributedString
-        
+        // setup self view contraints
         midButton.snp.makeConstraints { (make) in
-            make.height.equalTo(40)
-            make.width.equalTo(150)
-            make.top.equalTo(frontCardView.snp.bottom).offset(33)
-            make.centerX.equalTo(frontCardView)
+            make.height.equalTo(19)
+            make.top.equalTo(noButton.snp.bottom).offset(36)
+            make.centerX.equalTo(self.view)
         }
     }
 }
