@@ -29,14 +29,14 @@ extension QuestionViewController {
         self.view.addSubview(midButton)
         
         // setup subviews properties
-        setupNumLabel()
+        setupDescriptionLabel()
         setupBackCardView()
         setupFrontCardView()
         setupYNButton()
         setupMidButton()
     }
     
-    private func setupNumLabel() {
+    private func setupDescriptionLabel() {
         
         // setup self view properties
         descriptionLabel.text = "@@님은 어떤 사람인가요?"
