@@ -17,4 +17,6 @@ extension UIColor {
     static let charcoalGrey = UIColor(red: 50/255, green: 65/255, blue: 72/255, alpha: 1)
     
     static let shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.03)
+    
+    static let blueGrey = UIColor(red: 140/255, green: 144/255, blue: 152/255, alpha: 1)
 }

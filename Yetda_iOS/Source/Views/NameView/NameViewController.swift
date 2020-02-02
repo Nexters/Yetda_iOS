@@ -13,7 +13,6 @@ class NameViewController: BaseViewController {
 
     @IBOutlet weak var nextButton: UIButton!
     var guideLabel: UILabel = UILabel()
-    var verticalStackView: UIStackView = UIStackView()
     var nameTextField: UITextField = UITextField()
     var bottomBorderView: UIView = UIView()
     
@@ -37,10 +36,11 @@ class NameViewController: BaseViewController {
         
         self.view.addSubview(guideLabel)
         self.view.addSubview(nameTextField)
+        self.view.addSubview(bottomBorderView)
         
         setGuideLabel()
-        setVerticalStackView()
         setNameTextField()
+        setBottomBorderView()
     }
     
     override func setupButton(button: UIButton) {

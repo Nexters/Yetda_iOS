@@ -31,29 +31,6 @@ extension NameViewController {
         }
     }
     
-    func setVerticalStackView() {
-        
-        view.addSubview(verticalStackView)
-        
-        // setup self view properties
-        verticalStackView.axis = .vertical
-        verticalStackView.backgroundColor = .green
-        
-        // setup self view contraints
-        verticalStackView.snp.makeConstraints { (make) in
-            make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
-            make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(20)
-            make.bottom.equalTo(nextButton.snp_topMargin).offset(-20)
-            make.top.equalTo(200)
-        }
-        
-        // add subviews
-        self.view.addSubview(bottomBorderView)
-        
-        // setup subviews properties
-        setBottomBorderView()
-    }
-    
     func setGuideLabel() {
         
         // setup self view properties
@@ -74,6 +51,7 @@ extension NameViewController {
         // setup self view properties
         nameTextField.borderStyle = .none
         nameTextField.textAlignment = .center
+        nameTextField.font = .boldSystemFont(ofSize: 34)
         nameTextField.delegate = self
         
         // setup self view contraints
@@ -88,17 +66,12 @@ extension NameViewController {
     func setBottomBorderView() {
         
         // setup self view properties
-        if nameTextField.isSelected {
-            bottomBorderView.backgroundColor = .darkGray
-        } else {
-            bottomBorderView.backgroundColor = .lightGray
-        }
+        bottomBorderView.backgroundColor = .blueGrey
         
         // setup self view contraints
         bottomBorderView.snp.makeConstraints { (make) in
-            make.topMargin.equalTo(nameTextField.snp_bottomMargin).offset(20)
-            make.trailing.equalTo(verticalStackView)
-            make.leading.equalTo(verticalStackView)
+            make.top.equalTo(nameTextField.snp.bottom)
+            make.left.right.equalTo(nameTextField)
             make.height.equalTo(2)
         }
     }
