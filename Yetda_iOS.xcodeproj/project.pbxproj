@@ -18,6 +18,9 @@
 		4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7A23D0B9C500A1AC91 /* BaseViewController.swift */; };
 		FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */; };
 		FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */; };
+		FA5D7C8F23E952B700991B20 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D7C8E23E952B700991B20 /* Gift.swift */; };
+		FA5D7C9123E9539D00991B20 /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D7C9023E9539D00991B20 /* Receiver.swift */; };
+		FA5D7C9323E954AD00991B20 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D7C9223E954AD00991B20 /* Results.swift */; };
 		FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */; };
 		FAA5B41C23DED9520082005E /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5B41B23DED9520082005E /* GenderViewController.swift */; };
 		FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1A23C4945900674A3E /* AppDelegate.swift */; };
@@ -51,6 +54,9 @@
 		D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yetda_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+UIButton.swift"; sourceTree = "<group>"; };
 		FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+UILabel.swift"; sourceTree = "<group>"; };
+		FA5D7C8E23E952B700991B20 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		FA5D7C9023E9539D00991B20 /* Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receiver.swift; sourceTree = "<group>"; };
+		FA5D7C9223E954AD00991B20 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+layout.swift"; sourceTree = "<group>"; };
 		FAA5B41B23DED9520082005E /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		FAB0FD1723C4945900674A3E /* Yetda_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yetda_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +144,7 @@
 		4C002D7223D0B44300A1AC91 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D7C8D23E950BB00991B20 /* Model */,
 				4C002D7923D0B9BA00A1AC91 /* Base */,
 				4C002D7023D0B42100A1AC91 /* Util */,
 			);
@@ -167,6 +174,16 @@
 				C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA5D7C8D23E950BB00991B20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D7C8E23E952B700991B20 /* Gift.swift */,
+				FA5D7C9023E9539D00991B20 /* Receiver.swift */,
+				FA5D7C9223E954AD00991B20 /* Results.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FAA5B41A23DED7170082005E /* GenderView */ = {
@@ -402,10 +419,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */,
+				FA5D7C8F23E952B700991B20 /* Gift.swift in Sources */,
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
 				FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */,
+				FA5D7C9323E954AD00991B20 /* Results.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,
 				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
+				FA5D7C9123E9539D00991B20 /* Receiver.swift in Sources */,
 				FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */,
 				FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */,
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,
