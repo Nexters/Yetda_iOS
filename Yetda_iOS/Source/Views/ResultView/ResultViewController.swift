@@ -58,13 +58,22 @@ class ResultViewController: UIViewController {
             try realm.write {
                 realm.add(data)
             }
-            let retreivedData = realm.objects(Results.self)
-            print(retreivedData[0].receivers)
             
         } catch let error as NSError {
             // handle error
             print(error)
         }
+    }
+    
+    func readRealmData() {
+        do {
+            let realm = try Realm()
+            let retreivedData = realm.objects(Results.self)
+            print(retreivedData[0].receivers)
+        } catch let error as NSError {
+            print(error)
+        }
+        
     }
     
 
