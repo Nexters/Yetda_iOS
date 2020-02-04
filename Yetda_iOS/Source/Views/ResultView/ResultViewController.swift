@@ -37,19 +37,7 @@ class ResultViewController: UIViewController {
         results.receivers.append(receiver)
         
         writeRealmData(data: results)
-        
-//        do {
-//            let realm = try Realm()
-//            try realm.write {
-//                realm.add(results)
-//            }
-//            let outcome = realm.objects(Results.self)
-//            print(outcome[0].receivers)
-//
-//        } catch let error as NSError {
-//            // handle error
-//            print(error)
-//        }
+    
     }
     
     func writeRealmData(data: Results) {
