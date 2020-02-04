@@ -10,10 +10,12 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import SnapKit
+import RealmSwift
 
 class StartViewController: BaseViewController {
     //    var database: Firestore!
     @IBOutlet weak var startButton: UIButton!
+    
     
     /// custom setup
     override func setup() {
@@ -42,6 +44,29 @@ class StartViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let presents = Presents()
+        presents.name = "향수"
+        presents.tags.append("뷰티")
+        presents.tags.append("실용")
+        
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(presents)
+            }
+            let outcome = realm.objects(Presents.self)
+            print(outcome)
+        } catch let error as NSError {
+            // handle error
+            print(error)
+        }
+        
+//        try! realm.write{
+//            realm.add(presents)
+//        }
+        
+        
         //        let settings = FirestoreSettings()
         //        Firestore.firestore().settings = settings
         //        database = Firestore.firestore()
@@ -56,6 +81,11 @@ class StartViewController: BaseViewController {
         //                }
         //            }
         //        }
+        
     }
 }
 
+class Presents: Object {
+        @objc dynamic var name = ""
+        let tags = List<String>()
+}
