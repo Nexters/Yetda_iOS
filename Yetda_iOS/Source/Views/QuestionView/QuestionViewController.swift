@@ -13,7 +13,7 @@ class QuestionViewController: UIViewController {
     var questionNum = 1
     var basePoint = 5
     
-    let cardSize = CGSize(width: 266, height: 297)
+    let cardSize = CGSize(width: 272, height: 280)
     
     let frontCardView: UIView = UIView()
     let backCardView: UIView = UIView()
