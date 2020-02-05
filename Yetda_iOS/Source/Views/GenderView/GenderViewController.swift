@@ -22,6 +22,14 @@ class GenderViewController: BaseViewController {
     
     var horizontalStackView = UIStackView()
     
+    static func instance(viewModel: HomeViewModel) -> GenderViewController? {
+        let genderViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "GenderViewController") as? GenderViewController
+        genderViewController?.homeViewModel = viewModel
+        return genderViewController
+    }
+    
+    fileprivate var homeViewModel: HomeViewModel?
+    
     override func viewDidLoad() {
            super.viewDidLoad()
            
@@ -47,4 +55,28 @@ class GenderViewController: BaseViewController {
            button.setTitle("다음", for: .normal)
        }
 
+}
+
+extension GenderViewController: HomeViewControllerable {
+    func next() {
+        homeViewModel?.startBtnTapped()
+    }
+    
+    func prev() {
+        
+    }
+    
+    func storeData() {
+        homeViewModel?.storeStart(name: "123123123")
+    }
+    
+    
+}
+
+private extension GenderViewController {
+    @objc
+    func nextBtnTapped() {
+        next()
+        storeData()
+    }
 }

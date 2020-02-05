@@ -20,7 +20,8 @@ class HomeViewModel: NSObject {
     public lazy var homeViewController: [HomeViewControllerable] = {
         let viewControllers: [HomeViewControllerable] = [StartViewController.instance(viewModel: self)!,
                                NameViewController.instance(viewModel: self)!,
-                               StartViewController.instance(viewModel: self)!]
+                               GenderViewController.instance(viewModel: self)!
+        ]
         return viewControllers
     }()
     
