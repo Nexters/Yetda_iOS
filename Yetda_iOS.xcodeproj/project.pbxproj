@@ -13,6 +13,8 @@
 		3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483623DDB26A0034C429 /* QuestionViewController+Layout.swift */; };
 		3A2F483923E537010034C429 /* QuestionViewController+ClickMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483823E537010034C429 /* QuestionViewController+ClickMotion.swift */; };
 		3A2F483B23E6C0380034C429 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483A23E6C0380034C429 /* UIButton+.swift */; };
+		3A2F484B23EAD5730034C429 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F484A23EAD5730034C429 /* HomePageViewController.swift */; };
+		3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */; };
 		3AF6A9BE23C4A72400B588CE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */; };
 		3AF6A9C223C4AD0300B588CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */; };
 		4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */; };
@@ -46,6 +48,8 @@
 		3A2F483623DDB26A0034C429 /* QuestionViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+Layout.swift"; sourceTree = "<group>"; };
 		3A2F483823E537010034C429 /* QuestionViewController+ClickMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+ClickMotion.swift"; sourceTree = "<group>"; };
 		3A2F483A23E6C0380034C429 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = SOURCE_ROOT; };
+		3A2F484A23EAD5730034C429 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVIewModel.swift; sourceTree = "<group>"; };
 		3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetdaIntegrator.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 		4C002D6F23D0B31300A1AC91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */,
+				3A2F484A23EAD5730034C429 /* HomePageViewController.swift */,
 				FAEC902623CC7EFD00010233 /* StartView */,
 				FAEC902923CC7F3300010233 /* NameView */,
 				FAA5B41A23DED7170082005E /* GenderView */,
@@ -410,6 +416,7 @@
 				FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */,
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
 				FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */,
+				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,
 				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
 				FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */,
@@ -425,6 +432,7 @@
 				FAEC903B23CC84D600010233 /* PriceViewController.swift in Sources */,
 				FAE165D923D97C2300CEC5F6 /* NameViewController+layout.swift in Sources */,
 				FAEC903D23CC84E800010233 /* QuestionViewController.swift in Sources */,
+				3A2F484B23EAD5730034C429 /* HomePageViewController.swift in Sources */,
 				4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */,
 				3A2F483123DDB1C50034C429 /* UIView+.swift in Sources */,
 				FAE165DB23D97DDA00CEC5F6 /* NameViewController+TextField.swift in Sources */,
