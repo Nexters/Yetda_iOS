@@ -36,7 +36,7 @@
         <!--Name View Controller-->
         <scene sceneID="YkM-He-iwt">
             <objects>
-                <viewController id="Xi1-Q4-ZVx" customClass="NameViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xi1-Q4-ZVx" customClass="NameViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PnN-Eq-tCQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

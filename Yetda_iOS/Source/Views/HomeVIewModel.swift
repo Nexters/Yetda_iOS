@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeViewModelable: class {
-    func next(_: HomeViewControllerable)
+    func next(viewController: HomeViewControllerable)
     func prev()
 }
 
@@ -18,8 +18,8 @@ class HomeViewModel: NSObject {
     private var name: String?
     
     public lazy var homeViewController: [HomeViewControllerable] = {
-        let viewControllers = [StartViewController.instance(viewModel: self)!,
-                               StartViewController.instance(viewModel: self)!,
+        let viewControllers: [HomeViewControllerable] = [StartViewController.instance(viewModel: self)!,
+                               NameViewController.instance(viewModel: self)!,
                                StartViewController.instance(viewModel: self)!]
         return viewControllers
     }()
@@ -30,7 +30,7 @@ class HomeViewModel: NSObject {
         print("startBtnTapped")
         
         
-        delegate?.next(homeViewController[1])
+        delegate?.next(viewController: homeViewController[1])
     }
     
     public func storeStart(name: String) {

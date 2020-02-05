@@ -27,7 +27,7 @@ class HomePageViewController: UIPageViewController {
         delegate = self
         dataSource = self
         
-        guard let firstVC = viewModel.homeViewController.first as? StartViewController else { return }
+        guard let firstVC = viewModel.homeViewController.first as? BaseViewController else { return }
         
         setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
     }
@@ -50,8 +50,8 @@ extension HomePageViewController: UIPageViewControllerDataSource {
 }
 
 extension HomePageViewController: HomeViewModelable {
-    func next(_: HomeViewControllerable) {
-        guard let vc = viewModel.homeViewController.first as? BaseViewController else { return }
+    func next(viewController: HomeViewControllerable) {
+        guard let vc = viewController as? BaseViewController else { return }
         setViewControllers([vc], direction: .forward, animated: true, completion: nil)
     }
     
