@@ -91,7 +91,6 @@ extension NameViewController: HomeViewControllerable {
 private extension NameViewController {
     @objc
     func nextBtnTapped() {
-        print("next button in start tapped")
         next()
         storeData()
     }

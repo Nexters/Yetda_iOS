@@ -16,13 +16,15 @@ protocol HomeViewModelable: class {
 class HomeViewModel: NSObject {
     
     private var name: String?
-    private var idx = 1
+    private var idx = 0
     
     public lazy var homeViewController: [HomeViewControllerable] = {
         let viewControllers: [HomeViewControllerable] = [StartViewController.instance(viewModel: self)!,
                                NameViewController.instance(viewModel: self)!,
                                GenderViewController.instance(viewModel: self)!,
-                               BirthdayViewController.instance(viewModel: self)!
+                               BirthdayViewController.instance(viewModel: self)!,
+                               PriceViewController.instance(viewModel: self)!,
+                               QuestionViewController.instance(viewModel: self)!
         ]
         return viewControllers
     }()
@@ -34,9 +36,8 @@ class HomeViewModel: NSObject {
         
         let len = homeViewController.count
         while idx < len {
-            delegate?.next(viewController: homeViewController[idx])
             idx += 1
-            print(idx)
+            delegate?.next(viewController: homeViewController[idx])
             break
         }
 //        delegate?.next(viewController: homeViewController[1])

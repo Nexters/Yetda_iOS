@@ -43,6 +43,7 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     override func setupButton(button: UIButton) {
         super.setupButton(button: nextButton)
         button.setTitle("다음", for: .normal)
+        nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
     }
     
     // populate months and days array
@@ -85,7 +86,7 @@ extension BirthdayViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStart(name: "123123123")
+        homeViewModel?.storeStart(name: "birthday")
     }
     
     
@@ -94,7 +95,6 @@ extension BirthdayViewController: HomeViewControllerable {
 private extension BirthdayViewController {
     @objc
     func nextBtnTapped() {
-        print("next button in start tapped")
         next()
         storeData()
     }
