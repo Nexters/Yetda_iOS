@@ -41,7 +41,7 @@ extension QuestionViewController {
         // setup self view properties
         descriptionLabel.text = "@@님은 어떤 사람인가요?"
         descriptionLabel.font = .systemFont(ofSize: 18)
-        descriptionLabel.textColor = UIColor.brownishGrey   
+        descriptionLabel.textColor = UIColor.brownishGrey
         descriptionLabel.sizeToFit()
         
         // setup self constraints

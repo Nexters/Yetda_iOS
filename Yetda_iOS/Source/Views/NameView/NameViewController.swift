@@ -12,10 +12,9 @@ import SnapKit
 class NameViewController: BaseViewController {
 
     @IBOutlet weak var nextButton: UIButton!
-    var guideLabel: UILabel!
-    var nameTextField: UITextField!
-    var verticalStackView: UIStackView!
-    var bottomBorderView: UIView!
+    var guideLabel: UILabel = UILabel()
+    var nameTextField: UITextField = UITextField()
+    var bottomBorderView: UIView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +23,17 @@ class NameViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        nameTextField.becomeFirstResponder()
+    }
+    
     // custom setup
     override func setup() {
         super.setup()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     // MARK: - apply layout from extension
@@ -34,32 +41,18 @@ class NameViewController: BaseViewController {
         super.setupUI()
         
         setButton()
-        setVerticalStackView()
+        
+        self.view.addSubview(guideLabel)
+        self.view.addSubview(nameTextField)
+        self.view.addSubview(bottomBorderView)
+        
         setGuideLabel()
         setNameTextField()
-        
-    }
-    
-    override func setupButton(button: UIButton) {
-        super.setupButton(button: nextButton)
-        button.setTitle("다음", for: .normal)
+        setBottomBorderView()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
-
 }
 
