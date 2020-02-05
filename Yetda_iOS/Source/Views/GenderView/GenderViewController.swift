@@ -44,8 +44,9 @@ class GenderViewController: BaseViewController {
        
        // MARK: - apply layout from extension
        override func setupUI() {
-           super.setupUI()
-        setButton()
+        super.setupUI()
+        setButtonUI()
+        setupButton(button: nextButton)
         createCheckboxStackView()
            
        }
@@ -53,6 +54,8 @@ class GenderViewController: BaseViewController {
        override func setupButton(button: UIButton) {
            super.setupButton(button: nextButton)
            button.setTitle("다음", for: .normal)
+        
+            nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
        }
 
 }

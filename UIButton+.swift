@@ -44,7 +44,7 @@ extension UIButton {
         setNextButtonEnable(isEnabled)
     }
     
-    func setNextButtonEnable(_ enable: Bool){
+    func setNextButtonEnable(_ enable: Bool) {
         if enable {
             self.setTitleColor(.white, for: .normal)
             self.backgroundColor = .pastelRed

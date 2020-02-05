@@ -12,8 +12,8 @@ import SnapKit
 extension GenderViewController {
     
     // Set nextButton
-    func setButton() {
-        setupButton(button: nextButton)
+    func setButtonUI() {
+//        setupButton(button: nextButton)
         nextButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(view)
             make.width.equalTo(240)

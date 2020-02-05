@@ -39,6 +39,7 @@ class NameViewController: BaseViewController {
     override func setup() {
         super.setup()
         
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -47,8 +48,8 @@ class NameViewController: BaseViewController {
     // MARK: - apply layout from extension
     override func setupUI() {
         super.setupUI()
-        
-        setButton()
+        setButtonUI()
+        setupButton(button: nextButton)
         
         self.view.addSubview(guideLabel)
         self.view.addSubview(nameTextField)
@@ -63,7 +64,7 @@ class NameViewController: BaseViewController {
         super.setupButton(button: nextButton)
         button.setTitle("다음", for: .normal)
         
-        nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -90,6 +91,7 @@ extension NameViewController: HomeViewControllerable {
 private extension NameViewController {
     @objc
     func nextBtnTapped() {
+        print("next button in start tapped")
         next()
         storeData()
     }

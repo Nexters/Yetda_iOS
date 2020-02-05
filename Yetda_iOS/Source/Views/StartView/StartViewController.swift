@@ -15,7 +15,7 @@ class StartViewController: BaseViewController {
     //    var database: Firestore!
     @IBOutlet weak var startButton: UIButton!
     
-    static func instance(viewModel: HomeViewModel) -> StartViewController?{
+    static func instance(viewModel: HomeViewModel) -> StartViewController? {
         let startViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "StartViewController") as? StartViewController
         startViewController?.homeViewModel = viewModel
         return startViewController
@@ -35,7 +35,6 @@ class StartViewController: BaseViewController {
     /// custom setup
     override func setup() {
         super.setup()
-        setupButton(button: startButton)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -43,12 +42,13 @@ class StartViewController: BaseViewController {
         super.setupButton(button: startButton)
         button.setTitle("시작하기", for: .normal)
         
-        startButton.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
     }
     
     
     override func setupUI() {
         super.setupUI()
+        setupButton(button: startButton)
         
         startButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(view)
