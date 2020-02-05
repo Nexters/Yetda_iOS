@@ -1,5 +1,6 @@
 disabled_rules:
 - empty_parentheses_with_trailing_closure
+- identifier_name
 - trailing_newline
 - trailing_whitespace
 - vertical_whitespace
