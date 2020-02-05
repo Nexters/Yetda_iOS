@@ -13,7 +13,6 @@
 		3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483623DDB26A0034C429 /* QuestionViewController+Layout.swift */; };
 		3A2F483923E537010034C429 /* QuestionViewController+ClickMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483823E537010034C429 /* QuestionViewController+ClickMotion.swift */; };
 		3A2F484123E75BBD0034C429 /* GenderToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F484023E75BBD0034C429 /* GenderToggleButton.swift */; };
-		3A2F483B23E6C0380034C429 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F483A23E6C0380034C429 /* UIButton+.swift */; };
 		3A2F484B23EAD5730034C429 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F484A23EAD5730034C429 /* HomePageViewController.swift */; };
 		3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */; };
 		3AF6A9BE23C4A72400B588CE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */; };
@@ -31,6 +30,7 @@
 		FAB0FD2223C4945900674A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2023C4945900674A3E /* Main.storyboard */; };
 		FAB0FD2423C4945A00674A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2323C4945A00674A3E /* Assets.xcassets */; };
 		FAB0FD2723C4945A00674A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2523C4945A00674A3E /* LaunchScreen.storyboard */; };
+		FADF05E823EB216900E40952 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADF05E723EB216900E40952 /* UIButton+.swift */; };
 		FAE165D923D97C2300CEC5F6 /* NameViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE165D823D97C2300CEC5F6 /* NameViewController+layout.swift */; };
 		FAE165DB23D97DDA00CEC5F6 /* NameViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE165DA23D97DDA00CEC5F6 /* NameViewController+TextField.swift */; };
 		FAEC903723CC84A200010233 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903623CC84A200010233 /* NameViewController.swift */; };
@@ -49,8 +49,6 @@
 		3A2F483623DDB26A0034C429 /* QuestionViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+Layout.swift"; sourceTree = "<group>"; };
 		3A2F483823E537010034C429 /* QuestionViewController+ClickMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+ClickMotion.swift"; sourceTree = "<group>"; };
 		3A2F484023E75BBD0034C429 /* GenderToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderToggleButton.swift; sourceTree = "<group>"; };
-		3A2F483C23E6DD9A0034C429 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIButton+.swift"; path = "Yetda_iOS/Source/Extension/UIButton+.swift"; sourceTree = SOURCE_ROOT; };
-		3A2F483A23E6C0380034C429 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = SOURCE_ROOT; };
 		3A2F484A23EAD5730034C429 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVIewModel.swift; sourceTree = "<group>"; };
 		3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -72,6 +70,7 @@
 		FAB0FD2323C4945A00674A3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB0FD2623C4945A00674A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB0FD2823C4945A00674A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FADF05E723EB216900E40952 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = SOURCE_ROOT; };
 		FAE165D823D97C2300CEC5F6 /* NameViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameViewController+layout.swift"; sourceTree = "<group>"; };
 		FAE165DA23D97DDA00CEC5F6 /* NameViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameViewController+TextField.swift"; sourceTree = "<group>"; };
 		FAEC903623CC84A200010233 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +99,7 @@
 			children = (
 				3A2F483023DDB1C50034C429 /* UIView+.swift */,
 				3A2F483223DDB1EF0034C429 /* UIColor+.swift */,
-				3A2F483C23E6DD9A0034C429 /* UIButton+.swift */,
+				FADF05E723EB216900E40952 /* UIButton+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<unknown>";
@@ -421,12 +420,12 @@
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
 				FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */,
 				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,
+				FADF05E823EB216900E40952 /* UIButton+.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,
 				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
 				FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */,
 				3A2F484123E75BBD0034C429 /* GenderToggleButton.swift in Sources */,
 				FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */,
-				3A2F483D23E6DD9A0034C429 /* UIButton+.swift in Sources */,
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,
 				3A2F483923E537010034C429 /* QuestionViewController+ClickMotion.swift in Sources */,
 				4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */,
