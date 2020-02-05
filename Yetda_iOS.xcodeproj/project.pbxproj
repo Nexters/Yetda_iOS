@@ -48,14 +48,11 @@
 		3A2F483223DDB1EF0034C429 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = SOURCE_ROOT; };
 		3A2F483623DDB26A0034C429 /* QuestionViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+Layout.swift"; sourceTree = "<group>"; };
 		3A2F483823E537010034C429 /* QuestionViewController+ClickMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionViewController+ClickMotion.swift"; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		3A2F484023E75BBD0034C429 /* GenderToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderToggleButton.swift; sourceTree = "<group>"; };
 		3A2F483C23E6DD9A0034C429 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIButton+.swift"; path = "Yetda_iOS/Source/Extension/UIButton+.swift"; sourceTree = SOURCE_ROOT; };
-=======
 		3A2F483A23E6C0380034C429 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = SOURCE_ROOT; };
 		3A2F484A23EAD5730034C429 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVIewModel.swift; sourceTree = "<group>"; };
->>>>>>> ff6746f694946d9f018fe8f6d36533188ba9c7be
 		3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetdaIntegrator.swift; sourceTree = "<group>"; };
