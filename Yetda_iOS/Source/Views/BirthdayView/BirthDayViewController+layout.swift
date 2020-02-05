@@ -34,7 +34,6 @@ extension BirthdayViewController {
     
     // Set SNP to nextButton
     func setButton() {
-        setupButton(button: nextButton)
 
         nextButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(view)

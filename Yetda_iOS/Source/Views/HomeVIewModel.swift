@@ -22,7 +22,7 @@ class HomeViewModel: NSObject {
         let viewControllers: [HomeViewControllerable] = [StartViewController.instance(viewModel: self)!,
                                NameViewController.instance(viewModel: self)!,
                                GenderViewController.instance(viewModel: self)!,
-                               GenderViewController.instance(viewModel: self)!
+                               BirthdayViewController.instance(viewModel: self)!
         ]
         return viewControllers
     }()
