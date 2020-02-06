@@ -28,11 +28,11 @@ class PriceViewController: BaseViewController {
         super.setup()
     }
     
-    override func setupUI() {
-        super.setupUI()
-//        setupButton(button: nextButton)
-//        setSNP()
-    }
+//    override func setupUI() {
+//        super.setupUI()
+////        setupButton(button: nextButton)
+////        setSNP()
+//    }
     
 
     /*

@@ -32,13 +32,12 @@ extension UIButton {
         self.titleLabel?.attributedText = underlineAttributedString
 
     }
-
+        
     
-    
-    func setNextButton(isEnable: Bool) {
+    func setNextButton(isEnable: Bool, title: String = "다음") {
 
         self.isEnabled = isEnable
-        self.setTitle("다음", for: .normal)
+        self.setTitle(title, for: .normal)
         self.titleLabel?.font = .systemFont(ofSize: 18)
         self.layer.cornerRadius = 22
         setNextButtonEnable(isEnabled)

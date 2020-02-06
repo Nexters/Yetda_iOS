@@ -18,8 +18,6 @@ extension NameViewController {
     */
 
     func setButtonUI() {
-        
-        // setup self view properties
         nextButton.setNextButton(isEnable: false)
         
         // setup self view contraints

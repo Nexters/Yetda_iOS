@@ -36,28 +36,37 @@ class StartViewController: BaseViewController {
     /// custom setup
     override func setup() {
         super.setup()
+        startButton.setNextButton(isEnable: true, title: "시작하기")
+        startButton.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
+        
+        startButton.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.view)
+            make.left.right.equalTo(self.view).inset(24)
+            make.bottom.equalTo(self.view).inset(50)
+            make.height.equalTo(44)
+        }
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    override func setupButton(button: UIButton) {
-        super.setupButton(button: startButton)
-        button.setTitle("시작하기", for: .normal)
-        
-        button.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
-    }
+//    override func setupButton(button: UIButton) {
+//        super.setupButton(button: startButton)
+//        button.setTitle("시작하기", for: .normal)
+//
+//        button.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
+//    }
     
     
-    override func setupUI() {
-        super.setupUI()
-        setupButton(button: startButton)
-        
-        startButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.width.equalTo(240)
-            make.height.equalTo(36)
-            make.bottom.equalTo(-80)
-        }
-    }
+//    override func set() {
+//        super.setupUI()
+//        setupButton(button: startButton)
+//
+//        startButton.snp.makeConstraints { (make) in
+//            make.centerX.equalTo(view)
+//            make.width.equalTo(240)
+//            make.height.equalTo(36)
+//            make.bottom.equalTo(-80)
+//        }
+//    }
     
     
     override func viewDidLoad() {
