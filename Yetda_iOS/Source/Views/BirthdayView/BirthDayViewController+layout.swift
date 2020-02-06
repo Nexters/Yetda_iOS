@@ -11,11 +11,6 @@ import UIKit
 extension BirthdayViewController {
     
     // MARK: - UI and SNP configurations
-//    func setSNP() {
-//        setDatePicker()
-//        setButtonUI()
-//    }
-
     
     // Create DatePicker with UIPickerView
     func setDatePicker() {

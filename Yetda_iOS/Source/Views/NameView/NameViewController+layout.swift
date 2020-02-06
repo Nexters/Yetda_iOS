@@ -9,13 +9,6 @@
 import UIKit
 
 extension NameViewController {
-    
-    /*
-     1. setup self view properties
-     2. setup self view contraints
-     3. add subviews
-     4. setup subviews properties
-    */
 
     func setButtonUI() {
         nextButton.setNextButton(isEnable: false)

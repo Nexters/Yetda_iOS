@@ -56,26 +56,6 @@ class NameViewController: BaseViewController {
     }
     
     // MARK: - apply layout from extension
-//    override func setupUI() {
-//        super.setupUI()
-//        setButtonUI()
-//        setupButton(button: nextButton)
-//
-//        self.view.addSubview(guideLabel)
-//        self.view.addSubview(nameTextField)
-//        self.view.addSubview(bottomBorderView)
-//
-//        setGuideLabel()
-//        setNameTextField()
-//
-//    }
-    
-//    override func setupButton(button: UIButton) {
-//        super.setupButton(button: nextButton)
-//        button.setTitle("다음", for: .normal)
-//
-
-//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

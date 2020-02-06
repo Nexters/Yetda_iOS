@@ -24,14 +24,6 @@ class StartViewController: BaseViewController {
     
     fileprivate var homeViewModel: HomeViewModel?
     
-//    init(viewModel: HomeViewModel) {
-//        homeViewModel = viewModel
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     /// custom setup
     override func setup() {
@@ -47,26 +39,6 @@ class StartViewController: BaseViewController {
         }
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
-//    override func setupButton(button: UIButton) {
-//        super.setupButton(button: startButton)
-//        button.setTitle("시작하기", for: .normal)
-//
-//        button.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
-//    }
-    
-    
-//    override func set() {
-//        super.setupUI()
-//        setupButton(button: startButton)
-//
-//        startButton.snp.makeConstraints { (make) in
-//            make.centerX.equalTo(view)
-//            make.width.equalTo(240)
-//            make.height.equalTo(36)
-//            make.bottom.equalTo(-80)
-//        }
-//    }
     
     
     override func viewDidLoad() {
