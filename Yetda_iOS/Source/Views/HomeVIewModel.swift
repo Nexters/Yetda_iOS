@@ -40,7 +40,6 @@ class HomeViewModel: NSObject {
             delegate?.next(viewController: homeViewController[idx])
             break
         }
-//        delegate?.next(viewController: homeViewController[1])
     }
     
     public func storeStart(name: String) {
