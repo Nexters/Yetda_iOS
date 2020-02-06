@@ -10,6 +10,7 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import SnapKit
+import RealmSwift
 
 class StartViewController: BaseViewController {
     //    var database: Firestore!
@@ -61,6 +62,8 @@ class StartViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         //        let settings = FirestoreSettings()
         //        Firestore.firestore().settings = settings
         //        database = Firestore.firestore()
@@ -75,6 +78,7 @@ class StartViewController: BaseViewController {
         //                }
         //            }
         //        }
+        
     }
 }
 
