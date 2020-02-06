@@ -34,6 +34,7 @@ extension NameViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
         print("TextField did end editing method called")
+
         
     }
     
@@ -75,8 +76,10 @@ extension NameViewController: UITextFieldDelegate {
         guard let text = textField.text else { return }
         
         if text.count > 0 {
+            print("enabled")
             nextButton.setNextButton(isEnable: true)
         } else {
+            print("disabled")
             nextButton.setNextButton(isEnable: false)
         }
     }

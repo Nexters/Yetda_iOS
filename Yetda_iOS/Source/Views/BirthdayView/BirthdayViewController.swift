@@ -17,6 +17,14 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     var months: [String]! = []
     var days: [String]! = []
     var datePicker: UIPickerView!
+    
+    static func instance(viewModel: HomeViewModel) -> BirthdayViewController? {
+        let birthdayViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "BirthdayViewController") as? BirthdayViewController
+        birthdayViewController?.homeViewModel = viewModel
+        return birthdayViewController
+    }
+    
+    fileprivate var homeViewModel: HomeViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +43,7 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     override func setupButton(button: UIButton) {
         super.setupButton(button: nextButton)
         button.setTitle("다음", for: .normal)
+        nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
     }
     
     // populate months and days array
@@ -51,7 +60,7 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     // MARK: - apply layout from extension
     override func setupUI() {
         super.setupUI()
-        
+        setupButton(button: nextButton)
         setSNP()
     }
     
@@ -65,4 +74,28 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     }
     */
 
+}
+
+extension BirthdayViewController: HomeViewControllerable {
+    func next() {
+        homeViewModel?.startBtnTapped()
+    }
+    
+    func prev() {
+        
+    }
+    
+    func storeData() {
+        homeViewModel?.storeStart(name: "birthday")
+    }
+    
+    
+}
+
+private extension BirthdayViewController {
+    @objc
+    func nextBtnTapped() {
+        next()
+        storeData()
+    }
 }

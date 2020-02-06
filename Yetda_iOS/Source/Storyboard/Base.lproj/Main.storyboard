@@ -10,7 +10,7 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="StartViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,9 +19,6 @@
                                 <rect key="frame" x="184" y="581" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Xi1-Q4-ZVx" kind="show" id="int-z1-MlN"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -39,7 +36,7 @@
         <!--Name View Controller-->
         <scene sceneID="YkM-He-iwt">
             <objects>
-                <viewController id="Xi1-Q4-ZVx" customClass="NameViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xi1-Q4-ZVx" customClass="NameViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PnN-Eq-tCQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,9 +45,6 @@
                                 <rect key="frame" x="164" y="586" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="9Tc-Gg-ifO" kind="show" id="iSC-EH-J00"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -68,7 +62,7 @@
         <!--Birthday View Controller-->
         <scene sceneID="SnO-96-3ZA">
             <objects>
-                <viewController id="3BI-Cp-qiq" customClass="BirthdayViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BirthdayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3BI-Cp-qiq" customClass="BirthdayViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FH2-fv-1ek">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,9 +71,6 @@
                                 <rect key="frame" x="184" y="694" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="AVg-9i-zlU" kind="show" id="PLf-pS-Orl"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -92,12 +83,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-9f-ZuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3496" y="117"/>
+            <point key="canvasLocation" x="3495.652173913044" y="116.51785714285714"/>
         </scene>
         <!--Price View Controller-->
         <scene sceneID="fhY-kc-n5F">
             <objects>
-                <viewController id="AVg-9i-zlU" customClass="PriceViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PriceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AVg-9i-zlU" customClass="PriceViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zsf-cO-Iuw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,9 +97,6 @@
                                 <rect key="frame" x="184" y="649" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="LMg-ld-p3J" kind="show" id="Oif-NT-29Q"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -123,7 +111,7 @@
         <!--Question View Controller-->
         <scene sceneID="zBV-sf-WIP">
             <objects>
-                <viewController id="LMg-ld-p3J" customClass="QuestionViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LMg-ld-p3J" customClass="QuestionViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NML-hY-36v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +127,7 @@
         <!--Result View Controller-->
         <scene sceneID="DbV-4o-RwX">
             <objects>
-                <viewController id="UBw-SO-8cr" customClass="ResultViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UBw-SO-8cr" customClass="ResultViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yHG-i6-MNR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +160,7 @@
         <!--GenderViewcontroller-->
         <scene sceneID="SrR-4e-168">
             <objects>
-                <viewController title="GenderViewcontroller" id="9Tc-Gg-ifO" customClass="GenderViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GenderViewController" title="GenderViewcontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Tc-Gg-ifO" customClass="GenderViewController" customModule="Yetda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gz1-Dq-2Ub">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,9 +169,6 @@
                                 <rect key="frame" x="184" y="569" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="3BI-Cp-qiq" kind="show" id="MJq-6y-0kh"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

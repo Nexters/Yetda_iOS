@@ -17,7 +17,7 @@ extension NameViewController {
      4. setup subviews properties
     */
 
-    func setButton() {
+    func setButtonUI() {
         
         // setup self view properties
         nextButton.setNextButton(isEnable: false)

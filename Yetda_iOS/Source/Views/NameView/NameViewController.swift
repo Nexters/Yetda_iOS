@@ -16,6 +16,14 @@ class NameViewController: BaseViewController {
     var nameTextField: UITextField = UITextField()
     var bottomBorderView: UIView = UIView()
     
+    static func instance(viewModel: HomeViewModel) -> NameViewController? {
+        let nameViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "NameViewController") as? NameViewController
+        nameViewController?.homeViewModel = viewModel
+        return nameViewController
+    }
+    
+    fileprivate var homeViewModel: HomeViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +39,7 @@ class NameViewController: BaseViewController {
     override func setup() {
         super.setup()
         
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -39,8 +48,8 @@ class NameViewController: BaseViewController {
     // MARK: - apply layout from extension
     override func setupUI() {
         super.setupUI()
-        
-        setButton()
+        setButtonUI()
+        setupButton(button: nextButton)
         
         self.view.addSubview(guideLabel)
         self.view.addSubview(nameTextField)
@@ -48,11 +57,42 @@ class NameViewController: BaseViewController {
         
         setGuideLabel()
         setNameTextField()
-        setBottomBorderView()
+        
+    }
+    
+    override func setupButton(button: UIButton) {
+        super.setupButton(button: nextButton)
+        button.setTitle("다음", for: .normal)
+        
+        button.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+}
+
+extension NameViewController: HomeViewControllerable {
+    func next() {
+        homeViewModel?.startBtnTapped()
+    }
+    
+    func prev() {
+        
+    }
+    
+    func storeData() {
+        homeViewModel?.storeStart(name: "123123123")
+    }
+    
+    
+}
+
+private extension NameViewController {
+    @objc
+    func nextBtnTapped() {
+        next()
+        storeData()
     }
 }
 

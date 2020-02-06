@@ -24,10 +24,43 @@ class QuestionViewController: UIViewController {
     let noButton: UIButton = UIButton()
     let midButton: UIButton = UIButton()
     
+    static func instance(viewModel: HomeViewModel) -> QuestionViewController? {
+        let questionViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "QuestionViewController") as? QuestionViewController
+        questionViewController?.homeViewModel = viewModel
+        return questionViewController
+    }
+    
+    fileprivate var homeViewModel: HomeViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
         setupButtonAction()
+    }
+}
+
+extension QuestionViewController: HomeViewControllerable {
+    func next() {
+        homeViewModel?.startBtnTapped()
+    }
+    
+    func prev() {
+        
+    }
+    
+    func storeData() {
+        homeViewModel?.storeStart(name: "123123123")
+    }
+    
+    
+}
+
+private extension QuestionViewController {
+    @objc
+    func nextBtnTapped() {
+        print("next button in start tapped")
+        next()
+        storeData()
     }
 }
