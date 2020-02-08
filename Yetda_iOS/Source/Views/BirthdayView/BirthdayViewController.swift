@@ -17,6 +17,7 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     var months: [String]! = []
     var days: [String]! = []
     var datePicker: UIPickerView!
+    var monthDay = MonthDay()
     
     static func instance(viewModel: HomeViewModel) -> BirthdayViewController? {
         let birthdayViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "BirthdayViewController") as? BirthdayViewController
@@ -30,6 +31,7 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         super.viewDidLoad()
 
         populateData()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -65,7 +67,7 @@ extension BirthdayViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStringAnswer(actionType: ActionType.birthday, payload: "")
+        homeViewModel?.storeStringAnswer(actionType: ActionType.birthday, payload: "\(monthDay.month!) \(monthDay.day!)")
     }
     
     

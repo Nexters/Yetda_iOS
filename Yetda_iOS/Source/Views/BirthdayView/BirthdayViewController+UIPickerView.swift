@@ -40,5 +40,13 @@ extension BirthdayViewController: UIPickerViewDelegate {
         }
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        nextButton.setNextButton(isEnable: true)
+        if component == 0 {
+            monthDay.month = months[row]
+        } else {
+            monthDay.day = days[row]
+        }
+    }
 }
 

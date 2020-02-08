@@ -14,7 +14,7 @@ extension GenderViewController {
     // Set nextButton
     func setButtonUI() {
 //        setupButton(button: nextButton)
-        nextButton.setNextButton(isEnable: false)
+        nextButton.setNextButton(isEnable: true)
         
         nextButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.view)

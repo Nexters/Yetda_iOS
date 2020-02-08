@@ -22,13 +22,13 @@ extension BirthdayViewController {
         
         datePicker.snp.makeConstraints { (make) in
             make.leading.trailing.equalTo(self.view.safeAreaLayoutGuide).inset(20)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(-20)
+            make.bottom.equalTo(self.nextButton).inset(120)
         }
     }
     
     // Set SNP to nextButton
     func setButtonUI() {
-        nextButton.setNextButton(isEnable: true)
+        nextButton.setNextButton(isEnable: false)
         nextButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.view)
             make.left.right.equalTo(self.view).inset(24)

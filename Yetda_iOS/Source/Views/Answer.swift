@@ -9,7 +9,7 @@
 import Foundation
 
 struct Answer {
-    var name:String?
+    var name: String?
     var birthday: String?
     var gender: String?
     var minPrice: Int?
