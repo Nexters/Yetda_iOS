@@ -65,7 +65,7 @@ extension BirthdayViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStart(name: "birthday")
+        homeViewModel?.storeStringAnswer(actionType: ActionType.birthday, payload: "")
     }
     
     

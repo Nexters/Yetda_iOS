@@ -50,7 +50,7 @@ extension QuestionViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStart(name: "123123123")
+        homeViewModel?.storeStringAnswer(actionType: ActionType.tag, payload: "선물")
     }
     
     

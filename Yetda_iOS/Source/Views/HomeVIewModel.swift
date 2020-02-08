@@ -15,8 +15,14 @@ protocol HomeViewModelable: class {
 
 class HomeViewModel: NSObject {
     
-    private var name: String?
+//    private var name: String?
     private var idx = 0
+    
+//    enum ActionType {
+//        case name, gender, birthday, minPrice, maxPrice, tag
+//    }
+    
+    var answer = Answer()
     
     public lazy var homeViewController: [HomeViewControllerable] = {
         let viewControllers: [HomeViewControllerable] = [StartViewController.instance(viewModel: self)!,
@@ -42,8 +48,26 @@ class HomeViewModel: NSObject {
         }
     }
     
-    public func storeStart(name: String) {
-        print("\(name)")
-        self.name = name
+    public func storeStringAnswer(actionType: ActionType, payload: String) {
+            switch actionType {
+                case ActionType.name:
+                    answer.name = payload
+                case ActionType.gender:
+                    answer.gender = payload
+                case ActionType.birthday:
+                    answer.birthday = payload
+                default:
+                    if var tags = answer.tags {
+                        tags.append(payload)
+                    } else {
+                        answer.tags = []
+                    }
+            }
     }
+        
+    public func storePrice(minPrice: Int, maxPrice: Int) {
+        answer.minPrice = minPrice
+        answer.maxPrice = maxPrice
+    }
+    
 }

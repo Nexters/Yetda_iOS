@@ -40,7 +40,7 @@ extension PriceViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStart(name: "123123123")
+        homeViewModel?.storePrice(minPrice: 0, maxPrice: 10000)
     }
     
     
