@@ -20,8 +20,6 @@
 		4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */; };
 		4C002D7723D0B53400A1AC91 /* FIrebaseIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7623D0B53400A1AC91 /* FIrebaseIntegrator.swift */; };
 		4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7A23D0B9C500A1AC91 /* BaseViewController.swift */; };
-		FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */; };
-		FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */; };
 		FA5D7C8F23E952B700991B20 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D7C8E23E952B700991B20 /* Gift.swift */; };
 		FA5D7C9123E9539D00991B20 /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D7C9023E9539D00991B20 /* Receiver.swift */; };
 		FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */; };
@@ -60,8 +58,6 @@
 		4C002D7A23D0B9C500A1AC91 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.release.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yetda_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+UIButton.swift"; sourceTree = "<group>"; };
-		FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+UILabel.swift"; sourceTree = "<group>"; };
 		FA5D7C8E23E952B700991B20 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		FA5D7C9023E9539D00991B20 /* Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receiver.swift; sourceTree = "<group>"; };
 		FA5D7C9223E954AD00991B20 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -203,8 +199,6 @@
 			children = (
 				FAA5B41B23DED9520082005E /* GenderViewController.swift */,
 				FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */,
-				FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */,
-				FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */,
 				3A44737323EEA16B00CE8936 /* GenderToggleButton.swift */,
 			);
 			path = GenderView;
@@ -435,13 +429,11 @@
 				FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */,
 				FA5D7C8F23E952B700991B20 /* Gift.swift in Sources */,
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
-				FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */,
 				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,
 				FADF05E823EB216900E40952 /* UIButton+.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,
 				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
 				FA5D7C9123E9539D00991B20 /* Receiver.swift in Sources */,
-				FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */,
 				FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */,
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,
 				3A44737423EEA16B00CE8936 /* GenderToggleButton.swift in Sources */,

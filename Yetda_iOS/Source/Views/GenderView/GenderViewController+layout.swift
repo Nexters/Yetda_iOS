@@ -1,5 +1,5 @@
 //
-//  CheckBox.swift
+//  GenderViewController+layout.swift
 //  Yetda_iOS
 //
 //  Created by Leon Kong on 2020/01/29.
