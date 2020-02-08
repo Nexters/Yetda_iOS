@@ -50,18 +50,18 @@ class HomeViewModel: NSObject {
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {
             switch actionType {
-                case ActionType.name:
-                    answer.name = payload
-                case ActionType.gender:
-                    answer.gender = payload
-                case ActionType.birthday:
-                    answer.birthday = payload
-                default:
-                    if var tags = answer.tags {
-                        tags.append(payload)
-                    } else {
-                        answer.tags = []
-                    }
+            case ActionType.name:
+                answer.name = payload
+            case ActionType.gender:
+                answer.gender = payload
+            case ActionType.birthday:
+                answer.birthday = payload
+            default:
+                if var tags = answer.tags {
+                    tags.append(payload)
+                } else {
+                    answer.tags = []
+                }
             }
     }
         
