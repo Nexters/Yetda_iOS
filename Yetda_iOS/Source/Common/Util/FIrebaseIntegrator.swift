@@ -17,7 +17,7 @@ class FIrebaseIntegrator: NSObject, Integratorable {
         super.init()
     }
     
-    func initIntegrator(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+    func initIntegrator(launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         FirebaseApp.configure()
         db = Firestore.firestore()
     }

@@ -40,23 +40,12 @@ class GenderViewController: BaseViewController {
        // custom setup
        override func setup() {
            super.setup()
-       }
-       
-       // MARK: - apply layout from extension
-       override func setupUI() {
-        super.setupUI()
-        setButtonUI()
-        setupButton(button: nextButton)
-        createCheckboxStackView()
-           
-       }
-       
-       override func setupButton(button: UIButton) {
-           super.setupButton(button: nextButton)
-           button.setTitle("다음", for: .normal)
         
+            setButtonUI()
             nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+            createCheckboxStackView()
        }
+       
 
 }
 

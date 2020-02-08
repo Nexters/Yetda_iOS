@@ -24,39 +24,20 @@ class StartViewController: BaseViewController {
     
     fileprivate var homeViewModel: HomeViewModel?
     
-//    init(viewModel: HomeViewModel) {
-//        homeViewModel = viewModel
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     /// custom setup
     override func setup() {
         super.setup()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
-    override func setupButton(button: UIButton) {
-        super.setupButton(button: startButton)
-        button.setTitle("시작하기", for: .normal)
-        
-        button.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
-    }
-    
-    
-    override func setupUI() {
-        super.setupUI()
-        setupButton(button: startButton)
+        startButton.setNextButton(isEnable: true, title: "시작하기")
+        startButton.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
         
         startButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.width.equalTo(240)
-            make.height.equalTo(36)
-            make.bottom.equalTo(-80)
+            make.centerX.equalTo(self.view)
+            make.left.right.equalTo(self.view).inset(24)
+            make.bottom.equalTo(self.view).inset(50)
+            make.height.equalTo(44)
         }
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     

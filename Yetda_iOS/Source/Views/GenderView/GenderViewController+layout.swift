@@ -14,11 +14,13 @@ extension GenderViewController {
     // Set nextButton
     func setButtonUI() {
 //        setupButton(button: nextButton)
+        nextButton.setNextButton(isEnable: false)
+        
         nextButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.width.equalTo(240)
-            make.height.equalTo(36)
-            make.bottom.equalTo(-80)
+            make.centerX.equalTo(self.view)
+            make.left.right.equalTo(self.view).inset(24)
+            make.bottom.equalTo(self.view).inset(50)
+            make.height.equalTo(44)
         }
     }
     
@@ -87,7 +89,7 @@ extension GenderViewController {
     func setCheckBox(view: UIView, button: UIButton) {
         setButtonContainerView(view: view)
         button.setButtonStyle()
-//        button.setButtonAction(view: horizontalStackView)
+
 
         view.addSubview(button)
         button.snp.makeConstraints { (make) in
@@ -104,8 +106,10 @@ extension GenderViewController {
     @objc func buttonAction(sender: UIButton!) {
         if sender.backgroundColor == .brownishGrey {
             sender.backgroundColor = .clear
+            nextButton.setNextButtonEnable(false)
         } else {
             sender.backgroundColor = .brownishGrey
+            nextButton.setNextButtonEnable(true)
         }
 
         if sender == maleButton {

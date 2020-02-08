@@ -37,12 +37,8 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     // custom setup
     override func setup() {
         super.setup()
-    }
-    
-    // Change Button title to "다음"
-    override func setupButton(button: UIButton) {
-        super.setupButton(button: nextButton)
-        button.setTitle("다음", for: .normal)
+        setDatePicker()
+        setButtonUI()
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
     }
     
@@ -57,23 +53,6 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         }
     }
     
-    // MARK: - apply layout from extension
-    override func setupUI() {
-        super.setupUI()
-        setupButton(button: nextButton)
-        setSNP()
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension BirthdayViewController: HomeViewControllerable {

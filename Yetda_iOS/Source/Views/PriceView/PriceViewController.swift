@@ -27,23 +27,6 @@ class PriceViewController: BaseViewController {
     override func setup() {
         super.setup()
     }
-    
-    override func setupUI() {
-        super.setupUI()
-//        setupButton(button: nextButton)
-//        setSNP()
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

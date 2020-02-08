@@ -11,12 +11,6 @@ import UIKit
 extension BirthdayViewController {
     
     // MARK: - UI and SNP configurations
-    func setSNP() {
-        
-        setDatePicker()
-        setButton()
-    }
-
     
     // Create DatePicker with UIPickerView
     func setDatePicker() {
@@ -33,14 +27,14 @@ extension BirthdayViewController {
     }
     
     // Set SNP to nextButton
-    func setButton() {
-
+    func setButtonUI() {
+        nextButton.setNextButton(isEnable: true)
         nextButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.width.equalTo(240)
-            make.height.equalTo(36)
-            make.bottom.equalTo(datePicker.snp.top).inset(-80)
-//            make.top.equalTo(200)
+            make.centerX.equalTo(self.view)
+            make.left.right.equalTo(self.view).inset(24)
+            make.bottom.equalTo(self.view).inset(50)
+            make.height.equalTo(44)
         }
-    }
+        }
+    
 }
