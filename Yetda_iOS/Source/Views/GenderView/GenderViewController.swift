@@ -12,15 +12,10 @@ import SnapKit
 class GenderViewController: BaseViewController {
     
     @IBOutlet weak var nextButton: UIButton!
-    var femaleButton = UIButton()
-    var maleButton = UIButton()
-    var femaleLabel = UILabel()
-    var maleLabel = UILabel()
     
-    var femaleCheckBox = UIView()
-    var maleCheckBox = UIView()
-    
-    var horizontalStackView = UIStackView()
+    var descriptionLabel = UILabel()
+    var femaleButton = GenderToggleButton(title: "여성")
+    var maleButton = GenderToggleButton(title: "남성")
     
     static func instance(viewModel: HomeViewModel) -> GenderViewController? {
         let genderViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "GenderViewController") as? GenderViewController
@@ -31,22 +26,19 @@ class GenderViewController: BaseViewController {
     fileprivate var homeViewModel: HomeViewModel?
     
     override func viewDidLoad() {
-           super.viewDidLoad()
-           
-           // Do any additional setup after loading the view.
-           navigationController?.setNavigationBarHidden(false, animated: true)
-       }
-       
-       // custom setup
-       override func setup() {
-           super.setup()
+        super.viewDidLoad()
         
-            setButtonUI()
-            nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
-            createCheckboxStackView()
-       }
-       
-
+        // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    // custom setup
+    override func setup() {
+        super.setup()
+        
+        setupUI()
+        nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+    }
 }
 
 extension GenderViewController: HomeViewControllerable {
@@ -61,8 +53,6 @@ extension GenderViewController: HomeViewControllerable {
     func storeData() {
         homeViewModel?.storeStart(name: "123123123")
     }
-    
-    
 }
 
 private extension GenderViewController {
