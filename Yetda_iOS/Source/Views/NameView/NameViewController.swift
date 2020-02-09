@@ -72,7 +72,7 @@ extension NameViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStart(name: "123123123")
+        homeViewModel?.storeStringAnswer(actionType: ActionType.name, payload: nameTextField.text!)
     }
     
     
