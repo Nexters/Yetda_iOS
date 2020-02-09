@@ -15,6 +15,7 @@
 		3A2F484B23EAD5730034C429 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F484A23EAD5730034C429 /* HomePageViewController.swift */; };
 		3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */; };
 		3A44737423EEA16B00CE8936 /* GenderToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44737323EEA16B00CE8936 /* GenderToggleButton.swift */; };
+		3A44737623EFD63200CE8936 /* GenderViewController+ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44737523EFD63200CE8936 /* GenderViewController+ToggleButton.swift */; };
 		3AF6A9BE23C4A72400B588CE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */; };
 		3AF6A9C223C4AD0300B588CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */; };
 		4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */; };
@@ -51,6 +52,7 @@
 		3A2F484A23EAD5730034C429 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVIewModel.swift; sourceTree = "<group>"; };
 		3A44737323EEA16B00CE8936 /* GenderToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderToggleButton.swift; sourceTree = "<group>"; };
+		3A44737523EFD63200CE8936 /* GenderViewController+ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+ToggleButton.swift"; sourceTree = "<group>"; };
 		3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetdaIntegrator.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				FAA5B41B23DED9520082005E /* GenderViewController.swift */,
 				FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */,
+				3A44737523EFD63200CE8936 /* GenderViewController+ToggleButton.swift */,
 				3A44737323EEA16B00CE8936 /* GenderToggleButton.swift */,
 			);
 			path = GenderView;
@@ -429,6 +432,7 @@
 				FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */,
 				FA5D7C8F23E952B700991B20 /* Gift.swift in Sources */,
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
+				3A44737623EFD63200CE8936 /* GenderViewController+ToggleButton.swift in Sources */,
 				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,
 				FADF05E823EB216900E40952 /* UIButton+.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,

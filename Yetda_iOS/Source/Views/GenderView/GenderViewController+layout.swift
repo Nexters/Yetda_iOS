@@ -66,6 +66,7 @@ extension GenderViewController {
         
         // setup self view properties
         femaleButton.setEnable(true)
+        femaleButton.addTarget(self, action: #selector(clickGenderToggleButton(_:)), for: .touchUpInside)
         
         // setup self view contraints
         femaleButton.snp.makeConstraints { (make) in
@@ -79,6 +80,7 @@ extension GenderViewController {
         
         // setup self view properties
         maleButton.setEnable(false)
+        maleButton.addTarget(self, action: #selector(clickGenderToggleButton(_:)), for: .touchUpInside)
         
         // setup self view contraints
         maleButton.snp.makeConstraints { (make) in

@@ -16,6 +16,11 @@ class GenderViewController: BaseViewController {
     var descriptionLabel = UILabel()
     var femaleButton = GenderToggleButton(title: "여성")
     var maleButton = GenderToggleButton(title: "남성")
+    var selectedGender = Gender.female
+    
+    enum Gender {
+        case female, male
+    }
     
     static func instance(viewModel: HomeViewModel) -> GenderViewController? {
         let genderViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "GenderViewController") as? GenderViewController

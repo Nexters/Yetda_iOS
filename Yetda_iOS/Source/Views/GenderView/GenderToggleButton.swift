@@ -41,7 +41,7 @@ class GenderToggleButton: UIButton {
 
 extension GenderToggleButton {
     
-    func setEnable(_ enable: Bool){
+    func setEnable(_ enable: Bool) {
         isOn = enable
     }
 }
