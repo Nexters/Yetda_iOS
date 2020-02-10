@@ -10,7 +10,7 @@ import UIKit
 
 protocol HomeViewModelable: class {
     func next(viewController: HomeViewControllerable)
-    func prev()
+    func prev(viewController: HomeViewControllerable)
 }
 
 class HomeViewModel: NSObject {
@@ -38,6 +38,16 @@ class HomeViewModel: NSObject {
         while idx < len {
             idx += 1
             delegate?.next(viewController: homeViewController[idx])
+            break
+        }
+    }
+    
+    public func backBtnTapped() {
+        print("backButtonTapped")
+        
+        while idx > 1 {
+            idx -= 1
+            delegate?.prev(viewController: homeViewController[idx])
             break
         }
     }

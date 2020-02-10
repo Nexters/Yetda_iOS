@@ -13,6 +13,7 @@ class GenderViewController: BaseViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    var backButton = UIButton()
     var descriptionLabel = UILabel()
     var femaleButton = GenderToggleButton(title: "여성")
     var maleButton = GenderToggleButton(title: "남성")
@@ -43,6 +44,7 @@ class GenderViewController: BaseViewController {
         
         setupUI()
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(backBtnTapped), for: .touchUpInside)
     }
 }
 
@@ -52,7 +54,7 @@ extension GenderViewController: HomeViewControllerable {
     }
     
     func prev() {
-        
+        homeViewModel?.backBtnTapped()
     }
     
     func storeData() {
@@ -65,5 +67,10 @@ private extension GenderViewController {
     func nextBtnTapped() {
         next()
         storeData()
+    }
+    
+    @objc
+    func backBtnTapped() {
+        prev()
     }
 }

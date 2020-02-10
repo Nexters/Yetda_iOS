@@ -22,33 +22,47 @@ extension GenderViewController {
         // setup self view properties
         // setup self view contraints
         // add subviews
+        view.addSubview(backButton)
         view.addSubview(descriptionLabel)
         view.addSubview(femaleButton)
         view.addSubview(maleButton)
         
         // setup subviews properties
+        setupBackButton()
         setupNextButton()
         setupDescriptionLabel()
         setupFemaleButton()
         setupMaleButton()
     }
     
+    private func setupBackButton() {
+        // 리소스 추가 예정
+        backButton.setTitle("<", for: .normal)
+        backButton.setTitleColor(.veryLightPink, for: .normal)
+        backButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .bold)
+        
+        backButton.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(16)
+            make.left.equalTo(self.view.safeAreaLayoutGuide).inset(24)
+        }
+    }
+    
     // Set nextButton
-    func setupNextButton() {
+    private func setupNextButton() {
         
         // setup self view properties
         nextButton.setNextButton(isEnable: true)
         
         // setup self view contraints
         nextButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self.view)
-            make.left.right.equalTo(self.view).inset(24)
-            make.bottom.equalTo(self.view).inset(50)
+            make.centerX.equalTo(self.view.safeAreaLayoutGuide)
+            make.left.right.equalTo(self.view.safeAreaLayoutGuide).inset(24)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(50)
             make.height.equalTo(44)
         }
     }
     
-    func setupDescriptionLabel() {
+    private func setupDescriptionLabel() {
         
         // setup self view properties
         descriptionLabel.text = "쭈피님의 성별은?"
@@ -57,12 +71,12 @@ extension GenderViewController {
         
         // setup self view contraints
         descriptionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view).inset(103)
-            make.centerX.equalTo(self.view)
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(103)
+            make.centerX.equalTo(self.view.safeAreaLayoutGuide)
         }
     }
     
-    func setupFemaleButton() {
+    private func setupFemaleButton() {
         
         // setup self view properties
         femaleButton.setEnable(true)
@@ -76,7 +90,7 @@ extension GenderViewController {
         }
     }
     
-    func setupMaleButton() {
+    private func setupMaleButton() {
         
         // setup self view properties
         maleButton.setEnable(false)
