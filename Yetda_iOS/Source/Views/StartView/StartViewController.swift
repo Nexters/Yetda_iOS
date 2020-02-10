@@ -15,6 +15,7 @@ import RealmSwift
 class StartViewController: BaseViewController {
     //    var database: Firestore!
     @IBOutlet weak var startButton: UIButton!
+    var database: Firestore?
     
     static func instance(viewModel: HomeViewModel) -> StartViewController? {
         let startViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "StartViewController") as? StartViewController
@@ -43,6 +44,21 @@ class StartViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        database = Firestore.firestore()
+        // Do any additional setup after loading the view.
+        
+        database?.collection("presents").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
     }
 }
 
@@ -56,10 +72,8 @@ extension StartViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStart(name: "123123123")
+//        homeViewModel?.storeAnswer(name: "123123123")
     }
-    
-    
 }
 
 private extension StartViewController {

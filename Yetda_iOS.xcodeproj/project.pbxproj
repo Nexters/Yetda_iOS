@@ -21,6 +21,11 @@
 		4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */; };
 		4C002D7723D0B53400A1AC91 /* FIrebaseIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7623D0B53400A1AC91 /* FIrebaseIntegrator.swift */; };
 		4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7A23D0B9C500A1AC91 /* BaseViewController.swift */; };
+		FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */; };
+		FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */; };
+		FA42367D23EE9CD800F71143 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42367C23EE9CD800F71143 /* Answer.swift */; };
+		FA42368123EEA83400F71143 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368023EEA83400F71143 /* ActionType.swift */; };
+		FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368223EEC17F00F71143 /* MonthDay.swift */; };
 		FA5D7C8F23E952B700991B20 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D7C8E23E952B700991B20 /* Gift.swift */; };
 		FA5D7C9123E9539D00991B20 /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D7C9023E9539D00991B20 /* Receiver.swift */; };
 		FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */; };
@@ -60,6 +65,11 @@
 		4C002D7A23D0B9C500A1AC91 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C3D4420E2D72B612ACF68DE6 /* Pods-Yetda_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda_iOS.release.xcconfig"; path = "Target Support Files/Pods-Yetda_iOS/Pods-Yetda_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D0C6060225DE08CA70EEC314 /* Pods_Yetda_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yetda_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+UIButton.swift"; sourceTree = "<group>"; };
+		FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+UILabel.swift"; sourceTree = "<group>"; };
+		FA42367C23EE9CD800F71143 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		FA42368023EEA83400F71143 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		FA42368223EEC17F00F71143 /* MonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDay.swift; sourceTree = "<group>"; };
 		FA5D7C8E23E952B700991B20 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		FA5D7C9023E9539D00991B20 /* Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receiver.swift; sourceTree = "<group>"; };
 		FA5D7C9223E954AD00991B20 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -130,7 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				3A2F484C23EAD5F20034C429 /* HomeVIewModel.swift */,
+				FA42368023EEA83400F71143 /* ActionType.swift */,
 				3A2F484A23EAD5730034C429 /* HomePageViewController.swift */,
+				FA42367C23EE9CD800F71143 /* Answer.swift */,
 				FAEC902623CC7EFD00010233 /* StartView */,
 				FAEC902923CC7F3300010233 /* NameView */,
 				FAA5B41A23DED7170082005E /* GenderView */,
@@ -262,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEC903823CC84B700010233 /* BirthdayViewController.swift */,
+				FA42368223EEC17F00F71143 /* MonthDay.swift */,
 				FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */,
 				FAECF8B823DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift */,
 			);
@@ -430,12 +443,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */,
+				FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */,
 				FA5D7C8F23E952B700991B20 /* Gift.swift in Sources */,
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
 				3A44737623EFD63200CE8936 /* GenderViewController+ToggleButton.swift in Sources */,
 				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,
 				FADF05E823EB216900E40952 /* UIButton+.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,
+				FA42368123EEA83400F71143 /* ActionType.swift in Sources */,
 				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
 				FA5D7C9123E9539D00991B20 /* Receiver.swift in Sources */,
 				FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */,
@@ -449,6 +464,7 @@
 				3A2F483323DDB1EF0034C429 /* UIColor+.swift in Sources */,
 				FAEC903B23CC84D600010233 /* PriceViewController.swift in Sources */,
 				FAE165D923D97C2300CEC5F6 /* NameViewController+layout.swift in Sources */,
+				FA42367D23EE9CD800F71143 /* Answer.swift in Sources */,
 				FAEC903D23CC84E800010233 /* QuestionViewController.swift in Sources */,
 				3A2F484B23EAD5730034C429 /* HomePageViewController.swift in Sources */,
 				4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */,
