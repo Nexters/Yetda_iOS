@@ -76,9 +76,9 @@ extension GenderViewController {
         // setup self view contraints
         nextButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.view.safeAreaLayoutGuide)
-            make.left.right.equalTo(self.view.safeAreaLayoutGuide).inset(24)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(50)
-            make.height.equalTo(44)
+            make.left.right.equalTo(self.view.safeAreaLayoutGuide).inset(28)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(32)
+            make.height.equalTo(52)
         }
     }
     
@@ -93,18 +93,19 @@ extension GenderViewController {
         descriptionLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self.view.safeAreaLayoutGuide).inset(103)
             make.centerX.equalTo(self.view.safeAreaLayoutGuide)
+            make.height.equalTo(33)
         }
     }
     
     private func setupFemaleButton() {
         
         // setup self view properties
-        femaleButton.setEnable(true)
+        femaleButton.setOn(true)
         femaleButton.addTarget(self, action: #selector(clickGenderToggleButton(_:)), for: .touchUpInside)
         
         // setup self view contraints
         femaleButton.snp.makeConstraints { (make) in
-            make.top.equalTo(self.descriptionLabel).offset(40)
+            make.top.equalTo(self.descriptionLabel.snp.bottom).offset(40)
             make.right.equalTo(self.view.snp.centerX).offset(-11)
             make.width.height.equalTo(100)
         }
@@ -113,14 +114,13 @@ extension GenderViewController {
     private func setupMaleButton() {
         
         // setup self view properties
-        maleButton.setEnable(false)
+        maleButton.setOn(false)
         maleButton.addTarget(self, action: #selector(clickGenderToggleButton(_:)), for: .touchUpInside)
         
         // setup self view contraints
         maleButton.snp.makeConstraints { (make) in
-            make.top.equalTo(self.descriptionLabel).offset(40)
+            make.top.width.height.equalTo(femaleButton)
             make.left.equalTo(self.view.snp.centerX).offset(11)
-            make.width.height.equalTo(100)
         }
     }
 }

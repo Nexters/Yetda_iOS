@@ -9,15 +9,16 @@
 import UIKit
 
 extension GenderViewController {
+    
     @IBAction func clickGenderToggleButton(_ sender: GenderToggleButton) {
         if sender == femaleButton {
             selectedGender = .female
-            femaleButton.setEnable(true)
-            maleButton.setEnable(false)
+            femaleButton.setOn(true)
+            maleButton.setOn(false)
         } else {
             selectedGender = .male
-            maleButton.setEnable(true)
-            femaleButton.setEnable(false)
+            maleButton.setOn(true)
+            femaleButton.setOn(false)
         }
     }
 }

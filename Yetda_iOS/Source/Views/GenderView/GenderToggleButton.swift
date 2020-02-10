@@ -39,14 +39,17 @@ class GenderToggleButton: UIButton {
 
 }
 
+// MARK: - Public Functions
 extension GenderToggleButton {
     
-    func setEnable(_ enable: Bool) {
-        isOn = enable
+    func setOn(_ isOn: Bool) {
+        self.isOn = isOn
     }
 }
 
+// MARK: - Private Functions
 extension GenderToggleButton {
+    
     private func setting() {
         self.frame.size = CGSize(width: 100, height: 100)
         self.layer.cornerRadius = 50
