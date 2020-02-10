@@ -14,6 +14,7 @@ class GenderViewController: BaseViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     var backButton = UIButton()
+    var skipButton = UIButton()
     var descriptionLabel = UILabel()
     var femaleButton = GenderToggleButton(title: "여성")
     var maleButton = GenderToggleButton(title: "남성")
@@ -45,6 +46,7 @@ class GenderViewController: BaseViewController {
         setupUI()
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backBtnTapped), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
     }
 }
 
@@ -72,5 +74,10 @@ private extension GenderViewController {
     @objc
     func backBtnTapped() {
         prev()
+    }
+    
+    @objc
+    func skipButtonTapped() {
+        next()
     }
 }

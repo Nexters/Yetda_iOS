@@ -23,27 +23,47 @@ extension GenderViewController {
         // setup self view contraints
         // add subviews
         view.addSubview(backButton)
+        view.addSubview(skipButton)
         view.addSubview(descriptionLabel)
         view.addSubview(femaleButton)
         view.addSubview(maleButton)
         
         // setup subviews properties
-        setupBackButton()
         setupNextButton()
+        setupBackButton()
+        setupSkipButton()
         setupDescriptionLabel()
         setupFemaleButton()
         setupMaleButton()
     }
     
     private func setupBackButton() {
-        // 리소스 추가 예정
+        // MARK: 리소스 추가 예정
+        // setup self view properties
         backButton.setTitle("<", for: .normal)
         backButton.setTitleColor(.veryLightPink, for: .normal)
         backButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .bold)
         
+        // setup self view contraints
         backButton.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(16)
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(16)
             make.left.equalTo(self.view.safeAreaLayoutGuide).inset(24)
+            make.height.equalTo(22)
+        }
+    }
+    
+    private func setupSkipButton() {
+        
+        // setup self view properties
+        skipButton.setTitle("건너뛰기", for: .normal)
+        skipButton.setTitleColor(.blueGrey, for: .normal)
+        skipButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .medium)
+        
+        // setup self view contraints
+        skipButton.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(17)
+            make.right.equalTo(self.view.safeAreaLayoutGuide).inset(24)
+            make.height.equalTo(21)
         }
     }
     
