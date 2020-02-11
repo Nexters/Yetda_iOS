@@ -55,12 +55,13 @@ class StartViewController: BaseViewController {
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else {
-                        for document in querySnapshot!.documents {
-                            print("\(document.documentID) => \(document.data())")
-                        }
 //                        for document in querySnapshot!.documents {
-//                            print("\(document.data())")
+//                            print("\(document.documentID) => \(document.data())")
 //                        }
+                        for document in querySnapshot!.documents {
+                            let date = document.get("updated_at")
+                            print("\(date)")
+                        }
                     }
                 }
         
