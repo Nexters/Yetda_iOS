@@ -45,19 +45,17 @@ extension HomePageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         return nil
     }
-    
-    
 }
 
 extension HomePageViewController: HomeViewModelable {
+    
     func next(viewController: HomeViewControllerable) {
         guard let vc = viewController as? BaseViewController else { return }
         setViewControllers([vc], direction: .forward, animated: true, completion: nil)
     }
     
-    func prev() {
-        
+    func prev(viewController: HomeViewControllerable) {
+        guard let vc = viewController as? BaseViewController else { return }
+        setViewControllers([vc], direction: .reverse, animated: true, completion: nil)
     }
-    
-    
 }
