@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Database: Object {
-    @objc dynamic var updated_at = ""
+    @objc dynamic var updated_at = "now"
     let presents = List<Present>()
     let questions = List<Question>()
 }

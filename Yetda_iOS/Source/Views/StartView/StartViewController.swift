@@ -16,6 +16,7 @@ class StartViewController: BaseViewController {
     //    var database: Firestore!
     @IBOutlet weak var startButton: UIButton!
     var database: Firestore?
+    var updated_at: Timestamp?
     
     static func instance(viewModel: HomeViewModel) -> StartViewController? {
         let startViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "StartViewController") as? StartViewController
@@ -45,26 +46,63 @@ class StartViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        database = Firestore.firestore()
         
-                let settings = FirestoreSettings()
-                Firestore.firestore().settings = settings
-                database = Firestore.firestore()
+        dumpNewDataFromFirebase(database: database)
+        
+        do {
+            let realm = try Realm()
+            let mdb = realm.objects(Database.self)
+            if type(of: mdb) == Results<Database>.self {
+                // 아직 데이터베이스가 생성되지 않은 상태
+                let mdb = Database()
+                mdb.updated_at = ""
+                try realm.write {
+                    realm.add(mdb)
+                }
+            } else {
+                // 이미 Realm은 존재
+                print("Realm exists: \(mdb)")
+                
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+            
+                    database?.collection("updates").getDocuments() { (querySnapshot, err) in
+                                if let err = err {
+                                    print("Error getting documents: \(err)")
+                                } else {
+//                                    for document in querySnapshot!.documents {
+//                                        let date = document.get("updated_at")
+//                                        print(date)
+                                    let date = querySnapshot!.documents[0].get("updated_at")
+                                }
+                            }
+                
+        
+        
+
                 // Do any additional setup after loading the view.
         
-        database?.collection("updates").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-//                        for document in querySnapshot!.documents {
-//                            print("\(document.documentID) => \(document.data())")
-//                        }
-                        for document in querySnapshot!.documents {
-                            let date = document.get("updated_at")
-                            print("\(date)")
-                        }
-                    }
-                }
+
+
         
+    }
+    
+    func dumpNewDataFromFirebase(database: Firestore?) {
+        let presentsRef = database?.collection("presents")
+        presentsRef?.getDocuments(completion: { (querySnapshot, error) in
+            if let err = error {
+                print(err)
+            } else {
+                for doc in querySnapshot!.documents {
+                    print("\(doc.documentID) => \(doc.data())")
+                }
+            }
+        })
     }
 }
 
