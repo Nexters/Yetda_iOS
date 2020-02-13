@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RangeSeekSlider
 
 extension PriceViewController {
     /*
@@ -25,6 +26,7 @@ extension PriceViewController {
         view.addSubview(descriptionLabel)
         view.addSubview(nextButton)
         view.addSubview(priceGroup)
+        view.addSubview(priceSlider)
         
         // setup subviews properties
         setupBackButton()
@@ -32,6 +34,7 @@ extension PriceViewController {
         setupDescriptionLabel()
         setupNextButton()
         setupPriceGroup()
+        setupPriceSlider()
     }
     
     private func setupBackButton() {
@@ -135,5 +138,26 @@ extension PriceViewController {
         wonPriceLabel.text = "만원"
         wonPriceLabel.font = .systemFont(ofSize: 34, weight: .bold)
         wonPriceLabel.sizeToFit()
+    }
+    
+    private func setupPriceSlider() {
+
+        // setup self view properties
+        priceSlider.tintColor = .paleLilac
+        priceSlider.colorBetweenHandles = .chacolGrey
+        priceSlider.lineHeight = 2
+        priceSlider.hideLabels = true
+        priceSlider.handleColor = .white
+        priceSlider.handleBorderColor = .paleLilac
+        priceSlider.handleBorderWidth = 1
+        priceSlider.handleDiameter = 30
+        
+        // setup self view contraints
+        priceSlider.snp.makeConstraints { (make) in
+            make.top.equalTo(priceGroup.snp.bottom).offset(40)
+            make.centerX.equalTo(self.view.safeAreaLayoutGuide)
+            make.left.right.equalTo(self.view.safeAreaLayoutGuide).inset(54)
+            make.height.equalTo(30)
+        }
     }
 }

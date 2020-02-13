@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RangeSeekSlider
 
 class PriceViewController: BaseViewController {
     
@@ -21,7 +22,7 @@ class PriceViewController: BaseViewController {
     var maxPriceLabel = UILabel()
     var wonPriceLabel = UILabel()
     
-    var priceSlider = UISlider()
+    var priceSlider = RangeSeekSlider()
     
     static func instance(viewModel: HomeViewModel) -> PriceViewController? {
         let priceViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "PriceViewController") as? PriceViewController

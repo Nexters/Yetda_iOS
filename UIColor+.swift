@@ -16,7 +16,7 @@ extension UIColor {
     static let shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.03)
     static let veryLightPink = UIColor(red: 201/255, green: 201/255, blue: 201/255, alpha: 1)
     static let veryLightPink2 = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
-    
+    static let chacolGrey = UIColor(red: 50/255, green: 65/255, blue: 72/255, alpha: 1)
     static func blueGreyWith(alpha: CGFloat) -> UIColor {
         return UIColor(red: 140/255, green: 144/255, blue: 152/255, alpha: alpha)
     }
