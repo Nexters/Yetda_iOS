@@ -143,14 +143,26 @@ extension PriceViewController {
     private func setupPriceSlider() {
 
         // setup self view properties
+        priceSlider.setupStyle()
         priceSlider.tintColor = .paleLilac
         priceSlider.colorBetweenHandles = .chacolGrey
         priceSlider.lineHeight = 2
-        priceSlider.hideLabels = true
+        
         priceSlider.handleColor = .white
         priceSlider.handleBorderColor = .paleLilac
         priceSlider.handleBorderWidth = 1
         priceSlider.handleDiameter = 30
+        
+        priceSlider.minValue = 0
+        priceSlider.maxValue = 100
+        priceSlider.minDistance = 1
+        priceSlider.selectedMinValue = 0
+        priceSlider.selectedMaxValue = 10
+        
+        priceSlider.enableStep = true
+        priceSlider.hideLabels = true
+        
+        priceSlider.delegate = self
         
         // setup self view contraints
         priceSlider.snp.makeConstraints { (make) in

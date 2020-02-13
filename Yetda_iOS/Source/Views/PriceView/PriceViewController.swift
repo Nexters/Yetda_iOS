@@ -57,7 +57,9 @@ extension PriceViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storePrice(minPrice: 0, maxPrice: 10000)
+        let min = Int(priceSlider.selectedMinValue)
+        let max = Int(priceSlider.selectedMaxValue)
+        homeViewModel?.storePrice(minPrice: min, maxPrice: max)
     }
 }
 

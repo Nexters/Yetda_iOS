@@ -17,6 +17,7 @@
 		3A44737423EEA16B00CE8936 /* GenderToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44737323EEA16B00CE8936 /* GenderToggleButton.swift */; };
 		3A44737623EFD63200CE8936 /* GenderViewController+ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44737523EFD63200CE8936 /* GenderViewController+ToggleButton.swift */; };
 		3A44737823F557AC00CE8936 /* PirceViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44737723F557AC00CE8936 /* PirceViewController+layout.swift */; };
+		3A44737C23F5765600CE8936 /* PriceViewController+RangeSeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44737B23F5765600CE8936 /* PriceViewController+RangeSeekSlider.swift */; };
 		3AF6A9BE23C4A72400B588CE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */; };
 		3AF6A9C223C4AD0300B588CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */; };
 		4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */; };
@@ -58,6 +59,7 @@
 		3A44737323EEA16B00CE8936 /* GenderToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderToggleButton.swift; sourceTree = "<group>"; };
 		3A44737523EFD63200CE8936 /* GenderViewController+ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+ToggleButton.swift"; sourceTree = "<group>"; };
 		3A44737723F557AC00CE8936 /* PirceViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PirceViewController+layout.swift"; sourceTree = "<group>"; };
+		3A44737B23F5765600CE8936 /* PriceViewController+RangeSeekSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PriceViewController+RangeSeekSlider.swift"; sourceTree = "<group>"; };
 		3AF6A9BD23C4A72400B588CE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		3AF6A9C123C4AD0300B588CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C002D7323D0B49E00A1AC91 /* YetdaIntegrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetdaIntegrator.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			children = (
 				FAEC903A23CC84D600010233 /* PriceViewController.swift */,
 				3A44737723F557AC00CE8936 /* PirceViewController+layout.swift */,
+				3A44737B23F5765600CE8936 /* PriceViewController+RangeSeekSlider.swift */,
 			);
 			path = PriceView;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				3A2F484B23EAD5730034C429 /* HomePageViewController.swift in Sources */,
 				4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */,
 				3A2F483123DDB1C50034C429 /* UIView+.swift in Sources */,
+				3A44737C23F5765600CE8936 /* PriceViewController+RangeSeekSlider.swift in Sources */,
 				FAE165DB23D97DDA00CEC5F6 /* NameViewController+TextField.swift in Sources */,
 				FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */,
 				4C002D7723D0B53400A1AC91 /* FIrebaseIntegrator.swift in Sources */,
