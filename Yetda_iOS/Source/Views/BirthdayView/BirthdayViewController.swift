@@ -63,8 +63,6 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
-        
-        
     }
     
     // populate months and days array
