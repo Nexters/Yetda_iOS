@@ -58,9 +58,13 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         super.setup()
 
         setupUI()
-//        setDatePicker()
+        setDatePicker()
         
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
+        
+        
     }
     
     // populate months and days array
@@ -81,7 +85,7 @@ extension BirthdayViewController: HomeViewControllerable {
     }
     
     func prev() {
-        
+        homeViewModel?.backBtnTapped()
     }
     
     func storeData() {
@@ -94,5 +98,15 @@ private extension BirthdayViewController {
     func nextBtnTapped() {
         next()
         storeData()
+    }
+    
+    @objc
+    func backButtonTapped() {
+        prev()
+    }
+    
+    @objc
+    func skipButtonTapped() {
+        next()
     }
 }
