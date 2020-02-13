@@ -53,23 +53,26 @@ class HomeViewModel: NSObject {
     }
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {
-        switch actionType {
-        case ActionType.name:
-            answer.name = payload
-        case ActionType.gender:
-            answer.gender = payload
-        case ActionType.birthday:
-            answer.birthday = payload
-        default:
-            if var tags = answer.tags {
-                tags.append(payload)
-            } else {
-                answer.tags = []
+        print("store data")
+            switch actionType {
+            case ActionType.name:
+                answer.name = payload
+            case ActionType.gender:
+                answer.gender = payload
+            case ActionType.birthday:
+                answer.birthday = payload
+            default:
+                if var tags = answer.tags {
+                    tags.append(payload)
+                } else {
+                    answer.tags = []
+                }
             }
         }
     }
         
     public func storePrice(minPrice: Int, maxPrice: Int) {
+        print("store data")
         answer.minPrice = minPrice
         answer.maxPrice = maxPrice
     }

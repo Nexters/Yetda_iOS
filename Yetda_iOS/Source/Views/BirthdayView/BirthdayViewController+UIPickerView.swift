@@ -41,11 +41,18 @@ extension BirthdayViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        nextButton.setNextButton(isEnable: true)
         if component == 0 {
             monthDay.month = months[row]
+            monthLabel.text = String(format: "%02d", row+1)
+            monthLabel.textColor = UIColor(red: 42/255, green: 42/255, blue: 42/255, alpha: 1)
         } else {
             monthDay.day = days[row]
+            dateLabel.text = String(format: "%02d", row+1)
+            dateLabel.textColor = UIColor(red: 42/255, green: 42/255, blue: 42/255, alpha: 1)
+        }
+        
+        if monthDay.month != nil && monthDay.day != nil {
+            nextButton.setNextButton(isEnable: true)
         }
     }
 }
