@@ -53,6 +53,7 @@ class HomeViewModel: NSObject {
     }
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {
+        print("store data")
             switch actionType {
             case ActionType.name:
                 answer.name = payload
@@ -70,6 +71,7 @@ class HomeViewModel: NSObject {
     }
         
     public func storePrice(minPrice: Int, maxPrice: Int) {
+        print("store data")
         answer.minPrice = minPrice
         answer.maxPrice = maxPrice
     }

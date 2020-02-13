@@ -12,7 +12,26 @@ import UIKit
 import SnapKit
 
 class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
-    @IBOutlet weak var nextButton: UIButton!
+    
+    var backButton = UIButton()
+    var skipButton = UIButton()
+    var descriptionLabel = UILabel()
+    
+    var monthGroup = UIView()
+    var monthLabel = UILabel()
+    var monthLineGroup = UIView()
+    var monthLine1 = UIView()
+    var monthLine2 = UIView()
+    
+    var slashLabel = UILabel()
+    
+    var dateGroup = UIView()
+    var dateLabel = UILabel()
+    var dateLineGroup = UIView()
+    var dateLine1 = UIView()
+    var dateLine2 = UIView()
+    
+    var nextButton = UIButton()
     
     var months: [String]! = []
     var days: [String]! = []
@@ -31,17 +50,19 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         super.viewDidLoad()
 
         populateData()
-        
-
         // Do any additional setup after loading the view.
     }
     
     // custom setup
     override func setup() {
         super.setup()
+
+        setupUI()
         setDatePicker()
-        setButtonUI()
+        
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
     }
     
     // populate months and days array
@@ -54,7 +75,6 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
             days.append(String("\(day)일"))
         }
     }
-    
 }
 
 extension BirthdayViewController: HomeViewControllerable {
@@ -63,14 +83,12 @@ extension BirthdayViewController: HomeViewControllerable {
     }
     
     func prev() {
-        
+        homeViewModel?.backBtnTapped()
     }
     
     func storeData() {
         homeViewModel?.storeStringAnswer(actionType: ActionType.birthday, payload: "\(monthDay.month!) \(monthDay.day!)")
     }
-    
-    
 }
 
 private extension BirthdayViewController {
@@ -78,5 +96,15 @@ private extension BirthdayViewController {
     func nextBtnTapped() {
         next()
         storeData()
+    }
+    
+    @objc
+    func backButtonTapped() {
+        prev()
+    }
+    
+    @objc
+    func skipButtonTapped() {
+        next()
     }
 }
