@@ -35,7 +35,7 @@ class HomeViewModel: NSObject {
         print("startBtnTapped")
         
         let len = homeViewController.count
-        while idx < len {
+        while idx < len - 1 {
             idx += 1
             delegate?.next(viewController: homeViewController[idx])
             break
@@ -53,20 +53,20 @@ class HomeViewModel: NSObject {
     }
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {
-            switch actionType {
-            case ActionType.name:
-                answer.name = payload
-            case ActionType.gender:
-                answer.gender = payload
-            case ActionType.birthday:
-                answer.birthday = payload
-            default:
-                if var tags = answer.tags {
-                    tags.append(payload)
-                } else {
-                    answer.tags = []
-                }
+        switch actionType {
+        case ActionType.name:
+            answer.name = payload
+        case ActionType.gender:
+            answer.gender = payload
+        case ActionType.birthday:
+            answer.birthday = payload
+        default:
+            if var tags = answer.tags {
+                tags.append(payload)
+            } else {
+                answer.tags = []
             }
+        }
     }
         
     public func storePrice(minPrice: Int, maxPrice: Int) {
