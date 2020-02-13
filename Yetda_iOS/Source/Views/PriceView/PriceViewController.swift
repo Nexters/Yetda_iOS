@@ -13,8 +13,15 @@ class PriceViewController: BaseViewController {
     var backButton = UIButton()
     var skipButton = UIButton()
     var descriptionLabel = UILabel()
-    
     var nextButton = UIButton()
+    
+    var priceGroup = UIStackView()
+    var minPriceLabel = UILabel()
+    var tildeLabel = UILabel() //"~"
+    var maxPriceLabel = UILabel()
+    var wonPriceLabel = UILabel()
+    
+    var priceSlider = UISlider()
     
     static func instance(viewModel: HomeViewModel) -> PriceViewController? {
         let priceViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "PriceViewController") as? PriceViewController

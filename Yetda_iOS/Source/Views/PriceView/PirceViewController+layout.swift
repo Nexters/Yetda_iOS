@@ -24,12 +24,14 @@ extension PriceViewController {
         view.addSubview(skipButton)
         view.addSubview(descriptionLabel)
         view.addSubview(nextButton)
+        view.addSubview(priceGroup)
         
         // setup subviews properties
         setupBackButton()
         setupSkipButton()
         setupDescriptionLabel()
         setupNextButton()
+        setupPriceGroup()
     }
     
     private func setupBackButton() {
@@ -89,5 +91,49 @@ extension PriceViewController {
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(32)
             make.height.equalTo(52)
         }
+    }
+    
+    private func setupPriceGroup() {
+        
+        // setup self view properties
+        priceGroup.axis  = .horizontal
+        priceGroup.distribution  = .fillProportionally
+        priceGroup.alignment = .center
+        priceGroup.spacing   = 16.0
+        
+        // setup self view contraints
+        priceGroup.snp.makeConstraints { (make) in
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(41)
+            make.centerX.equalTo(self.view.safeAreaLayoutGuide)
+            make.height.equalTo(41)
+        }
+        
+        // add subviews
+        priceGroup.addArrangedSubview(minPriceLabel)
+        priceGroup.addArrangedSubview(tildeLabel)
+        priceGroup.addArrangedSubview(maxPriceLabel)
+        priceGroup.addArrangedSubview(wonPriceLabel)
+        
+        // setup subviews properties
+        setupPriceLabels()
+    }
+    
+    private func setupPriceLabels() {
+        
+        minPriceLabel.text = "1"
+        minPriceLabel.font = .systemFont(ofSize: 34, weight: .bold)
+        minPriceLabel.sizeToFit()
+        
+        tildeLabel.text = "~"
+        tildeLabel.font = .systemFont(ofSize: 34, weight: .bold)
+        tildeLabel.sizeToFit()
+        
+        maxPriceLabel.text = "10"
+        maxPriceLabel.font = .systemFont(ofSize: 34, weight: .bold)
+        maxPriceLabel.sizeToFit()
+        
+        wonPriceLabel.text = "만원"
+        wonPriceLabel.font = .systemFont(ofSize: 34, weight: .bold)
+        wonPriceLabel.sizeToFit()
     }
 }
