@@ -13,5 +13,6 @@ target 'Yetda_iOS' do
   pod 'SwiftLint', '0.38.1'
   pod 'SnapKit', '~> 5.0.0'
   pod 'RealmSwift'
+  pod 'RangeSeekSlider'
 
 end

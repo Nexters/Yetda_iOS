@@ -35,7 +35,7 @@ class HomeViewModel: NSObject {
         print("startBtnTapped")
         
         let len = homeViewController.count
-        while idx < len {
+        while idx < len - 1 {
             idx += 1
             delegate?.next(viewController: homeViewController[idx])
             break
@@ -68,6 +68,7 @@ class HomeViewModel: NSObject {
                     answer.tags = []
                 }
             }
+        }
     }
         
     public func storePrice(minPrice: Int, maxPrice: Int) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: BaseViewController {
 
     var questionNum = 1
     var basePoint = 5

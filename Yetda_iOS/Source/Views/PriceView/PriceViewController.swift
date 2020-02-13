@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import RangeSeekSlider
 
 class PriceViewController: BaseViewController {
+    
+    var backButton = UIButton()
+    var skipButton = UIButton()
+    var descriptionLabel = UILabel()
+    var nextButton = UIButton()
+    
+    var priceGroup = UIStackView()
+    var minPriceLabel = UILabel()
+    var tildeLabel = UILabel() //"~"
+    var maxPriceLabel = UILabel()
+    var wonPriceLabel = UILabel()
+    
+    var priceSlider = RangeSeekSlider()
     
     static func instance(viewModel: HomeViewModel) -> PriceViewController? {
         let priceViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "PriceViewController") as? PriceViewController
@@ -20,14 +34,17 @@ class PriceViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
         // Do any additional setup after loading the view.
     }
     
     override func setup() {
         super.setup()
+        setupUI()
+        
+        nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
     }
-
 }
 
 extension PriceViewController: HomeViewControllerable {
@@ -36,21 +53,30 @@ extension PriceViewController: HomeViewControllerable {
     }
     
     func prev() {
-        
+        homeViewModel?.backBtnTapped()
     }
     
     func storeData() {
-        homeViewModel?.storePrice(minPrice: 0, maxPrice: 10000)
+        let min = Int(priceSlider.selectedMinValue)
+        let max = Int(priceSlider.selectedMaxValue)
+        homeViewModel?.storePrice(minPrice: min, maxPrice: max)
     }
-    
-    
 }
 
 private extension PriceViewController {
     @objc
     func nextBtnTapped() {
-        print("next button in start tapped")
         next()
         storeData()
+    }
+    
+    @objc
+    func backButtonTapped() {
+        prev()
+    }
+    
+    @objc
+    func skipButtonTapped() {
+        next()
     }
 }
