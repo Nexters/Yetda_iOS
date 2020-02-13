@@ -1,5 +1,5 @@
 //
-//  CheckBox.swift
+//  GenderViewController+layout.swift
 //  Yetda_iOS
 //
 //  Created by Leon Kong on 2020/01/29.
@@ -11,113 +11,116 @@ import SnapKit
 
 extension GenderViewController {
     
+    /*
+     1. setup self view properties
+     2. setup self view contraints
+     3. add subviews
+     4. setup subviews properties
+    */
+    
+    func setupUI() {
+        // setup self view properties
+        // setup self view contraints
+        // add subviews
+        view.addSubview(backButton)
+        view.addSubview(skipButton)
+        view.addSubview(descriptionLabel)
+        view.addSubview(femaleButton)
+        view.addSubview(maleButton)
+        
+        // setup subviews properties
+        setupNextButton()
+        setupBackButton()
+        setupSkipButton()
+        setupDescriptionLabel()
+        setupFemaleButton()
+        setupMaleButton()
+    }
+    
+    private func setupBackButton() {
+        // MARK: 리소스 추가 예정
+        // setup self view properties
+        backButton.setTitle("<", for: .normal)
+        backButton.setTitleColor(.veryLightPink, for: .normal)
+        backButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .bold)
+        
+        // setup self view contraints
+        backButton.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(16)
+            make.left.equalTo(self.view.safeAreaLayoutGuide).inset(24)
+            make.height.equalTo(22)
+        }
+    }
+    
+    private func setupSkipButton() {
+        
+        // setup self view properties
+        skipButton.setTitle("건너뛰기", for: .normal)
+        skipButton.setTitleColor(.blueGrey, for: .normal)
+        skipButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .medium)
+        
+        // setup self view contraints
+        skipButton.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(17)
+            make.right.equalTo(self.view.safeAreaLayoutGuide).inset(24)
+            make.height.equalTo(21)
+        }
+    }
+    
     // Set nextButton
-    func setButtonUI() {
-//        setupButton(button: nextButton)
+    private func setupNextButton() {
+        
+        // setup self view properties
         nextButton.setNextButton(isEnable: true)
         
+        // setup self view contraints
         nextButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self.view)
-            make.left.right.equalTo(self.view).inset(24)
-            make.bottom.equalTo(self.view).inset(50)
-            make.height.equalTo(44)
+            make.centerX.equalTo(self.view.safeAreaLayoutGuide)
+            make.left.right.equalTo(self.view.safeAreaLayoutGuide).inset(28)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(32)
+            make.height.equalTo(52)
         }
     }
     
-    // Styles and SnapKit Implementations
-    func createCheckboxStackView() {
-        view.addSubview(horizontalStackView)
+    private func setupDescriptionLabel() {
         
-        // Init CheckBox with Button and container View
-        setCheckBox(view: femaleCheckBox, button: femaleButton)
-        setCheckBox(view: maleCheckBox, button: maleButton)
+        // setup self view properties
+        descriptionLabel.text = "쭈피님의 성별은?"
+        descriptionLabel.textColor = .brownishGrey
+        descriptionLabel.font = .systemFont(ofSize: 20, weight: .medium)
         
-        horizontalStackView.addSubview(femaleCheckBox)
-        horizontalStackView.addSubview(femaleLabel)
-        horizontalStackView.addSubview(maleCheckBox)
-        horizontalStackView.addSubview(maleLabel)
-        
-        horizontalStackView.snp.makeConstraints { (make) in
-            make.topMargin.equalTo(300)
-            make.leading.trailing.equalTo(self.view.safeAreaLayoutGuide).inset(20)
+        // setup self view contraints
+        descriptionLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(103)
+            make.centerX.equalTo(self.view.safeAreaLayoutGuide)
             make.height.equalTo(33)
         }
-        
-        setLabelsAndButtons()
-        
     }
     
-    
-    // Set SNP to CheckBox labels and buttons
-    func setLabelsAndButtons() {
-        femaleLabel.setCommonLabelSetup(title: "여성")
-        femaleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(femaleButton.snp.right).inset(-14)
-        }
+    private func setupFemaleButton() {
         
-        maleLabel.setCommonLabelSetup(title: "남성")
-        maleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(maleButton.snp.right).inset(-14)
-        }
+        // setup self view properties
+        femaleButton.setOn(true)
+        femaleButton.addTarget(self, action: #selector(clickGenderToggleButton(_:)), for: .touchUpInside)
         
-        setButtonAction(button: femaleButton)
-        femaleCheckBox.snp.makeConstraints { (make) in
-            make.left.equalTo(26)
-        }
-        
-        setButtonAction(button: maleButton)
-        maleCheckBox.snp.makeConstraints { (make) in
-            make.left.equalTo(femaleLabel.snp.rightMargin).inset(-59)
-        }
-        
-    }
-    
-    // Outer Border of CheckBox Button
-    func setButtonContainerView(view: UIView) {
-        view.backgroundColor = .clear
-        view.layer.cornerRadius = 13
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.brownishGrey.cgColor
-        
-        view.snp.makeConstraints { (make) in
-            make.width.height.equalTo(26)
-        }
-        
-    }
-    
-    // CheckBox Button and View setups
-    func setCheckBox(view: UIView, button: UIButton) {
-        setButtonContainerView(view: view)
-        button.setButtonStyle()
-
-
-        view.addSubview(button)
-        button.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
+        // setup self view contraints
+        femaleButton.snp.makeConstraints { (make) in
+            make.top.equalTo(self.descriptionLabel.snp.bottom).offset(40)
+            make.right.equalTo(self.view.snp.centerX).offset(-11)
+            make.width.height.equalTo(100)
         }
     }
     
-    // Add CheckBox button action
-    func setButtonAction(button: UIButton) {
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-    }
-
-    //     male/female Buttons are mutually exclusive when selecting
-    @objc func buttonAction(sender: UIButton!) {
-        if sender.backgroundColor == .brownishGrey {
-            sender.backgroundColor = .clear
-            nextButton.setNextButtonEnable(false)
-        } else {
-            sender.backgroundColor = .brownishGrey
-            nextButton.setNextButtonEnable(true)
+    private func setupMaleButton() {
+        
+        // setup self view properties
+        maleButton.setOn(false)
+        maleButton.addTarget(self, action: #selector(clickGenderToggleButton(_:)), for: .touchUpInside)
+        
+        // setup self view contraints
+        maleButton.snp.makeConstraints { (make) in
+            make.top.width.height.equalTo(femaleButton)
+            make.left.equalTo(self.view.snp.centerX).offset(11)
         }
-
-        if sender == maleButton {
-            femaleButton.backgroundColor = .clear
-        } else {
-            maleButton.backgroundColor = .clear
-        }
-
-
     }
 }

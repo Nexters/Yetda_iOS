@@ -12,15 +12,17 @@ import SnapKit
 class GenderViewController: BaseViewController {
     
     @IBOutlet weak var nextButton: UIButton!
-    var femaleButton = UIButton()
-    var maleButton = UIButton()
-    var femaleLabel = UILabel()
-    var maleLabel = UILabel()
     
-    var femaleCheckBox = UIView()
-    var maleCheckBox = UIView()
+    var backButton = UIButton()
+    var skipButton = UIButton()
+    var descriptionLabel = UILabel()
+    var femaleButton = GenderToggleButton(title: "여성")
+    var maleButton = GenderToggleButton(title: "남성")
+    var selectedGender = Gender.female
     
-    var horizontalStackView = UIStackView()
+    enum Gender {
+        case female, male
+    }
     
     static func instance(viewModel: HomeViewModel) -> GenderViewController? {
         let genderViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "GenderViewController") as? GenderViewController
@@ -31,22 +33,21 @@ class GenderViewController: BaseViewController {
     fileprivate var homeViewModel: HomeViewModel?
     
     override func viewDidLoad() {
-           super.viewDidLoad()
-           
-           // Do any additional setup after loading the view.
-           navigationController?.setNavigationBarHidden(false, animated: true)
-       }
-       
-       // custom setup
-       override func setup() {
-           super.setup()
+        super.viewDidLoad()
         
-            setButtonUI()
-            nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
-            createCheckboxStackView()
-       }
-       
-
+        // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    // custom setup
+    override func setup() {
+        super.setup()
+        
+        setupUI()
+        nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(backBtnTapped), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
+    }
 }
 
 extension GenderViewController: HomeViewControllerable {
@@ -55,14 +56,12 @@ extension GenderViewController: HomeViewControllerable {
     }
     
     func prev() {
-        
+        homeViewModel?.backBtnTapped()
     }
     
     func storeData() {
         homeViewModel?.storeStringAnswer(actionType: ActionType.gender, payload: "female")
     }
-    
-    
 }
 
 private extension GenderViewController {
@@ -70,5 +69,15 @@ private extension GenderViewController {
     func nextBtnTapped() {
         next()
         storeData()
+    }
+    
+    @objc
+    func backBtnTapped() {
+        prev()
+    }
+    
+    @objc
+    func skipButtonTapped() {
+        next()
     }
 }

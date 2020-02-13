@@ -10,18 +10,12 @@ import UIKit
 
 protocol HomeViewModelable: class {
     func next(viewController: HomeViewControllerable)
-    func prev()
+    func prev(viewController: HomeViewControllerable)
 }
 
 class HomeViewModel: NSObject {
     
-//    private var name: String?
     private var idx = 0
-    
-//    enum ActionType {
-//        case name, gender, birthday, minPrice, maxPrice, tag
-//    }
-    
     var answer = Answer()
     
     public lazy var homeViewController: [HomeViewControllerable] = {
@@ -48,6 +42,16 @@ class HomeViewModel: NSObject {
         }
     }
     
+    public func backBtnTapped() {
+        print("backButtonTapped")
+        
+        while idx > 1 {
+            idx -= 1
+            delegate?.prev(viewController: homeViewController[idx])
+            break
+        }
+    }
+    
     public func storeStringAnswer(actionType: ActionType, payload: String) {
             switch actionType {
             case ActionType.name:
@@ -69,5 +73,4 @@ class HomeViewModel: NSObject {
         answer.minPrice = minPrice
         answer.maxPrice = maxPrice
     }
-    
 }
