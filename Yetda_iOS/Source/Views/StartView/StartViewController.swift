@@ -99,7 +99,12 @@ class StartViewController: BaseViewController {
                 print(err)
             } else {
                 for doc in querySnapshot!.documents {
-                    print("\(doc.documentID) => \(doc.data())")
+                    let docData = doc.data()
+//                    let tags = docData["tags"]
+                    
+                    if let dict = docData["tags"] as? [String], !dict.isEmpty {
+                        print(dict)
+                    }
                 }
             }
         })
