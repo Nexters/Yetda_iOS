@@ -50,26 +50,29 @@ class StartViewController: BaseViewController {
         Firestore.firestore().settings = settings
         database = Firestore.firestore()
         
-        dumpNewDataFromFirebase(database: database)
-        
         do {
-            let realm = try Realm()
-            let mdb = realm.objects(Database.self)
-            if type(of: mdb) == Results<Database>.self {
-                // 아직 데이터베이스가 생성되지 않은 상태
-                let mdb = Database()
-                mdb.updated_at = ""
-                try realm.write {
-                    realm.add(mdb)
-                }
-            } else {
-                // 이미 Realm은 존재
-                print("Realm exists: \(mdb)")
-                
+          let realm = try Realm()
+            try realm.write {
+                realm.deleteAll()
+            }
+            print(realm.objects(Present.self))
+//            let db = realm.objects(Database.self)
+            
+            if let firestoreDate = getRecentUpdatedDate(database: database) as? String {
+                let localDate = realm.objects(Database.self)
+//                if localDate[0].updated_at == firestoreDate {
+//                    print(true)
+//                } else {
+////                    print(localDate[0].updated_at)
+//                    print(firestoreDate)
+//                }
+//                print(firestoreDate)
             }
         } catch let error as NSError {
-            print(error)
+          // handle error
         }
+        
+//        dumpNewDataFromFirebase(database: database)
             
                     database?.collection("updates").getDocuments() { (querySnapshot, err) in
                                 if let err = err {
@@ -88,8 +91,35 @@ class StartViewController: BaseViewController {
                 // Do any additional setup after loading the view.
         
 
-
         
+    }
+    
+    func getRecentUpdatedDate(database: Firestore?) -> String {
+        var firestoreDate = ""
+        database?.collection("updates").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        let date = querySnapshot!.documents[0].get("updated_at")
+                        if let unWrappedData = date as? Timestamp {
+                            firestoreDate = "\(unWrappedData)"
+                        }
+                    }
+                }
+        return firestoreDate
+    }
+    
+    func storePresentInRealm(present: Present) {
+        do {
+            let realm = try Realm()
+            
+                // 선물을 realm에 추가
+                try realm.write {
+                    realm.add(present)
+                }
+        } catch let error as NSError {
+            print(error)
+        }
     }
     
     func dumpNewDataFromFirebase(database: Firestore?) {
@@ -99,12 +129,28 @@ class StartViewController: BaseViewController {
                 print(err)
             } else {
                 for doc in querySnapshot!.documents {
-                    let docData = doc.data()
-//                    let tags = docData["tags"]
+//                    let docData = doc.data()
+//                    let present = Present()
                     
-                    if let dict = docData["tags"] as? [String], !dict.isEmpty {
-                        print(dict)
+                    if let data = doc.data() as? [String: Any] {
+                        let present = Present()
+                        if let name = data["name"] as? String {
+                            present.present = name
+                        }
+                        if let price = data["price"] as? Int {
+                            present.price = String(price)
+                        }
+                        if let tags = data["tags"] as? [String] {
+                            for tag in tags {
+                                present.tags.append(tag)
+                            }
+                        }
+                        
                     }
+                    
+//                    if let dict = docData["tags"] as? [String], !dict.isEmpty {
+//                        print(dict)
+//                    }
                 }
             }
         })

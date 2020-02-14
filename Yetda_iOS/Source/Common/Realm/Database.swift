@@ -8,9 +8,10 @@
 
 import Foundation
 import RealmSwift
+import FirebaseFirestore
 
 class Database: Object {
-    @objc dynamic var updated_at = "now"
+    @objc dynamic var updated_at = ""
     let presents = List<Present>()
     let questions = List<Question>()
 }
