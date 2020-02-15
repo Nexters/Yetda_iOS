@@ -20,6 +20,8 @@ class StartViewController: BaseViewController {
     var updated_at: Timestamp?
     var imageView: UIImageView?
     var guideText = UILabel()
+    var cardView = UIView()
+    var subText = UILabel()
     
     static func instance(viewModel: HomeViewModel) -> StartViewController? {
         let startViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "StartViewController") as? StartViewController
@@ -44,7 +46,9 @@ class StartViewController: BaseViewController {
         }
         
         setImage()
-        setLabel()
+        setGuideText()
+        setCardView()
+        setSubText()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     

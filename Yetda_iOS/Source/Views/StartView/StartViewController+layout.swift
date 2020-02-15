@@ -23,7 +23,7 @@ extension StartViewController {
         
     }
     
-    func setLabel() {
+    func setGuideText() {
         let guideLabelView = UIView()
         guideLabelView.addSubview(guideText)
         self.view.addSubview(guideLabelView)
@@ -42,4 +42,31 @@ extension StartViewController {
             
         }
     }
+    
+    func setCardView() {
+        cardView.setCardView()
+        self.view.addSubview(cardView)
+        
+        cardView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.snp.top).offset(583)
+            make.width.equalTo(self.view.snp.width).multipliedBy(0.894)
+            make.height.equalTo(150)
+            make.leading.equalTo(self.view.snp.trailing).multipliedBy(0.053)
+            
+        }
+    }
+    
+    func setSubText() {
+        self.view.addSubview(subText)
+        
+        subText.text = "선물 추천 기록"
+        subText.textColor = .brownishGrey
+        subText.font = .systemFont(ofSize: 20)
+        
+        subText.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaInsets).inset(538)
+            make.leading.equalTo(self.view.snp.trailing).multipliedBy(0.053)
+        }
+    }
+    
 }
