@@ -28,7 +28,12 @@ extension StartViewController {
         
         _ = [guideLabelView, imageView, subText,cardView].map { self.contentView.addSubview($0)}
         
+        self.view.addSubview(startButton)
         
+        startButton.snp.makeConstraints { (make) in
+            make.trailing.equalToSuperview().inset(18)
+            make.top.equalToSuperview().offset(808)
+        }
         
         
         setGuideText()
@@ -93,6 +98,7 @@ extension StartViewController {
             
         }
     }
+    
     
     
 }

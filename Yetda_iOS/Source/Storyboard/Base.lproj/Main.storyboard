@@ -25,9 +25,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ePi-3M-pCi"/>
-                    <connections>
-                        <outlet property="startButton" destination="IdF-yw-p0B" id="y4q-7a-0c5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
