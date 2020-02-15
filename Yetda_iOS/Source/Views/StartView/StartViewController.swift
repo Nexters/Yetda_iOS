@@ -18,6 +18,8 @@ class StartViewController: BaseViewController {
     @IBOutlet weak var startButton: UIButton!
     var database: Firestore?
     var updated_at: Timestamp?
+    var imageView: UIImageView?
+    var guideText = UILabel()
     
     static func instance(viewModel: HomeViewModel) -> StartViewController? {
         let startViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "StartViewController") as? StartViewController
@@ -40,6 +42,9 @@ class StartViewController: BaseViewController {
             make.bottom.equalTo(self.view).inset(50)
             make.height.equalTo(44)
         }
+        
+        setImage()
+        setLabel()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
