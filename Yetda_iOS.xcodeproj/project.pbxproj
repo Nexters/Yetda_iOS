@@ -40,6 +40,7 @@
 		FAB0FD2223C4945900674A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2023C4945900674A3E /* Main.storyboard */; };
 		FAB0FD2423C4945A00674A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2323C4945A00674A3E /* Assets.xcassets */; };
 		FAB0FD2723C4945A00674A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FD2523C4945A00674A3E /* LaunchScreen.storyboard */; };
+		FAC23E2723F83EBF000B6DEF /* StartViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC23E2623F83EBF000B6DEF /* StartViewController+layout.swift */; };
 		FADF05E823EB216900E40952 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADF05E723EB216900E40952 /* UIButton+.swift */; };
 		FAE165D923D97C2300CEC5F6 /* NameViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE165D823D97C2300CEC5F6 /* NameViewController+layout.swift */; };
 		FAE165DB23D97DDA00CEC5F6 /* NameViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE165DA23D97DDA00CEC5F6 /* NameViewController+TextField.swift */; };
@@ -92,6 +93,7 @@
 		FAB0FD2323C4945A00674A3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB0FD2623C4945A00674A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB0FD2823C4945A00674A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC23E2623F83EBF000B6DEF /* StartViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StartViewController+layout.swift"; sourceTree = "<group>"; };
 		FADF05E723EB216900E40952 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = SOURCE_ROOT; };
 		FAE165D823D97C2300CEC5F6 /* NameViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameViewController+layout.swift"; sourceTree = "<group>"; };
 		FAE165DA23D97DDA00CEC5F6 /* NameViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameViewController+TextField.swift"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB0FD1E23C4945900674A3E /* StartViewController.swift */,
+				FAC23E2623F83EBF000B6DEF /* StartViewController+layout.swift */,
 			);
 			path = StartView;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */,
 				FA07AAB723F270C3006D2586 /* Present.swift in Sources */,
 				FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */,
+				FAC23E2723F83EBF000B6DEF /* StartViewController+layout.swift in Sources */,
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
 				FA07AABE23F271BE006D2586 /* Presents.swift in Sources */,
 				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,

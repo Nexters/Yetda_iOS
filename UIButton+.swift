@@ -31,6 +31,10 @@ extension UIButton {
         let underlineAttributedString = NSAttributedString(string: "StringWithUnderLine", attributes: underlineAttribute)
         self.titleLabel?.attributedText = underlineAttributedString
     }
+    
+//    func setStartButton() {
+//        self.layer.cornerRadius =
+//    }
         
     func setNextButton(isEnable: Bool, title: String = "다음") {
 
