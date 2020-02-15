@@ -88,7 +88,10 @@ extension QuestionViewController {
     private func setupFrontCardLabel() {
         
         // setup self view properties
-        frontCardLabel.text = "Question\(questionNum)"
+        
+            frontCardLabel.text = "\(questions.questions[questionNum].question)"
+        
+        
         
         // setup self view contraints
         frontCardLabel.snp.makeConstraints { (make) in

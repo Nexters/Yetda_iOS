@@ -35,18 +35,31 @@ extension QuestionViewController {
     @objc func showNextCard() {
         
         questionNum += 1
-        frontCardLabel.text = "Question\(questionNum)"
+      
+            frontCardLabel.text = "\(questions.questions[questionNum].question)"
         
-        if questionNum > basePoint {
-            descriptionLabel.text = "\(answer!.name)님에 대해 조금만 더 알려주세요!"
+        
+        
+        if questionNum >= questionSize - 1 {
+            questionNum = 0
+            next()
+        }
+        else {
+            if questionNum > basePoint {
+                if let name = answer?.name {
+                    descriptionLabel.text = "\(name)님에 대해 조금만 더 알려주세요!"
+                }
+            }
+            
+            frontCardLabel.alpha = 0
+            frontCardView.transform = .identity
+            
+            UIView.animate(withDuration: 0.5, animations: ({
+                self.frontCardLabel.alpha = 1
+            }))
         }
         
-        frontCardLabel.alpha = 0
-        frontCardView.transform = .identity
-        
-        UIView.animate(withDuration: 0.5, animations: ({
-            self.frontCardLabel.alpha = 1
-        }))
+
     }
     
     func setupButtonAction() {

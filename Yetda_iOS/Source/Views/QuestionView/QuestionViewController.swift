@@ -11,7 +11,7 @@ import RealmSwift
 
 class QuestionViewController: BaseViewController {
 
-    var questionNum = 1
+    var questionNum = 0
     var basePoint = 5
     
     let cardSize = CGSize(width: 272, height: 280)
@@ -25,9 +25,9 @@ class QuestionViewController: BaseViewController {
     let noButton: UIButton = UIButton()
     let midButton: UIButton = UIButton()
     var answer:Answer?
-    var question: Question?
-    var presents: Presents?
-    
+    var questions = Questions()
+    var presents: Results<Presents>?
+    var questionSize = 0
     
     
     static func instance(viewModel: HomeViewModel) -> QuestionViewController? {
@@ -44,8 +44,19 @@ class QuestionViewController: BaseViewController {
         
         do {
             let realm = try Realm()
-            let question = realm.objects(Question.self)
-            print("question: \(question)")
+            presents = realm.objects(Presents.self)
+            let qs: Results<Questions>?
+            qs = realm.objects(Questions.self)
+            if let unWrappedQuestions = qs {
+                questionSize = unWrappedQuestions[0].questions.count
+//                print("unwrapped: \(unWrappedQuestions[0].questions)")
+                for question in unWrappedQuestions[0].questions {
+//                    print("unwrapped: \(question)")
+                    questions.questions.append(question)
+                }
+                print("questions instance: \(questions)")
+            }
+            
         } catch let error as NSError {
             print("ERROR: \(error)")
         }
