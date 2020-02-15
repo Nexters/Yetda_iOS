@@ -14,5 +14,6 @@ target 'Yetda_iOS' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'RealmSwift'
   pod 'RangeSeekSlider'
+  pod 'BrightFutures'
 
 end

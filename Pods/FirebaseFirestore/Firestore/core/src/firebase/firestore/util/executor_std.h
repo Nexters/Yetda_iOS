@@ -21,7 +21,6 @@
 #include <atomic>
 #include <condition_variable>  // NOLINT(build/c++11)
 #include <deque>
-#include <memory>
 #include <mutex>  // NOLINT(build/c++11)
 #include <string>
 #include <thread>  // NOLINT(build/c++11)
@@ -274,7 +273,7 @@ class ExecutorStd : public Executor {
 
   std::vector<std::thread> worker_thread_pool_;
   // Used to stop the worker thread.
-  std::shared_ptr<std::atomic<bool>> shutting_down_;
+  std::atomic<bool> shutting_down_{false};
 
   std::atomic<Id> current_id_{0};
 };
