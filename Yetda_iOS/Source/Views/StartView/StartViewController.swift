@@ -80,7 +80,8 @@ class StartViewController: BaseViewController {
                                     
                                 }
                                 
-                                self.dumpNewDataFromFirebase(database: self.database)
+                                self.dumpPresentsFromFirebase(database: self.database)
+                                self.dumpQuestionFromFirebase(database: self.database)
                                 
                                 newUpdates.updated_at = firestoreDate
                                 try realm.write {
@@ -98,7 +99,7 @@ class StartViewController: BaseViewController {
 //                                    try realm.write {
 //                                       realm.deleteAll()
 //                                    }
-                                print("firestoreData: \(firestoreDate), localDB: \(realm.objects(Presents.self)), Updates: \(realm.objects(Updates.self))")
+                                print("firestoreData: \(firestoreDate), localDB: \(realm.objects(Presents.self)), Updates: \(realm.objects(Updates.self)), Question: \(realm.objects(Question.self))")
                             } catch let error as NSError {
                                 print("ERROR: \(error)")
                             }
@@ -139,7 +140,7 @@ class StartViewController: BaseViewController {
                 let config = Realm.Configuration(
                     // Set the new schema version. This must be greater than the previously used
                     // version (if you've never set a schema version before, the version is 0).
-                    schemaVersion: 4,
+                    schemaVersion: 5,
 
                     // Set the block which will be called automatically when opening a Realm with
                     // a schema version lower than the one set above
@@ -166,7 +167,49 @@ class StartViewController: BaseViewController {
                 print("migration success")
     }
     
-    func dumpNewDataFromFirebase(database: Firestore?) {
+    func dumpQuestionFromFirebase(database: Firestore?) {
+        let questionRef = database?.collection("question")
+        let questions = Questions()
+        
+        print("dumpQuestionFromFirebase")
+        
+        questionRef?.getDocuments(completion: { (querySnapshot, error) in
+            if let err = error {
+                    print(err)
+                } else {
+                    for doc in querySnapshot!.documents {
+                        print("question: \(doc.data())")
+                        if let data = doc.data() as? [String: Any] {
+                            let qs = Question()
+                            
+                            if let id = data["id"] as? Int {
+                                qs.id = id
+                            }
+                            if let question = data["question"] as? String {
+                                qs.question = question
+                            }
+                            if let tag = data["tag"] as? String {
+                                qs.tag = tag
+                            }
+                            questions.questions.append(qs)
+                            // question 관련 로직 들어갈 필요.
+
+                        }
+                    }
+                }
+                do {
+                    let realm = try Realm()
+                    try realm.write {
+                        realm.add(questions)
+                    }
+                } catch {
+                    print("failed")
+                }
+
+        })
+    }
+    
+    func dumpPresentsFromFirebase(database: Firestore?) {
         let presentsRef = database?.collection("presents")
 //        let questionRef = database?.collection("question")
         let newDB = Presents()

@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class Question: Object {
+    @objc dynamic var id = -1
     @objc dynamic var question = ""
     @objc dynamic var tag = ""
     @objc dynamic var isAsked = false
