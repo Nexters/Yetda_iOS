@@ -39,29 +39,19 @@ class StartViewController: BaseViewController {
     /// custom setup
     override func setup() {
         super.setup()
-//        startButton.setNextButton(isEnable: true, title: "")
-//        startButton.addTarget(self, action: #selector(startBtnTapped), for: .touchUpInside)
         startButton.isUserInteractionEnabled = true
         startButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(startBtnTapped)))
-//
-//        startButton.snp.makeConstraints { (make) in
-////            make.centerX.equalTo(self.view)
-////            make.left.right.equalTo(self.view).inset(24)
-////            make.bottom.equalTo(self.view).inset(50)
-////            make.height.equalTo(44)
-//            make.trailing.equalToSuperview().inset(18)
-//            make.top.equalToSuperview().offset(808)
-//        }
         
         
         
-        setScrollView()
+//        setScrollView()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        setScrollView()
         
         // Realm Migrationx
         mirgateRealm()
