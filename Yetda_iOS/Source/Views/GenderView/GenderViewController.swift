@@ -60,7 +60,11 @@ extension GenderViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStringAnswer(actionType: ActionType.gender, payload: "female")
+        if selectedGender == Gender.female {
+            homeViewModel?.storeStringAnswer(actionType: ActionType.gender, payload: "female")
+        } else {
+            homeViewModel?.storeStringAnswer(actionType: ActionType.gender, payload: "male")
+        }
     }
 }
 

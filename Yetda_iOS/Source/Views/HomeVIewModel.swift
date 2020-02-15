@@ -33,6 +33,7 @@ class HomeViewModel: NSObject {
     
     public func startBtnTapped() {
         print("startBtnTapped")
+        print(answer)
         
         let len = homeViewController.count
         while idx < len - 1 {
