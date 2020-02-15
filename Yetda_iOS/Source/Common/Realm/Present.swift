@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class Present: Object {
+    @objc dynamic var id = 0
     @objc dynamic var present = ""
     @objc dynamic var price = ""
     let tags = List<String>()
