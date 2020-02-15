@@ -22,13 +22,15 @@
 		FA07AAB723F270C3006D2586 /* Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AAB623F270C3006D2586 /* Present.swift */; };
 		FA07AAB923F270FC006D2586 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AAB823F270FC006D2586 /* Question.swift */; };
 		FA07AABB23F2713B006D2586 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AABA23F2713B006D2586 /* History.swift */; };
-		FA07AABE23F271BE006D2586 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AABD23F271BE006D2586 /* Database.swift */; };
+		FA07AABE23F271BE006D2586 /* Presents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AABD23F271BE006D2586 /* Presents.swift */; };
 		FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */; };
 		FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */; };
 		FA42367D23EE9CD800F71143 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42367C23EE9CD800F71143 /* Answer.swift */; };
 		FA42368123EEA83400F71143 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368023EEA83400F71143 /* ActionType.swift */; };
 		FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368223EEC17F00F71143 /* MonthDay.swift */; };
 		FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */; };
+		FA95784C23F7F5FE00B479FD /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95784B23F7F5FE00B479FD /* Questions.swift */; };
+		FA95784E23F7F7C600B479FD /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95784D23F7F7C600B479FD /* Updates.swift */; };
 		FAA5B41C23DED9520082005E /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5B41B23DED9520082005E /* GenderViewController.swift */; };
 		FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1A23C4945900674A3E /* AppDelegate.swift */; };
 		FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0FD1C23C4945900674A3E /* SceneDelegate.swift */; };
@@ -66,13 +68,15 @@
 		FA07AAB623F270C3006D2586 /* Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Present.swift; sourceTree = "<group>"; };
 		FA07AAB823F270FC006D2586 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FA07AABA23F2713B006D2586 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		FA07AABD23F271BE006D2586 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		FA07AABD23F271BE006D2586 /* Presents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presents.swift; sourceTree = "<group>"; };
 		FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+UIButton.swift"; sourceTree = "<group>"; };
 		FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+UILabel.swift"; sourceTree = "<group>"; };
 		FA42367C23EE9CD800F71143 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		FA42368023EEA83400F71143 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
 		FA42368223EEC17F00F71143 /* MonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDay.swift; sourceTree = "<group>"; };
 		FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+layout.swift"; sourceTree = "<group>"; };
+		FA95784B23F7F5FE00B479FD /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		FA95784D23F7F7C600B479FD /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
 		FAA5B41B23DED9520082005E /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		FAB0FD1723C4945900674A3E /* Yetda_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yetda_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0FD1A23C4945900674A3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,7 +207,9 @@
 				FA07AAB623F270C3006D2586 /* Present.swift */,
 				FA07AAB823F270FC006D2586 /* Question.swift */,
 				FA07AABA23F2713B006D2586 /* History.swift */,
-				FA07AABD23F271BE006D2586 /* Database.swift */,
+				FA07AABD23F271BE006D2586 /* Presents.swift */,
+				FA95784B23F7F5FE00B479FD /* Questions.swift */,
+				FA95784D23F7F7C600B479FD /* Updates.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -446,7 +452,7 @@
 				FA07AAB723F270C3006D2586 /* Present.swift in Sources */,
 				FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */,
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
-				FA07AABE23F271BE006D2586 /* Database.swift in Sources */,
+				FA07AABE23F271BE006D2586 /* Presents.swift in Sources */,
 				FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */,
 				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,
 				FADF05E823EB216900E40952 /* UIButton+.swift in Sources */,
@@ -456,6 +462,7 @@
 				FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */,
 				FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */,
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,
+				FA95784E23F7F7C600B479FD /* Updates.swift in Sources */,
 				FA07AAB923F270FC006D2586 /* Question.swift in Sources */,
 				3A2F483923E537010034C429 /* QuestionViewController+ClickMotion.swift in Sources */,
 				4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */,
@@ -469,6 +476,7 @@
 				FAEC903D23CC84E800010233 /* QuestionViewController.swift in Sources */,
 				3A2F484B23EAD5730034C429 /* HomePageViewController.swift in Sources */,
 				4C002D7423D0B49E00A1AC91 /* YetdaIntegrator.swift in Sources */,
+				FA95784C23F7F5FE00B479FD /* Questions.swift in Sources */,
 				FA07AABB23F2713B006D2586 /* History.swift in Sources */,
 				3A2F483123DDB1C50034C429 /* UIView+.swift in Sources */,
 				FAE165DB23D97DDA00CEC5F6 /* NameViewController+TextField.swift in Sources */,

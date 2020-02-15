@@ -68,29 +68,37 @@ class StartViewController: BaseViewController {
                 switch result {
                 case .success(let firestoreDate):
                     
-                        let localDB = realm.objects(Database.self)
+                        let updates = realm.objects(Updates.self)
 //                        var newLocalDB = Database()
                         print("firestore: \(firestoreDate)")
-                        if (localDB.isEmpty || localDB[0].updated_at != firestoreDate) || firestoreDate == "" {
+                        if (updates.isEmpty || updates[0].updated_at != firestoreDate) || firestoreDate == "" {
 //                            print("localDB: \(localDB)")
+                            let newUpdates = Updates()
                             do {
                                 try realm.write {
                                    realm.deleteAll()
+                                    
                                 }
                                 
                                 self.dumpNewDataFromFirebase(database: self.database)
-                                let dbInstance = realm.objects(Database.self)
-                                print("dbInstance: \(dbInstance)")
+                                
+                                newUpdates.updated_at = firestoreDate
+                                try realm.write {
+                                    realm.add(newUpdates)
+                                    print("true")
+                                }
+                                let dbInstance = realm.objects(Presents.self)
+                                print("dbInstance: \(dbInstance), firedate: \(realm.objects(Updates.self)[0])")
                             } catch let error as NSError {
                                 print("ERROR: \(error)")
                             }
                             
-                        } else if localDB[0].updated_at == firestoreDate && firestoreDate != "" {
+                        } else if updates[0].updated_at == firestoreDate && firestoreDate != "" {
                             do {
 //                                    try realm.write {
 //                                       realm.deleteAll()
 //                                    }
-                                    print("firestoreData: \(firestoreDate), localDB: \(localDB)")
+                                print("firestoreData: \(firestoreDate), localDB: \(realm.objects(Presents.self)), Updates: \(realm.objects(Updates.self))")
                             } catch let error as NSError {
                                 print("ERROR: \(error)")
                             }
@@ -103,7 +111,7 @@ class StartViewController: BaseViewController {
                     }
                     
                 }
-            print(realm.objects(Database.self))
+//            print(realm.objects(Presents.self))
         } catch let error as NSError {
             print("ERROR: \(error)")
         }
@@ -131,7 +139,7 @@ class StartViewController: BaseViewController {
                 let config = Realm.Configuration(
                     // Set the new schema version. This must be greater than the previously used
                     // version (if you've never set a schema version before, the version is 0).
-                    schemaVersion: 2,
+                    schemaVersion: 4,
 
                     // Set the block which will be called automatically when opening a Realm with
                     // a schema version lower than the one set above
@@ -160,18 +168,18 @@ class StartViewController: BaseViewController {
     
     func dumpNewDataFromFirebase(database: Firestore?) {
         let presentsRef = database?.collection("presents")
-        let newDB = Database()
-        var date = ""
+//        let questionRef = database?.collection("question")
+        let newDB = Presents()
         
-        let firestoreDate = fetchRecentUpdateDate(database: database).andThen { (result) in
-            switch result {
-            case .success(let fetchedDate):
-            date = "\(fetchedDate)"
-            case .failure(_):
-            break
-            }
+//        let firestoreDate = fetchRecentUpdateDate(database: database).andThen { (result) in
+//            switch result {
+//            case .success(let fetchedDate):
+//            date = "\(fetchedDate)"
+//            case .failure(_):
+//            break
+//            }
             
-            newDB.updated_at = date
+//            newDB.updated_at = date
             presentsRef?.getDocuments(completion: { (querySnapshot, error) in
                         if let err = error {
                             print(err)
@@ -195,6 +203,7 @@ class StartViewController: BaseViewController {
                                         }
                                     }
                                     newDB.presents.append(present)
+                                    // question 관련 로직 들어갈 필요.
                             
                                 }
                             }
@@ -209,7 +218,7 @@ class StartViewController: BaseViewController {
                         }
                     })
         }
-    }
+//    }
 }
 
 extension StartViewController: HomeViewControllerable {
