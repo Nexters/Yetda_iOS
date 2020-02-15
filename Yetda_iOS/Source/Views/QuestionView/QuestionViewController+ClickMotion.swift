@@ -11,6 +11,7 @@ import UIKit
 extension QuestionViewController {
     
     @IBAction func clickNoButton(sender: UIButton) {
+        print("NO!")
     
         UIView.animate(withDuration: 0.3, animations: ({
             let movingDistance = self.view.frame.width
@@ -21,6 +22,7 @@ extension QuestionViewController {
     }
     
     @IBAction func clickYesButton(sender: UIButton) {
+        print("YES!")
         
         UIView.animate(withDuration: 0.3, animations: ({
             let movingDistance = self.view.frame.width

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class QuestionViewController: BaseViewController {
 
@@ -24,6 +25,9 @@ class QuestionViewController: BaseViewController {
     let noButton: UIButton = UIButton()
     let midButton: UIButton = UIButton()
     var answer:Answer?
+    var question: Question?
+    var presents: Presents?
+    
     
     
     static func instance(viewModel: HomeViewModel) -> QuestionViewController? {
@@ -37,6 +41,14 @@ class QuestionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answer = homeViewModel?.answer
+        
+        do {
+            let realm = try Realm()
+            let question = realm.objects(Question.self)
+            print("question: \(question)")
+        } catch let error as NSError {
+            print("ERROR: \(error)")
+        }
 
         setupView()
         setupButtonAction()
