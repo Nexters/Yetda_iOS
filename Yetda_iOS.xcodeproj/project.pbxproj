@@ -27,8 +27,6 @@
 		FA07AAB923F270FC006D2586 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AAB823F270FC006D2586 /* Question.swift */; };
 		FA07AABB23F2713B006D2586 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AABA23F2713B006D2586 /* History.swift */; };
 		FA07AABE23F271BE006D2586 /* Presents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AABD23F271BE006D2586 /* Presents.swift */; };
-		FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */; };
-		FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */; };
 		FA42367D23EE9CD800F71143 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42367C23EE9CD800F71143 /* Answer.swift */; };
 		FA42368123EEA83400F71143 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368023EEA83400F71143 /* ActionType.swift */; };
 		FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368223EEC17F00F71143 /* MonthDay.swift */; };
@@ -222,6 +220,15 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		FA95785023F802CE00B479FD /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FA39047923E1D5D40096183B /* GenderViewController+UILabel.swift */,
+				FA36BF6423E27E2F00B9F1F5 /* GenderViewController+UIButton.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		FAA5B41A23DED7170082005E /* GenderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +248,7 @@
 				FAB0FD1823C4945900674A3E /* Products */,
 				8821F47DE098EAB26FA73907 /* Pods */,
 				6FB046D1D798E8D5AEB5EC66 /* Frameworks */,
+				FA95785023F802CE00B479FD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -458,20 +466,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A44737623EFD63200CE8936 /* GenderViewController+ToggleButton.swift in Sources */,
 				FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */,
 				FA07AAB723F270C3006D2586 /* Present.swift in Sources */,
 				FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */,
 				FAB0FD1F23C4945900674A3E /* StartViewController.swift in Sources */,
-				3A44737623EFD63200CE8936 /* GenderViewController+ToggleButton.swift in Sources */,
 				FA07AABE23F271BE006D2586 /* Presents.swift in Sources */,
-				FA39047A23E1D5D40096183B /* GenderViewController+UILabel.swift in Sources */,
 				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,
 				FADF05E823EB216900E40952 /* UIButton+.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,
 				FA42368123EEA83400F71143 /* ActionType.swift in Sources */,
 				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
-				FA5D7C9123E9539D00991B20 /* Receiver.swift in Sources */,
-				FA36BF6523E27E2F00B9F1F5 /* GenderViewController+UIButton.swift in Sources */,
 				FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */,
 				3A44737823F557AC00CE8936 /* PirceViewController+layout.swift in Sources */,
 				FAEC903723CC84A200010233 /* NameViewController.swift in Sources */,

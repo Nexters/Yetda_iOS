@@ -69,7 +69,6 @@ class HomeViewModel: NSObject {
                 }
             }
         }
-    }
         
     public func storePrice(minPrice: Int, maxPrice: Int) {
         print("store data")
