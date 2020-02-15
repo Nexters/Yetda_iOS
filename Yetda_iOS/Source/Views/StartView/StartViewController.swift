@@ -18,10 +18,13 @@ class StartViewController: BaseViewController {
     @IBOutlet weak var startButton: UIButton!
     var database: Firestore?
     var updated_at: Timestamp?
-    var imageView: UIImageView?
+    var contentView = UIView()
+    var guideLabelView = UIView()
+    var imageView = UIImageView(image: UIImage(named: "artboard14X")!)
     var guideText = UILabel()
     var cardView = UIView()
     var subText = UILabel()
+    var scrollView = UIScrollView()
     
     static func instance(viewModel: HomeViewModel) -> StartViewController? {
         let startViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "StartViewController") as? StartViewController
@@ -45,10 +48,11 @@ class StartViewController: BaseViewController {
             make.height.equalTo(44)
         }
         
-        setImage()
-        setGuideText()
-        setCardView()
-        setSubText()
+        setScrollView()
+//        setImage()
+//        setGuideText()
+//        setCardView()
+//        setSubText()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -223,15 +227,6 @@ class StartViewController: BaseViewController {
 //        let questionRef = database?.collection("question")
         let newDB = Presents()
         
-//        let firestoreDate = fetchRecentUpdateDate(database: database).andThen { (result) in
-//            switch result {
-//            case .success(let fetchedDate):
-//            date = "\(fetchedDate)"
-//            case .failure(_):
-//            break
-//            }
-            
-//            newDB.updated_at = date
             presentsRef?.getDocuments(completion: { (querySnapshot, error) in
                         if let err = error {
                             print(err)

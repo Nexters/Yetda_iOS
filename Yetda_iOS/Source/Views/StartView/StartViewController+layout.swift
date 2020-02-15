@@ -10,23 +10,36 @@ import UIKit
 import SnapKit
 
 extension StartViewController {
-    func setImage() {
-        let imageView = UIImageView(image: UIImage(named: "artboard14X")!)
-
-        self.view.addSubview(imageView)
-        imageView.snp.makeConstraints { (make) in
-            make.leading.equalTo(self.view.snp.trailing).multipliedBy(0.237)
-            make.width.equalTo(self.view.snp.width).multipliedBy(0.7)
-            make.top.equalTo(self.additionalSafeAreaInsets).inset(272)
+    func setScrollView() {
+        self.view.addSubview(scrollView)
+        
+        
+        // Set SNP to scrollView
+        scrollView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
         }
         
+        scrollView.addSubview(contentView)
         
+        contentView.snp.makeConstraints { (make) in
+            make.width.equalToSuperview()
+            make.centerX.top.bottom.equalToSuperview()
+        }
+        
+        _ = [guideLabelView, imageView, subText,cardView].map { self.contentView.addSubview($0)}
+        
+        
+        
+        
+        setGuideText()
+        setImage()
+        setSubText()
+        setCardView()
     }
     
     func setGuideText() {
-        let guideLabelView = UIView()
         guideLabelView.addSubview(guideText)
-        self.view.addSubview(guideLabelView)
+//        self.scrollView.addSubview(guideLabelView)
         
         guideText.text = "선물 추천 받으러 \n가볼까요?"
         guideText.numberOfLines = 0
@@ -35,38 +48,51 @@ extension StartViewController {
         guideText.sizeToFit()
         
         guideLabelView.snp.makeConstraints { (make) in
-            
-            // Set SNP Constraints
-            make.top.equalTo(self.view.safeAreaInsets).inset(106)
-            make.leading.equalTo(self.view.snp.trailing).multipliedBy(0.058)
+            make.top.equalToSuperview().offset(106)
+            make.leading.equalToSuperview().offset(24)
+            make.height.equalTo(82)
             
         }
     }
+    
+        func setImage() {
+    //        self.scrollView.addSubview(imageView)
+            imageView.snp.makeConstraints { (make) in
+                make.trailing.equalToSuperview().inset(26)
+                make.top.equalTo(guideLabelView.snp.bottom).offset(84)
+                
+            }
+            
+            
+        }
+    
+    func setSubText() {
+
+            subText.text = "선물 추천 기록"
+            subText.textColor = .brownishGrey
+            subText.font = .systemFont(ofSize: 20)
+
+            subText.snp.makeConstraints { (make) in
+                make.top.equalTo(imageView.snp.bottom).offset(23.7)
+                make.leading.equalToSuperview().offset(22)
+            }
+        }
+
     
     func setCardView() {
         cardView.setCardView()
-        self.view.addSubview(cardView)
         
         cardView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.snp.top).offset(583)
-            make.width.equalTo(self.view.snp.width).multipliedBy(0.894)
-            make.height.equalTo(150)
-            make.leading.equalTo(self.view.snp.trailing).multipliedBy(0.053)
+            
+            
+            make.top.equalTo(subText.snp.bottom).offset(12)
+            make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().inset(24)
+            make.height.equalTo(500)
+            make.bottom.equalToSuperview() // 이것이 중요함
             
         }
     }
     
-    func setSubText() {
-        self.view.addSubview(subText)
-        
-        subText.text = "선물 추천 기록"
-        subText.textColor = .brownishGrey
-        subText.font = .systemFont(ofSize: 20)
-        
-        subText.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.safeAreaInsets).inset(538)
-            make.leading.equalTo(self.view.snp.trailing).multipliedBy(0.053)
-        }
-    }
     
 }
