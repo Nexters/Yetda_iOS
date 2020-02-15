@@ -33,7 +33,7 @@ class HomeViewModel: NSObject {
     
     public func startBtnTapped() {
         print("startBtnTapped")
-        print(answer)
+//        print(answer)
         
         let len = homeViewController.count
         while idx < len - 1 {
@@ -54,7 +54,6 @@ class HomeViewModel: NSObject {
     }
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {
-        print("store data")
             switch actionType {
             case ActionType.name:
                 answer.name = payload
@@ -72,7 +71,7 @@ class HomeViewModel: NSObject {
         }
         
     public func storePrice(minPrice: Int, maxPrice: Int) {
-        print("store data")
+        print("store data: \(minPrice) \(maxPrice)")
         answer.minPrice = minPrice
         answer.maxPrice = maxPrice
     }

@@ -36,7 +36,7 @@ extension QuestionViewController {
         frontCardLabel.text = "Question\(questionNum)"
         
         if questionNum > basePoint {
-            descriptionLabel.text = "@@님에 대해 조금만 더 알려주세요!"
+            descriptionLabel.text = "\(answer!.name)님에 대해 조금만 더 알려주세요!"
         }
         
         frontCardLabel.alpha = 0

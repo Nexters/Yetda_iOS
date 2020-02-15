@@ -23,6 +23,8 @@ class QuestionViewController: BaseViewController {
     let yesButton: UIButton = UIButton()
     let noButton: UIButton = UIButton()
     let midButton: UIButton = UIButton()
+    var answer:Answer?
+    
     
     static func instance(viewModel: HomeViewModel) -> QuestionViewController? {
         let questionViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "QuestionViewController") as? QuestionViewController
@@ -34,10 +36,14 @@ class QuestionViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        answer = homeViewModel?.answer
 
         setupView()
         setupButtonAction()
+        
+//        print("question: \(answer)")
     }
+    
 }
 
 extension QuestionViewController: HomeViewControllerable {
