@@ -42,7 +42,7 @@ extension QuestionViewController {
         
         if questionNum >= questionSize - 1 {
             questionNum = 0
-            next()
+            goToResult()
         }
         else {
             if questionNum > basePoint {

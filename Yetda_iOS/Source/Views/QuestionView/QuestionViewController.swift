@@ -85,7 +85,12 @@ extension QuestionViewController: HomeViewControllerable {
     
 }
 
-private extension QuestionViewController {
+extension QuestionViewController {
+    func goToResult() {
+        print("let's GOGO")
+        next()
+    }
+    
     @objc
     func nextBtnTapped() {
         print("next button in start tapped")

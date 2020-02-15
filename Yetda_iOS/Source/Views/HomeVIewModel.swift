@@ -24,7 +24,8 @@ class HomeViewModel: NSObject {
                                GenderViewController.instance(viewModel: self)!,
                                BirthdayViewController.instance(viewModel: self)!,
                                PriceViewController.instance(viewModel: self)!,
-                               QuestionViewController.instance(viewModel: self)!
+                               QuestionViewController.instance(viewModel: self)!,
+                               ResultViewController.instance(viewModel: self)!
         ]
         return viewControllers
     }()
@@ -36,21 +37,20 @@ class HomeViewModel: NSObject {
 //        print(answer)
         
         let len = homeViewController.count
-        while idx < len - 1 {
+        if idx < len {
             idx += 1
             delegate?.next(viewController: homeViewController[idx])
-            break
         }
     }
     
     public func backBtnTapped() {
         print("backButtonTapped")
         
-        while idx > 1 {
+        if idx >= 1 {
             idx -= 1
-            delegate?.prev(viewController: homeViewController[idx])
-            break
+            delegate?.next(viewController: homeViewController[idx])
         }
+
     }
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {
