@@ -47,6 +47,7 @@ class ResultViewController: BaseViewController {
 extension ResultViewController: HomeViewControllerable {
     func next() {
 //        homeViewModel?.startBtnTapped()
+        homeViewModel?.backToStartBtnTapped()
         print("처음으로 돌아가기")
     }
     
