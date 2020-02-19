@@ -27,16 +27,18 @@ class ResultViewController: BaseViewController {
     
     fileprivate var homeViewModel: HomeViewModel?
     
-    override func setup() {
-        setupUI()
-        backButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
-    }
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func setup() {
+        super.setup()
+        
+        setupUI()
+        backButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
     }
 
         
@@ -45,6 +47,7 @@ class ResultViewController: BaseViewController {
 extension ResultViewController: HomeViewControllerable {
     func next() {
 //        homeViewModel?.startBtnTapped()
+        homeViewModel?.backToStartBtnTapped()
         print("처음으로 돌아가기")
     }
     
@@ -62,7 +65,7 @@ extension ResultViewController: HomeViewControllerable {
 private extension ResultViewController {
     @objc
     func nextBtnTapped() {
-        print("next button in start tapped")
+//        print("next button in start tapped")
         next()
         storeData()
     }
