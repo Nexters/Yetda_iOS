@@ -10,6 +10,14 @@ import UIKit
 import RealmSwift
 
 class ResultViewController: BaseViewController {
+    var backButton =  UIButton()
+    var contentView = UIView()
+    var cardView = UIView()
+    var imageView = UIImageView(image: UIImage(named: "artboard14X")!)
+    var guideText = UILabel()
+    var presentText = UILabel()
+    var subText = UILabel()
+    var otherPresentText = UILabel()
     
     static func instance(viewModel: HomeViewModel) -> ResultViewController? {
         let resultViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "ResultViewController") as? ResultViewController
@@ -18,20 +26,26 @@ class ResultViewController: BaseViewController {
     }
     
     fileprivate var homeViewModel: HomeViewModel?
+    
+    override func setup() {
+        setupUI()
+        backButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
+    }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
 
         // Do any additional setup after loading the view.
     }
+
         
 }
 
 extension ResultViewController: HomeViewControllerable {
     func next() {
-        homeViewModel?.startBtnTapped()
+//        homeViewModel?.startBtnTapped()
+        print("처음으로 돌아가기")
     }
     
     func prev() {

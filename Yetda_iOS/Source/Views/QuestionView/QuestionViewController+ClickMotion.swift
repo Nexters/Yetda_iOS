@@ -39,8 +39,8 @@ extension QuestionViewController {
             frontCardLabel.text = "\(questions.questions[questionNum].question)"
         
         
-        
-        if questionNum >= questionSize - 1 {
+        if questionNum >= 4 {
+//        if questionNum >= questionSize - 1 {
             questionNum = 0
             goToResult()
         }
