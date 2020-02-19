@@ -92,10 +92,10 @@ class StartViewController: BaseViewController {
                                 newUpdates.updated_at = firestoreDate
                                 try realm.write {
                                     realm.add(newUpdates)
-                                    print("true")
+//                                    print("true")
                                 }
                                 let dbInstance = realm.objects(Presents.self)
-                                print("dbInstance: \(dbInstance), firedate: \(realm.objects(Updates.self)[0])")
+//                                print("dbInstance: \(dbInstance), firedate: \(realm.objects(Updates.self)[0])")
                             } catch let error as NSError {
                                 print("ERROR: \(error)")
                             }
@@ -105,7 +105,7 @@ class StartViewController: BaseViewController {
 //                                    try realm.write {
 //                                       realm.deleteAll()
 //                                    }
-                                print("firestoreData: \(firestoreDate), localDB: \(realm.objects(Presents.self)), Updates: \(realm.objects(Updates.self)), Question: \(realm.objects(Question.self))")
+//                                print("firestoreData: \(firestoreDate), localDB: \(realm.objects(Presents.self)), Updates: \(realm.objects(Updates.self)), Question: \(realm.objects(Question.self))")
                             } catch let error as NSError {
                                 print("ERROR: \(error)")
                             }
@@ -184,7 +184,7 @@ class StartViewController: BaseViewController {
                     print(err)
                 } else {
                     for doc in querySnapshot!.documents {
-                        print("question: \(doc.data())")
+//                        print("question: \(doc.data())")
                         if let data = doc.data() as? [String: Any] {
                             let qs = Question()
                             

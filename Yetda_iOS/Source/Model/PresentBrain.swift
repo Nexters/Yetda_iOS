@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol PresentBrainable {
     func findPresents()
@@ -14,12 +15,33 @@ protocol PresentBrainable {
 }
 
 struct PresentBrain {
-    var presents: [Present]
-    var questions: [Question]
-    var excludedTags: [String]
     
-    func findPresents() {
+    // excludedTags는 동적으로 받아야 함
+    var excludedTags: [String] = ["정성", "인테리어", "문구", "쓸없선", "연인"]
+    
+    func findPresents() -> [Present] {
+        var filteredPresents: [Present] = []
+        do {
+            let realm = try Realm()
+            let realmPresent = realm.objects(Present.self)
+            
+                let filtered = Array(realmPresent).filter { (present) -> Bool in
+                    for tag in excludedTags {
+                        if present.tags.contains(tag) {
+                            return false
+                        }
+                    }
+                    return true
+                }
+                filteredPresents = filtered
+            
         
+            
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return filteredPresents
     }
     
     func findQuestion() {
