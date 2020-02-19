@@ -67,8 +67,8 @@ extension PriceViewController: HomeViewControllerable {
 private extension PriceViewController {
     @objc
     func nextBtnTapped() {
-        next()
         storeData()
+        next()
     }
     
     @objc

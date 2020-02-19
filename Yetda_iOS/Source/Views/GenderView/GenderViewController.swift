@@ -19,6 +19,7 @@ class GenderViewController: BaseViewController {
     var femaleButton = GenderToggleButton(title: "여성")
     var maleButton = GenderToggleButton(title: "남성")
     var selectedGender = Gender.female
+    var answer: Answer?
     
     enum Gender {
         case female, male
@@ -34,6 +35,7 @@ class GenderViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("answer: \(answer)")
         
         // Do any additional setup after loading the view.
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -42,6 +44,7 @@ class GenderViewController: BaseViewController {
     // custom setup
     override func setup() {
         super.setup()
+        answer = homeViewModel?.answer
         
         setupUI()
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
@@ -71,8 +74,8 @@ extension GenderViewController: HomeViewControllerable {
 private extension GenderViewController {
     @objc
     func nextBtnTapped() {
-        next()
         storeData()
+        next()
     }
     
     @objc

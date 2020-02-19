@@ -66,7 +66,8 @@ private extension ResultViewController {
     @objc
     func nextBtnTapped() {
 //        print("next button in start tapped")
-        next()
         storeData()
+        next()
+//        storeData()
     }
 }

@@ -94,8 +94,8 @@ extension BirthdayViewController: HomeViewControllerable {
 private extension BirthdayViewController {
     @objc
     func nextBtnTapped() {
-        next()
         storeData()
+        next()
     }
     
     @objc
