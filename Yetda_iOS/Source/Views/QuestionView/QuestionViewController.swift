@@ -24,6 +24,7 @@ class QuestionViewController: BaseViewController {
     let yesButton: UIButton = UIButton()
     let noButton: UIButton = UIButton()
     let midButton: UIButton = UIButton()
+    var secondCard = UIView()
     var answer:Answer?
     var questions = Questions()
     var presents: Results<Presents>?

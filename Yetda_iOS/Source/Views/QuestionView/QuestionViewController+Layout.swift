@@ -60,7 +60,7 @@ extension QuestionViewController {
         
         // setup self view contstraints
         backCardView.snp.makeConstraints { (make) in
-            make.width.equalTo(cardSize.width)
+            make.width.equalTo(cardSize.width - 45)
             make.height.equalTo(cardSize.height)
             make.center.equalTo(self.view)
         }
@@ -89,13 +89,19 @@ extension QuestionViewController {
         
         // setup self view properties
         
-            frontCardLabel.text = "\(questions.questions[questionNum].question)"
+        frontCardLabel.text = "\(questions.questions[questionNum].question)"
+        frontCardLabel.numberOfLines = 0
+        frontCardLabel.font = .systemFont(ofSize: 34)
+        frontCardLabel.textAlignment = .center
+        
         
         
         
         // setup self view contraints
         frontCardLabel.snp.makeConstraints { (make) in
             make.center.equalTo(frontCardView)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
     }
     
