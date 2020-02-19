@@ -53,6 +53,10 @@ class HomeViewModel: NSObject {
 
     }
     
+    public func backToStartBtnTapped() {
+        delegate?.next(viewController: StartViewController.instance(viewModel: self)!)
+    }
+    
     public func storeStringAnswer(actionType: ActionType, payload: String) {
             switch actionType {
             case ActionType.name:
