@@ -11,16 +11,16 @@ import UIKit
 
 extension UIView {
     
-    func setCardView() {
+    func setCardView(radius: Int = 14) {
         
         self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = 6
+        self.layer.cornerRadius = 14
         self.layer.borderColor = UIColor.paleLilac.cgColor
         self.layer.borderWidth = 2
         
         self.layer.shadowColor = UIColor.shadowColor.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
-        self.layer.shadowRadius = 4
+        self.layer.shadowRadius = 14
         self.layer.shadowOpacity = 1
     }
 }

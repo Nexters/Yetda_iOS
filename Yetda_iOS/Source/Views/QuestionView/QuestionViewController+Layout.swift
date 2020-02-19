@@ -22,8 +22,13 @@ extension QuestionViewController {
         
         // add subviews
         self.view.addSubview(descriptionLabel)
+        
+        // Stacked card views
         self.view.addSubview(backCardView)
+        self.view.addSubview(middleCardView)
         self.view.addSubview(frontCardView)
+        
+        // Buttons
         self.view.addSubview(noButton)
         self.view.addSubview(yesButton)
         self.view.addSubview(midButton)
@@ -31,6 +36,7 @@ extension QuestionViewController {
         // setup subviews properties
         setupDescriptionLabel()
         setupBackCardView()
+        setupMiddleCardView()
         setupFrontCardView()
         setupYNButton()
         setupMidButton()
@@ -53,19 +59,6 @@ extension QuestionViewController {
         }
     }
     
-    private func setupBackCardView() {  // 뒤에 깔려있는 카드 뷰 부분
-        
-        // setup self view properties
-        backCardView.setCardView()
-        
-        // setup self view contstraints
-        backCardView.snp.makeConstraints { (make) in
-            make.width.equalTo(cardSize.width - 45)
-            make.height.equalTo(cardSize.height)
-            make.center.equalTo(self.view)
-        }
-    }
-    
     private func setupFrontCardView() {  // 현재 카드 뷰 부분
     
         // setup self view properties
@@ -85,6 +78,36 @@ extension QuestionViewController {
         setupFrontCardLabel()
     }
     
+    private func setupMiddleCardView() {  // 뒤에 깔려있는 카드 뷰 부분
+        
+        // setup self view properties
+        middleCardView.setCardView(radius: 12)
+        
+        
+        // setup self view contstraints
+        middleCardView.snp.makeConstraints { (make) in
+            make.width.equalTo(cardSize.width - 45)
+            make.height.equalTo(cardSize.height)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-12)
+        }
+    }
+    
+    private func setupBackCardView() { // 가장 밑 카드
+        // setup self view properties
+        backCardView.setCardView(radius: 10)
+        
+        // setup self view contstraints
+        backCardView.snp.makeConstraints { (make) in
+            make.width.equalTo(cardSize.width - 84)
+            make.height.equalTo(cardSize.height)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-24)
+        }
+    }
+    
+    
+    
     private func setupFrontCardLabel() {
         
         // setup self view properties
@@ -93,8 +116,6 @@ extension QuestionViewController {
         frontCardLabel.numberOfLines = 0
         frontCardLabel.font = .systemFont(ofSize: 34)
         frontCardLabel.textAlignment = .center
-        
-        
         
         
         // setup self view contraints
