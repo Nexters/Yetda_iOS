@@ -81,8 +81,8 @@ extension NameViewController: HomeViewControllerable {
 private extension NameViewController {
     @objc
     func nextBtnTapped() {
-        next()
         storeData()
+        next()
     }
 }
 

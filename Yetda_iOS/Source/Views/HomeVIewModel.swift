@@ -54,7 +54,9 @@ class HomeViewModel: NSObject {
     }
     
     public func backToStartBtnTapped() {
+        idx = 0
         delegate?.next(viewController: StartViewController.instance(viewModel: self)!)
+        answer = Answer()
     }
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {

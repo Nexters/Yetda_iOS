@@ -85,7 +85,10 @@ extension GenderViewController {
     private func setupDescriptionLabel() {
         
         // setup self view properties
-        descriptionLabel.text = "쭈피님의 성별은?"
+        if let name = answer?.name {
+            descriptionLabel.text = "\(name)님의 성별은?"
+        } 
+//        descriptionLabel.text = "쭈피님의 성별은?"
         descriptionLabel.textColor = .brownishGrey
         descriptionLabel.font = .systemFont(ofSize: 20, weight: .medium)
         

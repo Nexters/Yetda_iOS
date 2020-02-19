@@ -18,6 +18,7 @@ class ResultViewController: BaseViewController {
     var presentText = UILabel()
     var subText = UILabel()
     var otherPresentText = UILabel()
+    var answer: Answer?
     
     static func instance(viewModel: HomeViewModel) -> ResultViewController? {
         let resultViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "ResultViewController") as? ResultViewController
@@ -36,6 +37,7 @@ class ResultViewController: BaseViewController {
     
     override func setup() {
         super.setup()
+        answer = homeViewModel?.answer
         
         setupUI()
         backButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
@@ -66,7 +68,8 @@ private extension ResultViewController {
     @objc
     func nextBtnTapped() {
 //        print("next button in start tapped")
-        next()
         storeData()
+        next()
+//        storeData()
     }
 }

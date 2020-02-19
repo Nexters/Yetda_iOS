@@ -304,8 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				FAEC903823CC84B700010233 /* BirthdayViewController.swift */,
-				FA42368223EEC17F00F71143 /* MonthDay.swift */,
 				FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */,
+				FA42368223EEC17F00F71143 /* MonthDay.swift */,
 				FAECF8B823DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift */,
 			);
 			path = BirthdayView;

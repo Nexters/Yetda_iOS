@@ -44,7 +44,10 @@ extension ResultViewController {
     
     func setGuideText() {
         self.contentView.addSubview(guideText)
-        guideText.text = "쭈삐님을 위한 추천선물"
+//        guideText.text = "쭈삐님을 위한 추천선물"
+        if let name = answer?.name {
+            guideText.text = "\(name)님을 위한 추천선물"
+        }
         guideText.numberOfLines = 0
         guideText.font = .systemFont(ofSize: 20)
         guideText.textColor = .brownishGrey

@@ -278,7 +278,7 @@ extension StartViewController: HomeViewControllerable {
 private extension StartViewController {
     @objc
     func startBtnTapped() {
-        next()
         storeData()
+        next()
     }
 }
