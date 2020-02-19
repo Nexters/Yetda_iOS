@@ -11,8 +11,8 @@ import SnapKit
 
 extension ResultViewController {
     func setupUI() {
-        setButtonUI()
         setContentView()
+        setButtonUI()
         setGuideText()
         setCardView()
         setImageView()
@@ -22,8 +22,8 @@ extension ResultViewController {
     }
     
     func setButtonUI() {
+        self.contentView.addSubview(backButton)
         backButton.setNextButton(isEnable: true, title: "처음으로 돌아가기")
-        self.view.addSubview(backButton)
         
         // setup self view contraints
         backButton.snp.makeConstraints { (make) in
