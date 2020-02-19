@@ -37,6 +37,7 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     var days: [String]! = []
     var datePicker: UIPickerView!
     var monthDay = MonthDay()
+    var answer: Answer?
     
     static func instance(viewModel: HomeViewModel) -> BirthdayViewController? {
         let birthdayViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "BirthdayViewController") as? BirthdayViewController
@@ -56,6 +57,7 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
     // custom setup
     override func setup() {
         super.setup()
+        answer = homeViewModel?.answer
 
         setupUI()
         setDatePicker()
