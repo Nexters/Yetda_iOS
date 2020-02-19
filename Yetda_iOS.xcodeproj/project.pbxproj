@@ -52,6 +52,7 @@
 		FAEC903F23CC850000010233 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC903E23CC850000010233 /* ResultViewController.swift */; };
 		FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */; };
 		FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF8B823DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift */; };
+		FAFDCCB223FD2BF800731DA9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFDCCB123FD2BF800731DA9 /* UILabel+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		FAEC903E23CC850000010233 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirthDayViewController+layout.swift"; sourceTree = "<group>"; };
 		FAECF8B823DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirthdayViewController+UIPickerView.swift"; sourceTree = "<group>"; };
+		FAFDCCB123FD2BF800731DA9 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				3A2F483023DDB1C50034C429 /* UIView+.swift */,
 				3A2F483223DDB1EF0034C429 /* UIColor+.swift */,
 				FADF05E723EB216900E40952 /* UIButton+.swift */,
+				FAFDCCB123FD2BF800731DA9 /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<unknown>";
@@ -474,6 +477,7 @@
 			files = (
 				3A44737623EFD63200CE8936 /* GenderViewController+ToggleButton.swift in Sources */,
 				FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */,
+				FAFDCCB223FD2BF800731DA9 /* UILabel+.swift in Sources */,
 				FA07AAB723F270C3006D2586 /* Present.swift in Sources */,
 				FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */,
 				FAC23E2723F83EBF000B6DEF /* StartViewController+layout.swift in Sources */,

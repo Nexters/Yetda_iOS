@@ -15,7 +15,9 @@ class ResultViewController: BaseViewController {
     var cardView = UIView()
     var imageView = UIImageView(image: UIImage(named: "artboard14X")!)
     var guideText = UILabel()
+    var presentText = UILabel()
     var subText = UILabel()
+    var otherPresentText = UILabel()
     
     static func instance(viewModel: HomeViewModel) -> ResultViewController? {
         let resultViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "ResultViewController") as? ResultViewController

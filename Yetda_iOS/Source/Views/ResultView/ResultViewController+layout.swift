@@ -16,7 +16,9 @@ extension ResultViewController {
         setGuideText()
         setCardView()
         setImageView()
+        setPresentTextView()
         setSubTextView()
+        setotherPresentText()
     }
     
     func setButtonUI() {
@@ -42,14 +44,14 @@ extension ResultViewController {
     
     func setGuideText() {
         self.contentView.addSubview(guideText)
-        guideText.text = "쭈삐님을 위한 \n추천선물"
+        guideText.text = "쭈삐님을 위한 추천선물"
         guideText.numberOfLines = 0
-        guideText.font = .systemFont(ofSize: 34)
+        guideText.font = .systemFont(ofSize: 20)
+        guideText.textColor = .brownishGrey
         
         guideText.snp.makeConstraints { (make) in
-            make.top.equalTo(150)
-            make.leading.equalTo(40)
-//            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().inset(150)
+            make.centerX.equalToSuperview()
         }
     }
     
@@ -67,24 +69,49 @@ extension ResultViewController {
         }
     }
     
+    func setPresentTextView() {
+        self.contentView.addSubview(presentText)
+        presentText.text = "마카롱과 디저트"
+        presentText.font = .systemFont(ofSize: 30)
+        presentText.textColor = .black
+        
+        presentText.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.height.equalTo(36)
+            make.top.equalTo(imageView.snp.bottom).offset(28)
+        }
+    }
+    
     func setSubTextView() {
         self.contentView.addSubview(subText)
+        subText.text = "술을 좋아한다면 실패 없을 선물이에요"
+        subText.font = .systemFont(ofSize: 18)
+        subText.textColor = .brownishGrey
         
         subText.snp.makeConstraints { (make) in
-            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(presentText.snp.bottom).offset(18)
+        }
+    }
+    
+    
+    func setotherPresentText() {
+        self.contentView.addSubview(otherPresentText)
+        otherPresentText.text = "또 다른 선물은?"
+        otherPresentText.font = .systemFont(ofSize: 20)
+        otherPresentText.textColor = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
+        otherPresentText.underline()
+        
+        otherPresentText.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(cardView.snp.bottom).offset(44)
         }
     }
     
     func setImageView() {
         imageView.snp.makeConstraints { (make) in
-            make.width.equalTo(258)
-            make.height.equalTo(258)
-//            make.leading.equalToSuperview().offset(40)
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().inset(40)
-//            make.bottom.equalToSuperview().inset(162)
-            
-            
         }
     }
 }
