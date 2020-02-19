@@ -23,6 +23,7 @@ class PriceViewController: BaseViewController {
     var wonPriceLabel = UILabel()
     
     var priceSlider = RangeSeekSlider()
+    var answer: Answer?
     
     static func instance(viewModel: HomeViewModel) -> PriceViewController? {
         let priceViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "PriceViewController") as? PriceViewController
@@ -39,6 +40,8 @@ class PriceViewController: BaseViewController {
     
     override func setup() {
         super.setup()
+        answer = homeViewModel?.answer
+        
         setupUI()
         
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)

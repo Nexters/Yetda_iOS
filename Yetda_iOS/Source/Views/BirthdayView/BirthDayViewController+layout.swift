@@ -75,7 +75,7 @@ extension BirthdayViewController {
         // setup self view properties
         if let name = answer?.name {
             descriptionLabel.text = "\(name)님의 성별은?"
-        } 
+        }
         descriptionLabel.textColor = .brownishGrey
         descriptionLabel.font = .systemFont(ofSize: 20, weight: .medium)
 
