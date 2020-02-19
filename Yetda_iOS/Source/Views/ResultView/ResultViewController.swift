@@ -13,6 +13,7 @@ class ResultViewController: BaseViewController {
     var backButton =  UIButton()
     var contentView = UIView()
     var cardView = UIView()
+    var imageView = UIImageView(image: UIImage(named: "artboard14X")!)
     var guideText = UILabel()
     var subText = UILabel()
     

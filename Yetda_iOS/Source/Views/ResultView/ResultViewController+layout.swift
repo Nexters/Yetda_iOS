@@ -14,6 +14,8 @@ extension ResultViewController {
         setButtonUI()
         setContentView()
         setGuideText()
+        setCardView()
+        setImageView()
         setSubTextView()
     }
     
@@ -40,21 +42,24 @@ extension ResultViewController {
     
     func setGuideText() {
         self.contentView.addSubview(guideText)
-        guideText.text = "쭈삐님을 위한 선물"
+        guideText.text = "쭈삐님을 위한 \n추천선물"
+        guideText.numberOfLines = 0
+        guideText.font = .systemFont(ofSize: 34)
         
         guideText.snp.makeConstraints { (make) in
             make.top.equalTo(150)
-            make.centerX.equalToSuperview()
+            make.leading.equalTo(40)
+//            make.centerX.equalToSuperview()
         }
     }
     
     func setCardView() {
-        cardView.setCardView()
-        
         contentView.addSubview(cardView)
+        cardView.setCardView()
+        cardView.addSubview(imageView)
         
         cardView.snp.makeConstraints { (make) in
-            make.top.equalTo(guideText.snp.bottom).inset(20)
+            make.top.equalTo(guideText.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(38)
             make.trailing.equalToSuperview().inset(38)
             make.width.equalTo(338)
@@ -66,6 +71,19 @@ extension ResultViewController {
         self.contentView.addSubview(subText)
         
         subText.snp.makeConstraints { (make) in
+            
+        }
+    }
+    
+    func setImageView() {
+        imageView.snp.makeConstraints { (make) in
+            make.width.equalTo(258)
+            make.height.equalTo(258)
+//            make.leading.equalToSuperview().offset(40)
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().inset(40)
+//            make.bottom.equalToSuperview().inset(162)
+            
             
         }
     }
