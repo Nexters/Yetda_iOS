@@ -111,10 +111,10 @@ extension QuestionViewController {
     private func setupFrontCardLabel() {
         
         // setup self view properties
-        question = presentBrain.findQuestion()
-        if let unwrapped = question {
-            frontCardLabel.text = "\(unwrapped.question)"
-        }
+        let question = presentBrain.question
+        
+        frontCardLabel.text = "\(question.question)"
+        
         frontCardLabel.numberOfLines = 0
         frontCardLabel.font = .systemFont(ofSize: 34)
         frontCardLabel.textAlignment = .center

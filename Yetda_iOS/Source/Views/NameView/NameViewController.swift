@@ -15,7 +15,6 @@ class NameViewController: BaseViewController {
     var guideLabel: UILabel = UILabel()
     var nameTextField: UITextField = UITextField()
     var bottomBorderView: UIView = UIView()
-    var presentBrain = PresentBrain()
     
     static func instance(viewModel: HomeViewModel) -> NameViewController? {
         let nameViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "NameViewController") as? NameViewController

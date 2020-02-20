@@ -17,27 +17,32 @@ import RealmSwift
 class PresentBrain {
     
     // excludedTags는 동적으로 받아야 함
-    private var excludedTags: [String] = []
-    var question: Question?
+    var excludedTags: [String] = []
+    var question = Question()
     var questionNum = 0
-    var presents: [Present]?
+    var presents = [Present]()
     var isContinue: Bool = true
+    var homeViewModel: HomeViewModel?
+    var answer: Answer?
+    var minPrice = 0
+    var maxPrice = 10
     
-    init() {
-        question = findQuestion()
-        presents = findPresents()
+    init(minPrice: Int, maxPrice: Int) {
+        self.minPrice = minPrice
+        self.maxPrice = maxPrice
+        print("Init called")
     }
     
     // Find presents candidates from constraints
-    func findPresents(minPrice: Int? = nil, maxPrice: Int? = nil) -> [Present] {
+    func findPresents() -> [Present] {
         var filteredPresents: [Present] = []
         do {
             let realm = try Realm()
             let realmPresents = realm.objects(Present.self)
             // 가격으로 한번 더 걸러내는 로직 들어가야 함.
             let priceFiltered = Array(realmPresents).filter { (present) -> Bool in
-                if minPrice != nil && maxPrice != nil && present.price != nil {
-                    if Int(present.price)! <= maxPrice! && Int(present.price)! >= minPrice! {
+                if present.price != "" {
+                    if Int(present.price)! <= maxPrice && Int(present.price)! >= minPrice {
                         return true
                     } else {
                         return false
@@ -47,6 +52,7 @@ class PresentBrain {
                 }
             }
                 let filtered = Array(priceFiltered).filter { (present) -> Bool in
+                    
                     for tag in excludedTags {
                         if present.tags.contains(tag) {
                             return false
@@ -55,7 +61,6 @@ class PresentBrain {
                     return true
                 }
                 filteredPresents = filtered
-            
         
             
         } catch let error as NSError {
@@ -66,7 +71,7 @@ class PresentBrain {
     }
     
     // Find randomized question candidate from constraints
-    func findQuestion() -> Question? {
+    func findQuestion() -> Question {
         // 아직 물어보지 않은 질문 중 tags에 없는 질문을 찾아 리턴한다
         var filteredQuestions: [Question] = []
         
@@ -86,35 +91,39 @@ class PresentBrain {
             print(error)
         }
         
-        
-        return filteredQuestions.randomElement() ?? nil
+        let outcome = filteredQuestions.randomElement() ?? question
+
+        return outcome
         
     }
     
     // Gonna be removed
-    func addExcludedTags(tag: String) {
-        excludedTags.append(tag)
+     func addExcludedTags(tag: String) {
+        if tag != "" {
+            excludedTags.append(String(tag.filter { !" \n\t\r".contains($0) }))
+        }
     }
     
     
     // MARK: - Question Handler
-    func handleQuestion(answerType: Bool) {
-        if questionNum < 3 {
+     func handleQuestion(answerType: Bool) {
+        answer = homeViewModel?.answer
+        if questionNum <= 3 {
             if answerType == true {
                 question = findQuestion()
             } else {
-                excludedTags.append(question!.tag)
+                addExcludedTags(tag: question.tag)
                 presents = findPresents()
                 question = findQuestion()
             }
         } else if questionNum == 4 {
-            if presents!.count < 6 {
+            if presents.count < 6 {
                 isContinue = false
             } else {
                 if answerType == true {
                     question = findQuestion()
                 } else {
-                    excludedTags.append(question!.tag)
+                    addExcludedTags(tag: question.tag)
                     presents = findPresents()
                     question = findQuestion()
                 }
@@ -124,7 +133,7 @@ class PresentBrain {
             if answerType == true {
                 isContinue = false
             } else {
-                excludedTags.append(question!.tag)
+                addExcludedTags(tag: question.tag)
                 presents = findPresents()
                 isContinue = false
             }

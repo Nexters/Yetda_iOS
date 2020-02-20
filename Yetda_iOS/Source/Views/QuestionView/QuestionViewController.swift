@@ -27,11 +27,11 @@ class QuestionViewController: BaseViewController {
     
     // Question and Answer related logics
     var answer: Answer?
-    var question: Question?
+//    var question: Question?
     var presents: Results<Presents>?
-    var questionNum = 0
+//    var questionNum = 0
     
-    var presentBrain = PresentBrain()
+    var presentBrain = PresentBrain(minPrice: 0, maxPrice: 10)
     
     
     static func instance(viewModel: HomeViewModel) -> QuestionViewController? {
@@ -45,7 +45,17 @@ class QuestionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answer = homeViewModel?.answer
-
+//        var question = presentBrain.findQuestion()
+//        print("question in main: \(question)")
+        
+        if let unWrappedAnswer = answer {
+            presentBrain = PresentBrain(minPrice: unWrappedAnswer.minPrice!, maxPrice: unWrappedAnswer.maxPrice!)
+            presentBrain.findPresents()
+            presentBrain.findQuestion()
+        } 
+        
+//        presentBrain.find
+//        presentBrain.findPresents()
         setupView()
         setupButtonAction()
     }
@@ -70,7 +80,7 @@ extension QuestionViewController: HomeViewControllerable {
 
 extension QuestionViewController {
     func goToResult() {
-        print("let's GOGO")
+        print("let's GOGO: \(presentBrain.presents), min/max: \(presentBrain.maxPrice)")
         next()
     }
     
