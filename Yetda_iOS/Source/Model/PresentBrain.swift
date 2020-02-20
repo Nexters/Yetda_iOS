@@ -14,10 +14,15 @@ protocol PresentBrainable {
     func findQuestion()
 }
 
-struct PresentBrain {
+class PresentBrain {
     
     // excludedTags는 동적으로 받아야 함
     private var excludedTags: [String] = []
+    var question: Question?
+    
+    init() {
+        question = findQuestion()
+    }
     
     func findPresents() -> [Present] {
         var filteredPresents: [Present] = []
@@ -69,7 +74,7 @@ struct PresentBrain {
         
     }
     
-    mutating func addExcludedTags(tag: String) {
+    func addExcludedTags(tag: String) {
         excludedTags.append(tag)
     }
 }

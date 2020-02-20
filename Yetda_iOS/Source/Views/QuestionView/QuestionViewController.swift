@@ -45,32 +45,9 @@ class QuestionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answer = homeViewModel?.answer
-        
-        // 작성한 PresentBrain을 활용해 question을 동적으로 생성하는 로직 추가 필요.
-        
-//        do {
-//            let realm = try Realm()
-//            presents = realm.objects(Presents.self)
-//            let qs: Results<Questions>?
-//            qs = realm.objects(Questions.self)
-//            if let unWrappedQuestions = qs {
-//                questionSize = unWrappedQuestions[0].questions.count
-////                print("unwrapped: \(unWrappedQuestions[0].questions)")
-//                for question in unWrappedQuestions[0].questions {
-////                    print("unwrapped: \(question)")
-//                    questions.questions.append(question)
-//                }
-//                print("questions instance: \(questions)")
-//            }
-//
-//        } catch let error as NSError {
-//            print("ERROR: \(error)")
-//        }
 
         setupView()
         setupButtonAction()
-        
-//        print("question: \(answer)")
     }
     
 }
