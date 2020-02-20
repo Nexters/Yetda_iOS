@@ -53,6 +53,7 @@
 		FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */; };
 		FAECF8B923DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF8B823DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift */; };
 		FAFDCCB223FD2BF800731DA9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFDCCB123FD2BF800731DA9 /* UILabel+.swift */; };
+		FAFDCCB623FDA0D700731DA9 /* PresentBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFDCCB523FDA0D700731DA9 /* PresentBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		FAECF8B623DADF7200B5DF95 /* BirthDayViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirthDayViewController+layout.swift"; sourceTree = "<group>"; };
 		FAECF8B823DAEAAF00B5DF95 /* BirthdayViewController+UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirthdayViewController+UIPickerView.swift"; sourceTree = "<group>"; };
 		FAFDCCB123FD2BF800731DA9 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = SOURCE_ROOT; };
+		FAFDCCB523FDA0D700731DA9 /* PresentBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				4C002D7223D0B44300A1AC91 /* Common */,
+				FAFDCCB423FDA0AF00731DA9 /* Model */,
 				4C002D6F23D0B31300A1AC91 /* Views */,
 				4C002D6E23D0B30800A1AC91 /* Storyboard */,
 			);
@@ -340,6 +343,14 @@
 			path = ResultView;
 			sourceTree = "<group>";
 		};
+		FAFDCCB423FDA0AF00731DA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAFDCCB523FDA0D700731DA9 /* PresentBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -513,6 +524,7 @@
 				3A44737C23F5765600CE8936 /* PriceViewController+RangeSeekSlider.swift in Sources */,
 				FAE165DB23D97DDA00CEC5F6 /* NameViewController+TextField.swift in Sources */,
 				FAB0FD1D23C4945900674A3E /* SceneDelegate.swift in Sources */,
+				FAFDCCB623FDA0D700731DA9 /* PresentBrain.swift in Sources */,
 				4C002D7723D0B53400A1AC91 /* FIrebaseIntegrator.swift in Sources */,
 				FAA5B41C23DED9520082005E /* GenderViewController.swift in Sources */,
 			);

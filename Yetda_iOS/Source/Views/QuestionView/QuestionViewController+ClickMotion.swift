@@ -12,40 +12,47 @@ extension QuestionViewController {
     
     @IBAction func clickNoButton(sender: UIButton) {
         print("NO!")
+        
+        presentBrain.handleQuestion(answerType: false)
     
         UIView.animate(withDuration: 0.3, animations: ({
             let movingDistance = self.view.frame.width
             self.frontCardView.transform = CGAffineTransform(translationX: -movingDistance, y: 0)
         }))
         
-        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showNextCard), userInfo: nil, repeats: false)
+        if presentBrain.isContinue == false {
+            presentBrain.questionNum = 0
+            goToResult()
+        } else {
+            Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showNextCard), userInfo: nil, repeats: false)
+        }
     }
     
     @IBAction func clickYesButton(sender: UIButton) {
         print("YES!")
+        presentBrain.handleQuestion(answerType: true)
         
         UIView.animate(withDuration: 0.3, animations: ({
             let movingDistance = self.view.frame.width
             self.frontCardView.transform = CGAffineTransform(translationX: movingDistance, y: 0)
         }))
         
-        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showNextCard), userInfo: nil, repeats: false)
+        if presentBrain.isContinue == false {
+            presentBrain.questionNum = 0
+//            print("excluded: \(presentBrain.excludedTags), presents: \(presentBrain.presents)")
+            goToResult()
+        } else {
+            Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showNextCard), userInfo: nil, repeats: false)
+        }
     }
     
     @objc func showNextCard() {
+        let question = presentBrain.question
+        presentBrain.questionNum += 1
+        frontCardLabel.text = "\(question.question)"
+
         
-        questionNum += 1
-      
-            frontCardLabel.text = "\(questions.questions[questionNum].question)"
-        
-        
-        if questionNum >= 4 {
-//        if questionNum >= questionSize - 1 {
-            questionNum = 0
-            goToResult()
-        }
-        else {
-            if questionNum > basePoint {
+        if presentBrain.questionNum > basePoint {
                 if let name = answer?.name {
                     descriptionLabel.text = "\(name)님에 대해 조금만 더 알려주세요!"
                 }
@@ -59,8 +66,9 @@ extension QuestionViewController {
             }))
         }
         
-
-    }
+//        print("show next card")
+//
+//    }
     
     func setupButtonAction() {
         noButton.addTarget(self, action: #selector(clickNoButton), for: .touchUpInside)

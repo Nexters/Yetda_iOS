@@ -10,8 +10,6 @@ import UIKit
 import RealmSwift
 
 class QuestionViewController: BaseViewController {
-
-    var questionNum = 0
     var basePoint = 5
     
     let cardSize = CGSize(width: 302, height: 362)
@@ -26,10 +24,14 @@ class QuestionViewController: BaseViewController {
     let noButton: UIButton = UIButton()
     let midButton: UIButton = UIButton()
     var secondCard = UIView()
-    var answer:Answer?
-    var questions = Questions()
+    
+    // Question and Answer related logics
+    var answer: Answer?
+//    var question: Question?
     var presents: Results<Presents>?
-    var questionSize = 0
+//    var questionNum = 0
+    
+    var presentBrain = PresentBrain(minPrice: 0, maxPrice: 10)
     
     
     static func instance(viewModel: HomeViewModel) -> QuestionViewController? {
@@ -43,30 +45,17 @@ class QuestionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answer = homeViewModel?.answer
+//        var question = presentBrain.findQuestion()
+//        print("question in main: \(question)")
         
-        do {
-            let realm = try Realm()
-            presents = realm.objects(Presents.self)
-            let qs: Results<Questions>?
-            qs = realm.objects(Questions.self)
-            if let unWrappedQuestions = qs {
-                questionSize = unWrappedQuestions[0].questions.count
-//                print("unwrapped: \(unWrappedQuestions[0].questions)")
-                for question in unWrappedQuestions[0].questions {
-//                    print("unwrapped: \(question)")
-                    questions.questions.append(question)
-                }
-                print("questions instance: \(questions)")
-            }
-            
-        } catch let error as NSError {
-            print("ERROR: \(error)")
-        }
-
+        if let unWrappedAnswer = answer {
+            presentBrain = PresentBrain(minPrice: unWrappedAnswer.minPrice!, maxPrice: unWrappedAnswer.maxPrice!)
+        } 
+        
+//        presentBrain.find
+//        presentBrain.findPresents()
         setupView()
         setupButtonAction()
-        
-//        print("question: \(answer)")
     }
     
 }
@@ -89,7 +78,7 @@ extension QuestionViewController: HomeViewControllerable {
 
 extension QuestionViewController {
     func goToResult() {
-        print("let's GOGO")
+        print("let's GOGO: \(presentBrain.presents), min/max: \(presentBrain.maxPrice)")
         next()
     }
     
