@@ -44,7 +44,7 @@ struct PresentBrain {
         return filteredPresents
     }
     
-    func findQuestion() -> Question {
+    func findQuestion() -> Question? {
         // 아직 물어보지 않은 질문 중 tags에 없는 질문을 찾아 리턴한다
         var filteredQuestions: [Question] = []
         
@@ -53,7 +53,7 @@ struct PresentBrain {
             let realmQuestions = realm.objects(Question.self)
             
             filteredQuestions = Array(realmQuestions).filter { (question) -> Bool in
-                if excludedTags.contains(question.tag) || question.isAsked == false {
+                if excludedTags.contains(question.tag) || question.isAsked == true {
                     return false
                 } else {
                     return true
@@ -65,7 +65,7 @@ struct PresentBrain {
         }
         
         
-        return filteredQuestions.randomElement()!
+        return filteredQuestions.randomElement() ?? nil
         
     }
     
