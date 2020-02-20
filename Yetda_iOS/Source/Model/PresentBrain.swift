@@ -44,7 +44,12 @@ struct PresentBrain {
         return filteredPresents
     }
     
-    func findQuestion() {
+    func findQuestion() -> Question {
+        // 아직 물어보지 않은 질문 중 tags에 없는 질문을 찾아 리턴한다
+        let filteredQuestions: [Question] = []
+        
+        
+        return filteredQuestions.randomElement()!
         
     }
 }
