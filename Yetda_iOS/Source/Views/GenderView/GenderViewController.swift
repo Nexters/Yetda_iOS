@@ -20,7 +20,6 @@ class GenderViewController: BaseViewController {
     var maleButton = GenderToggleButton(title: "남성")
     var selectedGender = Gender.female
     var answer: Answer?
-    var presentBrain = PresentBrain()
     
     enum Gender {
         case female, male
@@ -46,7 +45,6 @@ class GenderViewController: BaseViewController {
     override func setup() {
         super.setup()
         answer = homeViewModel?.answer
-        print(presentBrain.findQuestion())
         
         setupUI()
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)

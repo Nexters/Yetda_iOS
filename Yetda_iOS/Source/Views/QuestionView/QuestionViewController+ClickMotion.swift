@@ -23,6 +23,7 @@ extension QuestionViewController {
     
     @IBAction func clickYesButton(sender: UIButton) {
         print("YES!")
+        presentBrain.addExcludedTags(tag: question!.tag)
         
         UIView.animate(withDuration: 0.3, animations: ({
             let movingDistance = self.view.frame.width
@@ -33,18 +34,16 @@ extension QuestionViewController {
     }
     
     @objc func showNextCard() {
-        
+        question = presentBrain.findQuestion()
         questionNum += 1
-      
-            frontCardLabel.text = "\(questions.questions[questionNum].question)"
+        if let unwrappedQuestion = question {
+            frontCardLabel.text = "\(unwrappedQuestion.question)"
+        }
         
-        
-        if questionNum >= 4 {
-//        if questionNum >= questionSize - 1 {
+        if questionNum >= 5 {
             questionNum = 0
             goToResult()
-        }
-        else {
+        } else {
             if questionNum > basePoint {
                 if let name = answer?.name {
                     descriptionLabel.text = "\(name)님에 대해 조금만 더 알려주세요!"
