@@ -29,13 +29,24 @@ class PresentBrain {
     }
     
     // Find presents candidates from constraints
-    func findPresents() -> [Present] {
+    func findPresents(minPrice: Int? = nil, maxPrice: Int? = nil) -> [Present] {
         var filteredPresents: [Present] = []
         do {
             let realm = try Realm()
             let realmPresents = realm.objects(Present.self)
             // 가격으로 한번 더 걸러내는 로직 들어가야 함.
-                let filtered = Array(realmPresents).filter { (present) -> Bool in
+            let priceFiltered = Array(realmPresents).filter { (present) -> Bool in
+                if minPrice != nil && maxPrice != nil && present.price != nil {
+                    if Int(present.price)! <= maxPrice! && Int(present.price)! >= minPrice! {
+                        return true
+                    } else {
+                        return false
+                    }
+                } else {
+                    return false
+                }
+            }
+                let filtered = Array(priceFiltered).filter { (present) -> Bool in
                     for tag in excludedTags {
                         if present.tags.contains(tag) {
                             return false
