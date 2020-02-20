@@ -19,9 +19,13 @@ class PresentBrain {
     // excludedTags는 동적으로 받아야 함
     private var excludedTags: [String] = []
     var question: Question?
+    var questionNum = 0
+    var presents: [Present]?
+    var isContinue: Bool = true
     
     init() {
         question = findQuestion()
+        presents = findPresents()
     }
     
     func findPresents() -> [Present] {
@@ -77,4 +81,39 @@ class PresentBrain {
     func addExcludedTags(tag: String) {
         excludedTags.append(tag)
     }
+    
+    func handleQuestion(answerType: Bool) {
+        if questionNum < 3 {
+            if answerType == true {
+                question = findQuestion()
+            } else {
+                excludedTags.append(question!.tag)
+                presents = findPresents()
+                question = findQuestion()
+            }
+        } else if questionNum == 4 {
+            if presents!.count < 6 {
+                isContinue = false
+            } else {
+                if answerType == true {
+                    question = findQuestion()
+                } else {
+                    excludedTags.append(question!.tag)
+                    presents = findPresents()
+                    question = findQuestion()
+                }
+            }
+        } else {
+            // questionNum >= 5
+            if answerType == true {
+                isContinue = false
+            } else {
+                excludedTags.append(question!.tag)
+                presents = findPresents()
+                isContinue = false
+            }
+        }
+    }
+    
+    
 }
