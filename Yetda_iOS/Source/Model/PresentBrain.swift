@@ -9,10 +9,10 @@
 import UIKit
 import RealmSwift
 
-protocol PresentBrainable {
-    func findPresents()
-    func findQuestion()
-}
+//protocol PresentBrainable {
+//    func findPresents()
+//    func findQuestion()
+//}
 
 class PresentBrain {
     
@@ -28,6 +28,7 @@ class PresentBrain {
         presents = findPresents()
     }
     
+    // Find presents candidates from constraints
     func findPresents() -> [Present] {
         var filteredPresents: [Present] = []
         do {
@@ -53,6 +54,7 @@ class PresentBrain {
         return filteredPresents
     }
     
+    // Find randomized question candidate from constraints
     func findQuestion() -> Question? {
         // 아직 물어보지 않은 질문 중 tags에 없는 질문을 찾아 리턴한다
         var filteredQuestions: [Question] = []
@@ -78,10 +80,13 @@ class PresentBrain {
         
     }
     
+    // Gonna be removed
     func addExcludedTags(tag: String) {
         excludedTags.append(tag)
     }
     
+    
+    // MARK: - Question Handler
     func handleQuestion(answerType: Bool) {
         if questionNum < 3 {
             if answerType == true {
@@ -114,6 +119,14 @@ class PresentBrain {
             }
         }
     }
+    
+    /* 추가로 진행할 사항
+     
+     1. handleQuestion과 QuestionView 연동
+     2. ResultView에서 결과에 접근할 수 있도록 연동 (maybe HomeViewModel 사용해야 할 수도)
+     3. min/max price를 findPresents()의 제약조건으로 추가
+     
+     */
     
     
 }
