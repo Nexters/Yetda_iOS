@@ -30,6 +30,8 @@ class PresentBrain {
     init(minPrice: Int, maxPrice: Int) {
         self.minPrice = minPrice
         self.maxPrice = maxPrice
+        self.presents = findPresents()
+        self.question = findQuestion()
         print("Init called")
     }
     
