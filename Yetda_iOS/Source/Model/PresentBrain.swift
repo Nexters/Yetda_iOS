@@ -17,15 +17,15 @@ protocol PresentBrainable {
 struct PresentBrain {
     
     // excludedTags는 동적으로 받아야 함
-    var excludedTags: [String] = ["정성", "인테리어", "문구", "쓸없선", "연인"]
+    private var excludedTags: [String] = []
     
     func findPresents() -> [Present] {
         var filteredPresents: [Present] = []
         do {
             let realm = try Realm()
-            let realmPresent = realm.objects(Present.self)
-            
-                let filtered = Array(realmPresent).filter { (present) -> Bool in
+            let realmPresents = realm.objects(Present.self)
+            // 가격으로 한번 더 걸러내는 로직 들어가야 함.
+                let filtered = Array(realmPresents).filter { (present) -> Bool in
                     for tag in excludedTags {
                         if present.tags.contains(tag) {
                             return false
@@ -46,10 +46,30 @@ struct PresentBrain {
     
     func findQuestion() -> Question {
         // 아직 물어보지 않은 질문 중 tags에 없는 질문을 찾아 리턴한다
-        let filteredQuestions: [Question] = []
+        var filteredQuestions: [Question] = []
+        
+        do {
+            let realm = try Realm()
+            let realmQuestions = realm.objects(Question.self)
+            
+            filteredQuestions = Array(realmQuestions).filter { (question) -> Bool in
+                if excludedTags.contains(question.tag) || question.isAsked == false {
+                    return false
+                } else {
+                    return true
+                }
+            }
+            
+        } catch let error as NSError {
+            print(error)
+        }
         
         
         return filteredQuestions.randomElement()!
         
+    }
+    
+    mutating func addExcludedTags(tag: String) {
+        excludedTags.append(tag)
     }
 }
