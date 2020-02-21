@@ -19,6 +19,8 @@ class ResultViewController: BaseViewController {
     var subText = UILabel()
     var otherPresentText = UILabel()
     var answer: Answer?
+    var present: Present?
+    var idx = 0
     
     static func instance(viewModel: HomeViewModel) -> ResultViewController? {
         let resultViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "ResultViewController") as? ResultViewController
@@ -30,7 +32,8 @@ class ResultViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(answer)
+        print("result")
+        selectRandomizedPresent()
 
         // Do any additional setup after loading the view.
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -63,6 +66,16 @@ extension ResultViewController: HomeViewControllerable {
     }
     
     
+}
+
+extension ResultViewController {
+    func selectRandomizedPresent() {
+        if let ans = answer {
+//            print(ans.presents![0])
+            present = ans.presents![idx]
+            print(present)
+        }
+    }
 }
 
 private extension ResultViewController {

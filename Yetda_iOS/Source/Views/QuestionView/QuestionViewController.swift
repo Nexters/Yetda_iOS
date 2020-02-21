@@ -49,7 +49,7 @@ class QuestionViewController: BaseViewController {
 //        print("question in main: \(question)")
         
         if let unWrappedAnswer = answer {
-            presentBrain = PresentBrain(minPrice: unWrappedAnswer.minPrice!, maxPrice: unWrappedAnswer.maxPrice!)
+            presentBrain = PresentBrain(minPrice: unWrappedAnswer.minPrice, maxPrice: unWrappedAnswer.maxPrice)
         }
         print("Init")
         print(presentBrain.presents)
