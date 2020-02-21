@@ -73,7 +73,7 @@ extension ResultViewController {
     
     func setPresentTextView() {
         self.contentView.addSubview(presentText)
-        presentText.text = "마카롱과 디저트"
+        presentText.text = present?.present ?? "마카롱과 디저트"
         presentText.font = .systemFont(ofSize: 30)
         presentText.textColor = .black
         

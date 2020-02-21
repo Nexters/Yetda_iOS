@@ -9,5 +9,5 @@
 import Foundation
 
 enum ActionType {
-    case name, gender, birthday, tag
+    case name, gender, birthday, tag, presents
 }

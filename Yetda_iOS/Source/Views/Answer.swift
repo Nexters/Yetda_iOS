@@ -12,7 +12,8 @@ struct Answer {
     var name: String?
     var birthday: String?
     var gender: String?
-    var minPrice: Int?
-    var maxPrice: Int?
+    var minPrice: Int = 1
+    var maxPrice: Int = 10
     var tags: [String]?
+    var presents: [Present]?
 }

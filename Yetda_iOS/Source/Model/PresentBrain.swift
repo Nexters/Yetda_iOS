@@ -151,9 +151,7 @@ class PresentBrain {
     
     /* 추가로 진행할 사항
      
-     1. handleQuestion과 QuestionView 연동
-     2. ResultView에서 결과에 접근할 수 있도록 연동 (maybe HomeViewModel 사용해야 할 수도)
-     3. min/max price를 findPresents()의 제약조건으로 추가
+     질문이 모두 완료되었으면 선별된 present 결과를 저장
      
      */
     
