@@ -37,6 +37,7 @@ class ResultViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         navigationController?.setNavigationBarHidden(false, animated: true)
+        presentText.text = present?.present ?? "마카롱 등 디저트"
     }
     
     override func setup() {
