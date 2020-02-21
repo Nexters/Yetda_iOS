@@ -77,6 +77,7 @@ class StartViewController: BaseViewController {
                         let updates = realm.objects(Updates.self)
 //                        var newLocalDB = Database()
                         print("firestore: \(firestoreDate)")
+                        // 앱 내 데이터 없음 혹은 firestore 데이터 업데이트 발견
                         if (updates.isEmpty || updates[0].updated_at != firestoreDate) || firestoreDate == "" {
 //                            print("localDB: \(localDB)")
                             let newUpdates = Updates()
@@ -99,8 +100,9 @@ class StartViewController: BaseViewController {
                             } catch let error as NSError {
                                 print("ERROR: \(error)")
                             }
-                            
+                            // 업데이트 불필요
                         } else if updates[0].updated_at == firestoreDate && firestoreDate != "" {
+                            self.clearUserModifiedDataFromRealm()
                             do {
 //                                    try realm.write {
 //                                       realm.deleteAll()
@@ -171,6 +173,22 @@ class StartViewController: BaseViewController {
                     print("ERROR: \(error)")
                 }
                 print("migration success")
+    }
+    
+    func clearUserModifiedDataFromRealm() {
+        do {
+            let realm = try Realm()
+            let questions = realm.objects(Question.self)
+            
+            for question in questions {
+                try realm.write {
+                    question.isAsked = false
+                }
+            }
+            
+        } catch let error as NSError {
+            print(error)
+        }
     }
     
     func dumpQuestionFromFirebase(database: Firestore?) {

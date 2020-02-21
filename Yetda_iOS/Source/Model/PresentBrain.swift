@@ -78,9 +78,15 @@ class PresentBrain {
         // 아직 물어보지 않은 질문 중 tags에 없는 질문을 찾아 리턴한다
         var filteredQuestions: [Question] = []
         
+        
         do {
             let realm = try Realm()
             let realmQuestions = realm.objects(Question.self)
+            
+            try realm.write {
+                // 해당 question은 질문했으니 true로 변경
+                question.isAsked = true
+            }
             
             filteredQuestions = Array(realmQuestions).filter { (question) -> Bool in
                 if excludedTags.contains(question.tag) || question.isAsked == true {
