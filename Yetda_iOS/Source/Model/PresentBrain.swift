@@ -24,7 +24,7 @@ class PresentBrain {
     var isContinue: Bool = true
     var homeViewModel: HomeViewModel?
     var answer: Answer?
-    var minPrice = 0
+    var minPrice = 1
     var maxPrice = 10
     
     init(minPrice: Int, maxPrice: Int) {
@@ -44,7 +44,8 @@ class PresentBrain {
             // 가격으로 한번 더 걸러내는 로직 들어가야 함.
             let priceFiltered = Array(realmPresents).filter { (present) -> Bool in
                 if present.price != "" {
-                    if Int(present.price)! <= maxPrice && Int(present.price)! >= minPrice {
+//                    print("present: \(present.price) min: \(minPrice), max: \(maxPrice)")
+                    if Int(present.price)! <= maxPrice*10000 && Int(present.price)! >= minPrice*10000 {
                         return true
                     } else {
                         return false
@@ -77,9 +78,15 @@ class PresentBrain {
         // 아직 물어보지 않은 질문 중 tags에 없는 질문을 찾아 리턴한다
         var filteredQuestions: [Question] = []
         
+        
         do {
             let realm = try Realm()
             let realmQuestions = realm.objects(Question.self)
+            
+            try realm.write {
+                // 해당 question은 질문했으니 true로 변경
+                question.isAsked = true
+            }
             
             filteredQuestions = Array(realmQuestions).filter { (question) -> Bool in
                 if excludedTags.contains(question.tag) || question.isAsked == true {
