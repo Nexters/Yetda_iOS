@@ -63,7 +63,36 @@ extension ResultViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        
+        // store data to realm history
+        print("store to realm")
+        do {
+            let realm = try Realm()
+            try realm.write {
+                // let myOtherDog = Dog(value: ["name" : "Pluto", "age": 3])
+                /*
+                 class History: Object {
+                     @objc dynamic var date = ""
+                     @objc dynamic var birthday = ""
+                     @objc dynamic var name = ""
+                     @objc dynamic var price = ""
+                     let presents = List<Present>()
+                 }
+                 */
+                if let unwrappedAnswer = answer {
+                    let dateFormatter = DateFormatter()
+                    let date = Date()
+                    let dateString = dateFormatter.string(from: date)
+                    let history = History(value: ["date": dateString, "birthday": unwrappedAnswer.birthday, "name": unwrappedAnswer.name, "price": present?.price, "presents": unwrappedAnswer.presents])
+                    realm.add(history)
+                }
+                
+            }
+            
+            let outcome = realm.objects(History.self)
+            print("History: \(outcome)")
+        } catch let error as NSError {
+            print(error)
+        }
     }
     
     
