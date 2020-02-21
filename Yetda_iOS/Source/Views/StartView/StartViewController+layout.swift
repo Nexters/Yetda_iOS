@@ -26,7 +26,7 @@ extension StartViewController {
             make.centerX.top.bottom.equalToSuperview()
         }
         
-        _ = [guideLabelView, imageView, subText,cardView].map { self.contentView.addSubview($0)}
+        _ = [guideLabelView, imageView, subText, historyTableView].map { self.contentView.addSubview($0)}
         
         self.view.addSubview(startButton)
         
@@ -39,7 +39,8 @@ extension StartViewController {
         setGuideText()
         setImage()
         setSubText()
-        setCardView()
+//        setCardView()
+        setTableView()
     }
     
     func setGuideText() {
@@ -95,6 +96,20 @@ extension StartViewController {
             make.trailing.equalToSuperview().inset(24)
             make.height.equalTo(500)
             make.bottom.equalToSuperview() // 이것이 중요함
+            
+        }
+    }
+    
+    
+    func setTableView() {
+        historyTableView.snp.makeConstraints { (make) in
+            
+            
+        make.top.equalTo(subText.snp.bottom).offset(12)
+        make.leading.equalToSuperview().offset(24)
+        make.trailing.equalToSuperview().inset(24)
+        make.height.equalTo(500)
+        make.bottom.equalToSuperview() // 이것이 중요함
             
         }
     }
