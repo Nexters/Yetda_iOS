@@ -26,6 +26,8 @@ class StartViewController: BaseViewController {
     var cardView = UIView()
     var subText = UILabel()
     var scrollView = UIScrollView()
+    var historyTableView = UITableView()
+    var items: [String] = []
     
     static func instance(viewModel: HomeViewModel) -> StartViewController? {
         let startViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "StartViewController") as? StartViewController
@@ -39,6 +41,7 @@ class StartViewController: BaseViewController {
     /// custom setup
     override func setup() {
         super.setup()
+//        getHistory()
         startButton.isUserInteractionEnabled = true
         startButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(startBtnTapped)))
         
@@ -52,6 +55,12 @@ class StartViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setScrollView()
+        print("working")
+        self.historyTableView.dataSource = self
+        self.historyTableView.delegate = self
+        self.historyTableView.register(UITableViewCell.self,
+                                forCellReuseIdentifier: "TableViewCell")
+
         
         // Realm Migrationx
         mirgateRealm()
@@ -62,6 +71,8 @@ class StartViewController: BaseViewController {
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         database = Firestore.firestore()
+        
+        getHistory()
         
         do {
           let realm = try Realm()
@@ -148,13 +159,13 @@ class StartViewController: BaseViewController {
                 let config = Realm.Configuration(
                     // Set the new schema version. This must be greater than the previously used
                     // version (if you've never set a schema version before, the version is 0).
-                    schemaVersion: 5,
+                    schemaVersion: 6,
 
                     // Set the block which will be called automatically when opening a Realm with
                     // a schema version lower than the one set above
                     migrationBlock: { migration, oldSchemaVersion in
                         // We haven’t migrated anything yet, so oldSchemaVersion == 0
-                        if (oldSchemaVersion < 2) {
+                        if (oldSchemaVersion < 6) {
                             // Nothing to do!
                             // Realm will automatically detect new properties and removed properties
                             // And will update the schema on disk automatically
@@ -278,6 +289,23 @@ class StartViewController: BaseViewController {
                     })
         }
 //    }
+    
+    func getHistory() {
+        print("Running")
+        do {
+            let realm = try Realm()
+            let history = realm.objects(History.self)
+            
+            for h in history {
+                items.append(h.name)
+            }
+            
+            
+            print("history: \(history)")
+        } catch let error as NSError {
+            print(error)
+        }
+    }
 }
 
 extension StartViewController: HomeViewControllerable {
@@ -299,5 +327,26 @@ private extension StartViewController {
     func startBtnTapped() {
         storeData()
         next()
+    }
+}
+
+extension StartViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      print(items[indexPath.row])
+    }
+}
+
+extension StartViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                  numberOfRowsInSection section: Int) -> Int {
+    return self.items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell")! as UITableViewCell
+
+      cell.textLabel?.text = items[indexPath.row]
+
+      return cell
     }
 }
