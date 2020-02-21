@@ -24,7 +24,7 @@ class PresentBrain {
     var isContinue: Bool = true
     var homeViewModel: HomeViewModel?
     var answer: Answer?
-    var minPrice = 0
+    var minPrice = 1
     var maxPrice = 10
     
     init(minPrice: Int, maxPrice: Int) {
@@ -44,7 +44,8 @@ class PresentBrain {
             // 가격으로 한번 더 걸러내는 로직 들어가야 함.
             let priceFiltered = Array(realmPresents).filter { (present) -> Bool in
                 if present.price != "" {
-                    if Int(present.price)! <= maxPrice && Int(present.price)! >= minPrice {
+//                    print("present: \(present.price) min: \(minPrice), max: \(maxPrice)")
+                    if Int(present.price)! <= maxPrice*10000 && Int(present.price)! >= minPrice*10000 {
                         return true
                     } else {
                         return false

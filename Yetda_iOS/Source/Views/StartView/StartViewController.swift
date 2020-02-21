@@ -236,6 +236,7 @@ class StartViewController: BaseViewController {
                                     }
                                     if let price = data["price"] as? Int {
                                         present.price = String(price)
+                                        print(present.price)
                                     }
                                     if let tags = data["tags"] as? [String] {
                                         for tag in tags {
