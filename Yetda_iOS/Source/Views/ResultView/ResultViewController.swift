@@ -30,6 +30,7 @@ class ResultViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(answer)
 
         // Do any additional setup after loading the view.
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -58,7 +59,7 @@ extension ResultViewController: HomeViewControllerable {
     }
     
     func storeData() {
-//        homeViewModel?.storeStringAnswer(actionType: ActionType.tag, payload: "선물")
+        
     }
     
     

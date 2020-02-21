@@ -75,6 +75,10 @@ class HomeViewModel: NSObject {
                 }
             }
         }
+    
+    public func storeSelectedPresents(payload: [Present]) {
+        answer.presents = payload
+    }
         
     public func storePrice(minPrice: Int, maxPrice: Int) {
         print("store data: \(minPrice) \(maxPrice)")

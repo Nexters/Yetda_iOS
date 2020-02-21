@@ -22,6 +22,9 @@ extension QuestionViewController {
         
         if presentBrain.isContinue == false {
             presentBrain.questionNum = 0
+            print("result")
+            print(presentBrain.presents)
+            storeData()
             goToResult()
         } else {
             Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showNextCard), userInfo: nil, repeats: false)
@@ -40,6 +43,11 @@ extension QuestionViewController {
         if presentBrain.isContinue == false {
             presentBrain.questionNum = 0
 //            print("excluded: \(presentBrain.excludedTags), presents: \(presentBrain.presents)")
+            
+            print("result")
+            print(presentBrain.presents)
+            storeData()
+            
             goToResult()
         } else {
             Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showNextCard), userInfo: nil, repeats: false)
