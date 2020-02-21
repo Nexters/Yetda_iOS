@@ -58,7 +58,7 @@ class StartViewController: BaseViewController {
         print("working")
         self.historyTableView.dataSource = self
         self.historyTableView.delegate = self
-        self.historyTableView.register(UITableViewCell.self,
+        self.historyTableView.register(CardTableCell.self,
                                 forCellReuseIdentifier: "TableViewCell")
 
         
@@ -337,9 +337,8 @@ extension StartViewController: UITableViewDelegate {
 }
 
 extension StartViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView,
-                  numberOfRowsInSection section: Int) -> Int {
-    return self.items.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

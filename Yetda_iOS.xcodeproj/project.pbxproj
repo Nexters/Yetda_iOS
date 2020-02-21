@@ -30,6 +30,7 @@
 		FA42367D23EE9CD800F71143 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42367C23EE9CD800F71143 /* Answer.swift */; };
 		FA42368123EEA83400F71143 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368023EEA83400F71143 /* ActionType.swift */; };
 		FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368223EEC17F00F71143 /* MonthDay.swift */; };
+		FA4F1F46240000800068F894 /* CardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F1F45240000800068F894 /* CardTableCell.swift */; };
 		FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */; };
 		FA95784C23F7F5FE00B479FD /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95784B23F7F5FE00B479FD /* Questions.swift */; };
 		FA95784E23F7F7C600B479FD /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95784D23F7F7C600B479FD /* Updates.swift */; };
@@ -84,6 +85,7 @@
 		FA42367C23EE9CD800F71143 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		FA42368023EEA83400F71143 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
 		FA42368223EEC17F00F71143 /* MonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDay.swift; sourceTree = "<group>"; };
+		FA4F1F45240000800068F894 /* CardTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableCell.swift; sourceTree = "<group>"; };
 		FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+layout.swift"; sourceTree = "<group>"; };
 		FA95784B23F7F5FE00B479FD /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		FA95784D23F7F7C600B479FD /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB0FD1E23C4945900674A3E /* StartViewController.swift */,
+				FA4F1F45240000800068F894 /* CardTableCell.swift */,
 				FAC23E2623F83EBF000B6DEF /* StartViewController+layout.swift */,
 			);
 			path = StartView;
@@ -508,6 +511,7 @@
 				3A2F483923E537010034C429 /* QuestionViewController+ClickMotion.swift in Sources */,
 				4C002D7B23D0B9C500A1AC91 /* BaseViewController.swift in Sources */,
 				FAEC903923CC84B700010233 /* BirthdayViewController.swift in Sources */,
+				FA4F1F46240000800068F894 /* CardTableCell.swift in Sources */,
 				FAEC903F23CC850000010233 /* ResultViewController.swift in Sources */,
 				FAB0FD1B23C4945900674A3E /* AppDelegate.swift in Sources */,
 				3A2F483323DDB1EF0034C429 /* UIColor+.swift in Sources */,
