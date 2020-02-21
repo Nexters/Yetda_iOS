@@ -15,4 +15,5 @@ struct Answer {
     var minPrice: Int?
     var maxPrice: Int?
     var tags: [String]?
+    var presents: [Present]?
 }
