@@ -15,12 +15,12 @@ extension GenderViewController {
             selectedGender = .female
             femaleButton.setOn(true)
             maleButton.setOn(false)
-            selectedGender = Gender.male
+//            selectedGender = Gender.male
         } else {
             selectedGender = .male
             maleButton.setOn(true)
             femaleButton.setOn(false)
-            selectedGender = Gender.female
+//            selectedGender = Gender.female
         }
     }
 }
