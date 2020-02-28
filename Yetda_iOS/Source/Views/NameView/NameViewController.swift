@@ -33,6 +33,12 @@ class NameViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         nameTextField.becomeFirstResponder()
+        
+        guard let name = homeViewModel?.answer.name else {
+            nameTextField.text = ""
+            return
+        }
+        nameTextField.text = name
     }
     
     // custom setup
@@ -49,14 +55,12 @@ class NameViewController: BaseViewController {
         setGuideLabel()
         setNameTextField()
         
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     // MARK: - apply layout from extension
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -74,8 +78,6 @@ extension NameViewController: HomeViewControllerable {
     func storeData() {
         homeViewModel?.storeStringAnswer(actionType: ActionType.name, payload: nameTextField.text!)
     }
-    
-    
 }
 
 private extension NameViewController {

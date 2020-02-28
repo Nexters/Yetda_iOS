@@ -50,7 +50,6 @@ class HomeViewModel: NSObject {
             idx -= 1
             delegate?.next(viewController: homeViewController[idx])
         }
-
     }
     
     public func backToStartBtnTapped() {
@@ -60,21 +59,21 @@ class HomeViewModel: NSObject {
     }
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {
-            switch actionType {
-            case ActionType.name:
-                answer.name = payload
-            case ActionType.gender:
-                answer.gender = payload
-            case ActionType.birthday:
-                answer.birthday = payload
-            default:
-                if var tags = answer.tags {
-                    tags.append(payload)
-                } else {
-                    answer.tags = []
-                }
+        switch actionType {
+        case ActionType.name:
+            answer.name = payload
+        case ActionType.gender:
+            answer.gender = payload
+        case ActionType.birthday:
+            answer.birthday = payload
+        default:
+            if var tags = answer.tags {
+                tags.append(payload)
+            } else {
+                answer.tags = []
             }
         }
+    }
     
     public func storeSelectedPresents(payload: [Present]) {
         answer.presents = payload
