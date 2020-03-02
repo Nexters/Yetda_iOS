@@ -31,6 +31,7 @@
 		FA42368123EEA83400F71143 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368023EEA83400F71143 /* ActionType.swift */; };
 		FA42368323EEC17F00F71143 /* MonthDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42368223EEC17F00F71143 /* MonthDay.swift */; };
 		FA4F1F46240000800068F894 /* CardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F1F45240000800068F894 /* CardTableCell.swift */; };
+		FA5F16ED240CD4E000528583 /* StartViewController+realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F16EC240CD4E000528583 /* StartViewController+realm.swift */; };
 		FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */; };
 		FA95784C23F7F5FE00B479FD /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95784B23F7F5FE00B479FD /* Questions.swift */; };
 		FA95784E23F7F7C600B479FD /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95784D23F7F7C600B479FD /* Updates.swift */; };
@@ -86,6 +87,7 @@
 		FA42368023EEA83400F71143 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
 		FA42368223EEC17F00F71143 /* MonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDay.swift; sourceTree = "<group>"; };
 		FA4F1F45240000800068F894 /* CardTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableCell.swift; sourceTree = "<group>"; };
+		FA5F16EC240CD4E000528583 /* StartViewController+realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StartViewController+realm.swift"; sourceTree = "<group>"; };
 		FA85C4C423E1595F0083C550 /* GenderViewController+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenderViewController+layout.swift"; sourceTree = "<group>"; };
 		FA95784B23F7F5FE00B479FD /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		FA95784D23F7F7C600B479FD /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				FAB0FD1E23C4945900674A3E /* StartViewController.swift */,
 				FA4F1F45240000800068F894 /* CardTableCell.swift */,
 				FAC23E2623F83EBF000B6DEF /* StartViewController+layout.swift */,
+				FA5F16EC240CD4E000528583 /* StartViewController+realm.swift */,
 			);
 			path = StartView;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				3A2F484D23EAD5F20034C429 /* HomeVIewModel.swift in Sources */,
 				FADF05E823EB216900E40952 /* UIButton+.swift in Sources */,
 				3A2F483723DDB26A0034C429 /* QuestionViewController+Layout.swift in Sources */,
+				FA5F16ED240CD4E000528583 /* StartViewController+realm.swift in Sources */,
 				FA42368123EEA83400F71143 /* ActionType.swift in Sources */,
 				FAECF8B723DADF7200B5DF95 /* BirthDayViewController+layout.swift in Sources */,
 				FA85C4C523E1595F0083C550 /* GenderViewController+layout.swift in Sources */,
