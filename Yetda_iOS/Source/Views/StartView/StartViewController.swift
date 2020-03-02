@@ -14,8 +14,6 @@ import RealmSwift
 import BrightFutures
 
 class StartViewController: BaseViewController {
-    //    var database: Firestore!
-//    @IBOutlet weak var startButton: UIButton!
     var startButton = UIImageView(image: UIImage(named: "floating_button")!)
     var database: Firestore?
     var updated_at: Timestamp?
@@ -44,9 +42,6 @@ class StartViewController: BaseViewController {
         startButton.isUserInteractionEnabled = true
         startButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(startBtnTapped)))
         
-        
-        
-//        setScrollView()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -88,7 +83,6 @@ class StartViewController: BaseViewController {
                 case .success(let firestoreDate):
                     
                         let updates = realm.objects(Updates.self)
-//                        var newLocalDB = Database()
                         print("firestore: \(firestoreDate)")
                         
                         // 앱 내 데이터 없음 혹은 firestore 데이터 업데이트 발견
@@ -139,7 +133,6 @@ extension StartViewController: HomeViewControllerable {
     }
     
     func storeData() {
-//        homeViewModel?.storeAnswer(name: "123123123")
     }
 }
 

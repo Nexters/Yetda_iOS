@@ -35,7 +35,6 @@ class GenderViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("answer: \(answer)")
         
         // Do any additional setup after loading the view.
         navigationController?.setNavigationBarHidden(false, animated: true)
