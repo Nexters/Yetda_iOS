@@ -147,8 +147,7 @@ extension BirthdayViewController {
     func setupMonthLabel() {
         
         // setup self view properties
-        monthLabel.text = "MM"
-        monthLabel.textColor = .paleLilac
+        setLabelEmpty(monthLabel, text: "MM")
         monthLabel.textAlignment = .center
         monthLabel.font = .systemFont(ofSize: 34, weight: .bold)
         
@@ -182,8 +181,7 @@ extension BirthdayViewController {
     func setupDateLabel() {
         
         // setup self view properties
-        dateLabel.text = "DD"
-        dateLabel.textColor = .paleLilac
+        setLabelEmpty(dateLabel, text: "DD")
         dateLabel.textAlignment = .center
         dateLabel.font = .systemFont(ofSize: 34, weight: .bold)
         
@@ -238,5 +236,15 @@ extension BirthdayViewController {
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(32)
             make.height.equalTo(52)
         }
+    }
+    
+    func setLabelEmpty(_ label: UILabel, text: String) {
+        label.text = text
+        label.textColor = .paleLilac
+    }
+    
+    func setLabelInput(_ label: UILabel, text: String) {
+        label.text = text
+        label.textColor = UIColor(red: 42/255, green: 42/255, blue: 42/255, alpha: 1)
     }
 }

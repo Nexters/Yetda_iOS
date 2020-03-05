@@ -54,6 +54,14 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("birthday_a:\(homeViewModel?.answer)")
+        
+        checkStoredData()
+    }
+    
     // custom setup
     override func setup() {
         super.setup()
@@ -77,6 +85,20 @@ class BirthdayViewController: BaseViewController, UIPickerViewDataSource {
             days.append(String("\(day)일"))
         }
     }
+    
+    private func checkStoredData() {
+        guard let date = homeViewModel?.answer.birthday else {
+            setLabelEmpty(monthLabel, text: "MM")
+            setLabelEmpty(dateLabel, text: "DD")
+            return
+        }
+        
+        let arr = date.split(separator: " ")
+        let monthStr = String(arr[0].split(separator: "월")[0])
+        let dateStr = String(arr[1].split(separator: "일")[0])
+        setLabelInput(monthLabel, text: String(format: "%2d", monthStr))
+        setLabelInput(dateLabel, text: String(format: "%2d", dateStr))
+    }
 }
 
 extension BirthdayViewController: HomeViewControllerable {
@@ -89,7 +111,8 @@ extension BirthdayViewController: HomeViewControllerable {
     }
     
     func storeData() {
-        homeViewModel?.storeStringAnswer(actionType: ActionType.birthday, payload: "\(monthDay.month!) \(monthDay.day!)")
+        let data = "\(monthDay.month!) \(monthDay.day!)"
+        homeViewModel?.storeStringAnswer(actionType: ActionType.birthday, payload: data)
     }
 }
 

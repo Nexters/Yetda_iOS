@@ -40,7 +40,8 @@ class GenderViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         guard let gender = homeViewModel?.answer.gender else {
             clickGenderToggleButton(femaleButton)
@@ -76,6 +77,8 @@ extension GenderViewController: HomeViewControllerable {
     }
     
     func storeData() {
+        print("store gender: \(selectedGender)")
+        
         if selectedGender == Gender.female {
             homeViewModel?.storeStringAnswer(actionType: ActionType.gender, payload: "female")
         } else {

@@ -31,14 +31,20 @@ class NameViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        nameTextField.becomeFirstResponder()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("name_a:\(homeViewModel?.answer)")
         
         guard let name = homeViewModel?.answer.name else {
             nameTextField.text = ""
             return
         }
         nameTextField.text = name
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        nameTextField.becomeFirstResponder()
     }
     
     // custom setup

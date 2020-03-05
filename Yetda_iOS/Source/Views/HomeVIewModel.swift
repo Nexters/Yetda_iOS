@@ -34,7 +34,6 @@ class HomeViewModel: NSObject {
     
     public func startBtnTapped() {
         print("startBtnTapped")
-//        print(answer)
         
         let len = homeViewController.count
         if idx < len {
@@ -56,9 +55,21 @@ class HomeViewModel: NSObject {
         idx = 0
         delegate?.next(viewController: StartViewController.instance(viewModel: self)!)
         answer = Answer()
+        homeViewController = {
+            let viewControllers: [HomeViewControllerable] = [StartViewController.instance(viewModel: self)!,
+                                   NameViewController.instance(viewModel: self)!,
+                                   GenderViewController.instance(viewModel: self)!,
+                                   BirthdayViewController.instance(viewModel: self)!,
+                                   PriceViewController.instance(viewModel: self)!,
+                                   QuestionViewController.instance(viewModel: self)!,
+                                   ResultViewController.instance(viewModel: self)!
+            ]
+            return viewControllers
+        }()
     }
     
     public func storeStringAnswer(actionType: ActionType, payload: String) {
+        print("store payload: \(payload)")
         switch actionType {
         case ActionType.name:
             answer.name = payload
@@ -73,6 +84,7 @@ class HomeViewModel: NSObject {
                 answer.tags = []
             }
         }
+        print("stored answer:\(answer)")
     }
     
     public func storeSelectedPresents(payload: [Present]) {

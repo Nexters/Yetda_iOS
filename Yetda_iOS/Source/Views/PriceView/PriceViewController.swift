@@ -36,17 +36,22 @@ class PriceViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     override func setup() {
         super.setup()
         answer = homeViewModel?.answer
         
+        print("price_a:\(homeViewModel?.answer)")
+        
         setupUI()
         
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
+        
+        
     }
 }
 
