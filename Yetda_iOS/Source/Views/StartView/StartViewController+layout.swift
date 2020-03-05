@@ -45,7 +45,6 @@ extension StartViewController {
     
     func setGuideText() {
         guideLabelView.addSubview(guideText)
-//        self.scrollView.addSubview(guideLabelView)
         
         guideText.text = "선물 추천 받으러 \n가볼까요?"
         guideText.numberOfLines = 0
@@ -62,7 +61,6 @@ extension StartViewController {
     }
     
         func setImage() {
-    //        self.scrollView.addSubview(imageView)
             imageView.snp.makeConstraints { (make) in
                 make.trailing.equalToSuperview().inset(26)
                 make.top.equalTo(guideLabelView.snp.bottom).offset(84)
@@ -109,7 +107,7 @@ extension StartViewController {
         make.leading.equalToSuperview().offset(24)
         make.trailing.equalToSuperview().inset(24)
         make.height.equalTo(500)
-        make.bottom.equalToSuperview() // 이것이 중요함
+        make.bottom.equalToSuperview() // 이것이 중요함: 스크롤 가능하게 만듬.
             
         }
     }

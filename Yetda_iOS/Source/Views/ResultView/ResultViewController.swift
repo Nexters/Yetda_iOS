@@ -53,7 +53,6 @@ class ResultViewController: BaseViewController {
 
 extension ResultViewController: HomeViewControllerable {
     func next() {
-//        homeViewModel?.startBtnTapped()
         homeViewModel?.backToStartBtnTapped()
         print("처음으로 돌아가기")
     }
@@ -68,16 +67,6 @@ extension ResultViewController: HomeViewControllerable {
         do {
             let realm = try Realm()
             try realm.write {
-                // let myOtherDog = Dog(value: ["name" : "Pluto", "age": 3])
-                /*
-                 class History: Object {
-                     @objc dynamic var date = ""
-                     @objc dynamic var birthday = ""
-                     @objc dynamic var name = ""
-                     @objc dynamic var price = ""
-                     let presents = List<Present>()
-                 }
-                 */
                 if let unwrappedAnswer = answer {
                     let dateFormatter = DateFormatter()
                     let date = Date()
@@ -101,7 +90,6 @@ extension ResultViewController: HomeViewControllerable {
 extension ResultViewController {
     func selectRandomizedPresent() {
         if let ans = answer {
-//            print(ans.presents![0])
             present = ans.presents![idx]
             print(present)
         }
@@ -111,9 +99,7 @@ extension ResultViewController {
 private extension ResultViewController {
     @objc
     func nextBtnTapped() {
-//        print("next button in start tapped")
         storeData()
         next()
-//        storeData()
     }
 }

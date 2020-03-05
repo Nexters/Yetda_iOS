@@ -18,9 +18,10 @@ extension ResultViewController {
         setImageView()
         setPresentTextView()
         setSubTextView()
-        setotherPresentText()
+        setOtherPresentText()
     }
     
+    // 처음으로 돌아가기 버튼
     func setButtonUI() {
         self.contentView.addSubview(backButton)
         backButton.setNextButton(isEnable: true, title: "처음으로 돌아가기")
@@ -34,6 +35,7 @@ extension ResultViewController {
         }
     }
     
+    // 컨텐츠가 담기는 영역 설정
     func setContentView() {
         self.view.addSubview(contentView)
         
@@ -42,6 +44,7 @@ extension ResultViewController {
         }
     }
     
+    // 상단 텍스트
     func setGuideText() {
         self.contentView.addSubview(guideText)
         if let name = answer?.name {
@@ -57,6 +60,7 @@ extension ResultViewController {
         }
     }
     
+    // 선물 카드
     func setCardView() {
         contentView.addSubview(cardView)
         cardView.setCardView()
@@ -71,6 +75,7 @@ extension ResultViewController {
         }
     }
     
+    // 선물 텍스트
     func setPresentTextView() {
         self.contentView.addSubview(presentText)
         presentText.text = present?.present ?? "마카롱과 디저트"
@@ -84,6 +89,7 @@ extension ResultViewController {
         }
     }
     
+    // 선물과 연관된 서브 텍스트
     func setSubTextView() {
         self.contentView.addSubview(subText)
         subText.text = "술을 좋아한다면 실패 없을 선물이에요"
@@ -96,8 +102,8 @@ extension ResultViewController {
         }
     }
     
-    
-    func setotherPresentText() {
+    // 다른 선물 더 보기 버튼(기능 구현은 안됨)
+    func setOtherPresentText() {
         self.contentView.addSubview(otherPresentText)
         otherPresentText.text = "또 다른 선물은?"
         otherPresentText.font = .systemFont(ofSize: 20)
@@ -110,6 +116,7 @@ extension ResultViewController {
         }
     }
     
+    // 선물 이미지 뷰
     func setImageView() {
         imageView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
