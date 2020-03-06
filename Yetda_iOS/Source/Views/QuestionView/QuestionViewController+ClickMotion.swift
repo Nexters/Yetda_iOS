@@ -42,7 +42,6 @@ extension QuestionViewController {
         
         if presentBrain.isContinue == false {
             presentBrain.questionNum = 0
-//            print("excluded: \(presentBrain.excludedTags), presents: \(presentBrain.presents)")
             
             print("result")
             print(presentBrain.presents)
@@ -73,10 +72,6 @@ extension QuestionViewController {
                 self.frontCardLabel.alpha = 1
             }))
         }
-        
-//        print("show next card")
-//
-//    }
     
     func setupButtonAction() {
         noButton.addTarget(self, action: #selector(clickNoButton), for: .touchUpInside)

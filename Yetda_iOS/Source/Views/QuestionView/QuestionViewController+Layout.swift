@@ -108,7 +108,7 @@ extension QuestionViewController {
     
     
     
-    private func setupFrontCardLabel() {
+    private func setupFrontCardLabel() { // 가장 위 카드의 레이블 설정
         
         // setup self view properties
         let question = presentBrain.question
