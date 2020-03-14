@@ -39,6 +39,12 @@ class PriceViewController: BaseViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        checkStoredData()
+    }
+    
     override func setup() {
         super.setup()
         answer = homeViewModel?.answer
@@ -50,8 +56,19 @@ class PriceViewController: BaseViewController {
         nextButton.addTarget(self, action: #selector(nextBtnTapped), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
+    }
+    
+    private func checkStoredData() {
         
+        guard let min = homeViewModel?.answer.minPrice,
+            let max = homeViewModel?.answer.maxPrice else {
+            priceSlider.selectedMinValue = 0
+            priceSlider.selectedMaxValue = 10
+            return
+        }
         
+        priceSlider.selectedMinValue = CGFloat(min)
+        priceSlider.selectedMaxValue = CGFloat(max)
     }
 }
 
